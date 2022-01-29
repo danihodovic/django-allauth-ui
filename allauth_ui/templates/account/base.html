@@ -1,0 +1,24 @@
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html>
+  <head>
+    {% tailwind_preload_css %}
+    {% tailwind_css %}
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+  </head>
+  <body>
+    {% if messages %}
+    <div>
+      {% for message in messages %}
+      <div class="flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-3" role="alert">
+        <p>{{ message }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
