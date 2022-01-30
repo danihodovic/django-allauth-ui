@@ -28,7 +28,6 @@ THIRD_PARTY_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
     "allauth.socialaccount.providers.facebook",
-    "tailwind",
     "widget_tweaks",
     "django_browser_reload",
     "debug_toolbar",
@@ -78,4 +77,3 @@ SITE_ID = 1
 STATIC_URL = "/static/"
 MEDIA_URL = "/media/"
 MEDIA_ROOT = Path(__file__).parent / "media"
-TAILWIND_APP_NAME = "theme"

@@ -32,6 +32,8 @@ Sign in
 
 		<button type="submit" class="w-64 h-12 px-6 mt-8 text-lg text-white uppercase bg-blue-600 rounded text-bold hover:bg-blue-700">Login</button>
 
+    {% get_providers as socialaccount_providers %}
+    {% if socialaccount_providers %}
 		<div class="flex justify-center mt-6 text-xs">
 			<a class="text-blue-400 hover:text-blue-500" href="{% url 'account_reset_password' %}">Forgot Password</a>
 			<span class="mx-2 text-gray-300">/</span>
@@ -46,8 +48,6 @@ Sign in
 
     <p class="text-xs text-center text-gray-500">Sign in with a third party</p>
 
-    {% get_providers as socialaccount_providers %}
-    {% if socialaccount_providers %}
     {% include "socialaccount/snippets/provider_list.html" with process="login" %}
     {% endif %}
 

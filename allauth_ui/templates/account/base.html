@@ -1,10 +1,9 @@
-{% load tailwind_tags %}
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
-    {% tailwind_preload_css %}
-    {% tailwind_css %}
     <title>{% block head_title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'allauth_ui/output.css' %}">
     {% block extra_head %}
     {% endblock %}
   </head>
@@ -12,7 +11,7 @@
     {% if messages %}
     <div>
       {% for message in messages %}
-      <div class="flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-3" role="alert">
+      <div class="flex items-center px-4 py-3 text-sm font-bold text-white bg-blue-500" role="alert">
         <p>{{ message }}</p>
       </div>
       {% endfor %}
