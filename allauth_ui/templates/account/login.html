@@ -9,7 +9,7 @@ Sign in
 
 {% block content %}
 <div class="flex flex-col items-center justify-center w-screen h-screen text-gray-700 bg-gray-200">
-  <form method="POST" action="{% url 'account_login' %}" class="flex flex-col p-12 mt-12 bg-white rounded shadow-lg">
+  <form method="POST" action="{% url 'account_login' %}" class="flex flex-col p-12 bg-white rounded shadow-lg">
     {% csrf_token %}
 
     <h1 class="mb-5 text-3xl text-center">Sign in</h1>
@@ -57,5 +57,5 @@ Sign in
 
     {% include "socialaccount/snippets/login_extra.html" %}
   </form>
-</div>/div>
+</div>
 {% endblock %}
