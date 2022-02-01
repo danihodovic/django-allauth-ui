@@ -257,6 +257,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "docopt"
+version = "0.6.2"
+description = "Pythonic argument parser, that will make you smile"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "idna"
 version = "3.3"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -468,13 +476,14 @@ dev = ["pre-commit", "tox"]
 
 [[package]]
 name = "prompt-toolkit"
-version = "3.0.26"
+version = "2.0.10"
 description = "Library for building powerful interactive command lines in Python"
 category = "dev"
 optional = false
-python-versions = ">=3.6.2"
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [package.dependencies]
+six = ">=1.9.0"
 wcwidth = "*"
 
 [[package]]
@@ -491,20 +500,19 @@ ptpython = {version = "*", markers = "python_version >= \"3.5\""}
 
 [[package]]
 name = "ptpython"
-version = "3.0.20"
+version = "2.0.4"
 description = "Python REPL build on top of prompt_toolkit"
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = "*"
 
 [package.dependencies]
-appdirs = "*"
-jedi = ">=0.16.0"
-prompt-toolkit = ">=3.0.18,<3.1.0"
+docopt = "*"
+jedi = ">=0.9.0"
+prompt-toolkit = ">=2.0.6,<2.1.0"
 pygments = "*"
 
 [package.extras]
-all = ["black"]
 ptipython = ["ipython"]
 
 [[package]]
@@ -517,18 +525,15 @@ python-versions = "*"
 
 [[package]]
 name = "pudb"
-version = "2022.1"
+version = "2019.1"
 description = "A full-screen, console-based Python debugger"
 category = "dev"
 optional = false
-python-versions = "~=3.6"
+python-versions = "*"
 
 [package.dependencies]
-jedi = ">=0.18,<1"
-packaging = ">=20.0"
-pygments = ">=2.7.4"
+pygments = ">=1.0"
 urwid = ">=1.1.1"
-urwid_readline = "*"
 
 [[package]]
 name = "py"
@@ -816,20 +821,6 @@ optional = false
 python-versions = "*"
 
 [[package]]
-name = "urwid-readline"
-version = "0.13"
-description = "A textbox edit widget for urwid that supports readline shortcuts"
-category = "dev"
-optional = false
-python-versions = "*"
-
-[package.dependencies]
-urwid = "*"
-
-[package.extras]
-dev = ["black", "pytest"]
-
-[[package]]
 name = "wcwidth"
 version = "0.1.7"
 description = "Measures number of Terminal column cells of wide-character codes"
@@ -848,7 +839,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "a17456cb89d335e3385f8d940e56d267f79ac5bc0c18299d53bc8698a5ecc5b7"
+content-hash = "8cf4c841e27cac70eb803bd5a6df141c3cde870d91fcf45b113e7807eec74809"
 
 [metadata.files]
 appdirs = [
@@ -1049,6 +1040,9 @@ django-widget-tweaks = [
     {file = "django-widget-tweaks-1.4.12.tar.gz", hash = "sha256:9bfc5c705684754a83cc81da328b39ad1b80f32bd0f4340e2a810cbab4b0c00e"},
     {file = "django_widget_tweaks-1.4.12-py3-none-any.whl", hash = "sha256:fe6b17d5d595c63331f300917980db2afcf71f240ab9341b954aea8f45d25b9a"},
 ]
+docopt = [
+    {file = "docopt-0.6.2.tar.gz", hash = "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"},
+]
 idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
     {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
@@ -1153,23 +1147,25 @@ pluggy = [
     {file = "pluggy-0.13.0.tar.gz", hash = "sha256:fa5fa1622fa6dd5c030e9cad086fa19ef6a0cf6d7a2d12318e10cb49d6d68f34"},
 ]
 prompt-toolkit = [
-    {file = "prompt_toolkit-3.0.26-py3-none-any.whl", hash = "sha256:4bcf119be2200c17ed0d518872ef922f1de336eb6d1ddbd1e089ceb6447d97c6"},
-    {file = "prompt_toolkit-3.0.26.tar.gz", hash = "sha256:a51d41a6a45fd9def54365bca8f0402c8f182f2b6f7e29c74d55faeb9fb38ac4"},
+    {file = "prompt_toolkit-2.0.10-py2-none-any.whl", hash = "sha256:e7f8af9e3d70f514373bf41aa51bc33af12a6db3f71461ea47fea985defb2c31"},
+    {file = "prompt_toolkit-2.0.10-py3-none-any.whl", hash = "sha256:46642344ce457641f28fc9d1c9ca939b63dadf8df128b86f1b9860e59c73a5e4"},
+    {file = "prompt_toolkit-2.0.10.tar.gz", hash = "sha256:f15af68f66e664eaa559d4ac8a928111eebd5feda0c11738b5998045224829db"},
 ]
 ptipython = [
     {file = "ptipython-1.0.1-py2.py3-none-any.whl", hash = "sha256:0953e4bf835bea911394b2ee3fc1cbf1a2ae9ca1886dc6fca86ece3a1e51a1e3"},
     {file = "ptipython-1.0.1.tar.gz", hash = "sha256:0a4375af55c306ce6570f205adba290128979f7d6dff29cc4960c76aedb53788"},
 ]
 ptpython = [
-    {file = "ptpython-3.0.20-py2.py3-none-any.whl", hash = "sha256:99636899ab0e4d026e2ecc9368269114f387b4bb5411e57f072b0bde724d9f99"},
-    {file = "ptpython-3.0.20.tar.gz", hash = "sha256:eafd4ced27ca5dc370881d4358d1ab5041b32d88d31af8e3c24167fe4af64ed6"},
+    {file = "ptpython-2.0.4-py2-none-any.whl", hash = "sha256:51a74abe931f692360a32d650c2ba1ca329c08f3ed9b1de8abcd1164e0b0a6a7"},
+    {file = "ptpython-2.0.4-py3-none-any.whl", hash = "sha256:938ee050e37d61c138dbbeb21383dfef8b9ed4ffb453a5f34041f42025bf5042"},
+    {file = "ptpython-2.0.4.tar.gz", hash = "sha256:ebe9d68ea7532ec8ab306d4bdc7ec393701cd9bbd6eff0aa3067c821f99264d4"},
 ]
 ptyprocess = [
     {file = "ptyprocess-0.6.0-py2.py3-none-any.whl", hash = "sha256:d7cc528d76e76342423ca640335bd3633420dc1366f258cb31d05e865ef5ca1f"},
     {file = "ptyprocess-0.6.0.tar.gz", hash = "sha256:923f299cc5ad920c68f2bc0bc98b75b9f838b93b599941a6b63ddbc2476394c0"},
 ]
 pudb = [
-    {file = "pudb-2022.1.tar.gz", hash = "sha256:e827a4b489dcad561189535db6677becbf32164b2b44df00786eb2d5e00c587e"},
+    {file = "pudb-2019.1.tar.gz", hash = "sha256:ac30cfc64580958ab7265decb4cabb9141f08781ff072e9a336d5a7942ce35a6"},
 ]
 py = [
     {file = "py-1.9.0-py2.py3-none-any.whl", hash = "sha256:366389d1db726cd2fcfc79732e75410e5fe4d31db13692115529d34069a043c2"},
@@ -1323,9 +1319,6 @@ urllib3 = [
 ]
 urwid = [
     {file = "urwid-2.1.2.tar.gz", hash = "sha256:588bee9c1cb208d0906a9f73c613d2bd32c3ed3702012f51efe318a3f2127eae"},
-]
-urwid-readline = [
-    {file = "urwid_readline-0.13.tar.gz", hash = "sha256:018020cbc864bb5ed87be17dc26b069eae2755cb29f3a9c569aac3bded1efaf4"},
 ]
 wcwidth = [
     {file = "wcwidth-0.1.7-py2.py3-none-any.whl", hash = "sha256:f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"},
