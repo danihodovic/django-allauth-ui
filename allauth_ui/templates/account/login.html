@@ -32,14 +32,14 @@ Sign in
 
 		<button type="submit" class="w-64 h-12 px-6 mt-8 text-lg text-white uppercase bg-blue-600 rounded text-bold hover:bg-blue-700">Login</button>
 
-    {% get_providers as socialaccount_providers %}
-    {% if socialaccount_providers %}
 		<div class="flex justify-center mt-6 text-xs">
 			<a class="text-blue-400 hover:text-blue-500" href="{% url 'account_reset_password' %}">Forgot Password</a>
 			<span class="mx-2 text-gray-300">/</span>
 			<a class="text-blue-400 hover:text-blue-500" href="{% url 'account_signup' %}">Sign Up</a>
 		</div>
 
+    {% get_providers as socialaccount_providers %}
+    {% if socialaccount_providers %}
     <div class="flex items-center justify-between pt-3 mt-3">
       <hr class="w-full">
       <span class="p-2 mb-1 text-gray-400">OR</span>
