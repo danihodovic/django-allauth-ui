@@ -10,7 +10,7 @@
         href="{% provider_login_url provider.id  openid=brand.openid_url process=process  %}">{{brand.name}}</a>
    {% endfor %}
    {% endif %}
-      <a class="flex items-center justify-center h-12 mt-3 text-white uppercase align-middle rounded social-{{ provider.name | lower }}"
+      <a class="flex items-center justify-center h-12 mt-3 text-white uppercase align-middle rounded {{ provider | socialprovider_color }}"
         href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">{{provider.name}}</a>
 
 {% endfor %}
