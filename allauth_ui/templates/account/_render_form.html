@@ -1,5 +1,11 @@
 {% load widget_tweaks %}
 
+{% csrf_token %}
+
+{% if redirect_field_value %}
+<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+{% endif %}
+
 {% for field in form.visible_fields %}
   <div class="mb-4">
   {{ field|add_label_class:"font-semibold text-xs" }}

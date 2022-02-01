@@ -17,12 +17,6 @@
     </p>
 
     <form class="signup" id="signup_form" method="post" action="{% url 'socialaccount_signup' %}">
-      {% csrf_token %}
-
-      {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-      {% endif %}
-
       {% include "account/_render_form.html" %}
 		  <button type="submit" class="w-64 h-12 px-6 mt-8 text-lg text-white uppercase bg-blue-600 rounded text-bold hover:bg-blue-700">Sign up</button>
     </form>
