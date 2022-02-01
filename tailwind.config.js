@@ -1,6 +1,9 @@
 module.exports = {
   content: [
-    './allauth_ui/templates/**/*.html'
+    './allauth_ui/templates/**/*.html',
+  ],
+  safelist: [
+    { pattern: /social-/ }
   ],
   theme: {
     extend: {},
