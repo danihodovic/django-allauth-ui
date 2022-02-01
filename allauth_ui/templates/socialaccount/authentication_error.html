@@ -1,0 +1,19 @@
+{% extends "socialaccount/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Social Network Login Failure" %}{% endblock %}
+
+{% block content %}
+<div class="flex flex-col items-center justify-center w-screen h-screen text-gray-700 bg-gray-200">
+  <div class="inline-flex flex-col items-center p-12 bg-white rounded shadow-lg">
+    <h1 class="mb-5 text-3xl text-center">{% trans "Social Network Login Failure" %}</h1>
+
+    <p>
+      {% trans "An error occurred while attempting to login via your social network account." %}
+    </p>
+    <p><strong>Code: {{ auth_error.code }}</strong></p>
+    <p>Error: {{ auth_error.exception }}</p>
+  </div>
+</div>
+{% endblock %}
