@@ -1,6 +1,7 @@
 {% load widget_tweaks %}
 
 {% for field in form.visible_fields %}
+  <div class="mb-4">
   {{ field|add_label_class:"font-semibold text-xs" }}
   {% if field.errors %}
   {% render_field field class="flex items-center w-64 h-12 px-4 pb-3 mt-2 border-red-500 rounded focus:outline-none focus:ring-2" %}
@@ -12,5 +13,5 @@
     {{ error }}
   </span>
   {% endfor %}
-  <span class="pb-4"></span>
+  </div>
 {% endfor %}

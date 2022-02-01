@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:watch": "npx tailwindcss -i ./input.css -o allauth_ui/static/allauth_ui/output.css --watch",
-    "build": "npx tailwindcss -i ./input.css -o allauth_ui/static/allauth_ui/output.css --minify"
+    "build:watch": "npx tailwindcss -i allauth_ui/static/allauth_ui/input.css -o allauth_ui/static/allauth_ui/output.css --watch",
+    "build": "npx tailwindcss -i allauth_ui/static/allauth_ui/input.css -o allauth_ui/static/allauth_ui/output.css --minify"
   },
   "repository": {
     "type": "git",
