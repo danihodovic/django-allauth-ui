@@ -3,7 +3,7 @@ module.exports = {
     './allauth_ui/templates/**/*.html',
   ],
   safelist: [
-    { pattern: /social-/ }
+    { pattern: /social-|bg-/ }
   ],
   theme: {
     extend: {},

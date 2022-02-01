@@ -12,4 +12,7 @@
   .social-google {
     @apply bg-red-700 bg-red-800
   }
+  .social-linkedin {
+    @apply bg-cyan-600 bg-cyan-700
+  }
 }
