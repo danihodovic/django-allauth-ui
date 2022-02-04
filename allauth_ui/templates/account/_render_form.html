@@ -12,12 +12,12 @@
   <div class="mb-4">
   {{ field|add_label_class:"font-semibold text-xs" }}
   {% if field.errors %}
-  {% render_field field class="flex items-center w-64 h-12 px-4 pb-3 mt-2 border-red-500 rounded focus:outline-none focus:ring-2" %}
+  {% render_field field class="flex items-center w-64 h-12 px-4 pb-2 mt-2 border-red-500 rounded focus:outline-none focus:ring-2" %}
   {% else %}
-  {% render_field field class="flex items-center w-64 h-12 px-4 pb-3 mt-2 rounded focus:outline-none focus:ring-2" %}
+  {% render_field field class="flex items-center w-64 h-12 px-4 pb-2 mt-2 rounded focus:outline-none focus:ring-2" %}
   {% endif %}
   {% for error in field.errors %}
-  <span class="flex items-center mt-1 ml-1 text-xs font-medium tracking-wide text-red-500 max-w-xs">
+  <span class="flex items-center max-w-xs mt-1 ml-1 text-xs font-medium tracking-wide text-red-500">
     {{ error }}
   </span>
   {% endfor %}
