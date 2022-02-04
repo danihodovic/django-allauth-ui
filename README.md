@@ -16,9 +16,14 @@ defaults for new projects.
 
 ## Installation
 
+
 ```
 pip install django-allauth-ui
+pip install django-widget-tweaks
 ```
+
+django-allauth-ui depends on django-widget-tweaks to render form fields. Make
+sure to install django-widget-tweaks and add it to the INSTALLED_APPS.
 
 Add django-allauth-ui **before** django-allauth in your INSTALLED_APPS. See
 [./tests/settings.py](./tests/settings.py) for an example.
@@ -30,6 +35,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
+    "widget_tweaks",
 ]
 ```
 
