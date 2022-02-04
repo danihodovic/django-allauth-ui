@@ -1,0 +1,9 @@
+{% if form.non_field_errors %}
+  <ul class="max-w-xs">
+  {% for error in form.non_field_errors %}
+  <li class="my-6 text-xs font-medium tracking-wide text-red-500">
+    {{ error }}
+  </li>
+  {% endfor %}
+  </ul>
+{% endif %}

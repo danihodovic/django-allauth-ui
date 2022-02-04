@@ -6,6 +6,8 @@
 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
 {% endif %}
 
+{% include "account/_non_field_errors.html" %}
+
 {% for field in form.visible_fields %}
   <div class="mb-4">
   {{ field|add_label_class:"font-semibold text-xs" }}
@@ -15,7 +17,7 @@
   {% render_field field class="flex items-center w-64 h-12 px-4 pb-3 mt-2 rounded focus:outline-none focus:ring-2" %}
   {% endif %}
   {% for error in field.errors %}
-  <span class="flex items-center mt-1 ml-1 text-xs font-medium tracking-wide text-red-500">
+  <span class="flex items-center mt-1 ml-1 text-xs font-medium tracking-wide text-red-500 max-w-xs">
     {{ error }}
   </span>
   {% endfor %}
