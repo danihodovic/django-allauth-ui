@@ -3,9 +3,10 @@
 UI templates for [django-allauth](https://github.com/pennersr/django-allauth)
 built with Tailwind.
 
-While django-allauth is a great library the templates it provides out of the
-box are minimal html, so you end up re-designing them for every new Django
-project. This library aims at providing good looking defaults.
+django-allauth is a great library, but the templates it provides out of the box
+are minimal html. I usually end up re-designing the login / logout / signup
+pages for each new Django project. This library aims at providing decent
+defaults for new projects.
 
 ## Features
 
