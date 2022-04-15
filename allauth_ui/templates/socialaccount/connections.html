@@ -1,0 +1,46 @@
+{% extends "socialaccount/base.html" %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Account Connections" %}{% endblock %}
+
+{% block whitebox %}
+<h1 class="mb-5 text-xl text-center md:text-3xl">{% trans "Account Connections" %}</h1>
+
+{% if form.accounts %}
+<p class="text-sm md:text-base">{% blocktrans %}You have the following social accounts connected:{% endblocktrans %}</p>
+
+<form class="flex flex-col items-center w-full m-4" method="post" action="{% url 'socialaccount_connections' %}">
+  {% csrf_token %}
+
+  {% include "account/_non_field_errors.html" %}
+
+  {% for base_account in form.accounts %}
+  {% with base_account.get_provider_account as account %}
+  <div class="mb-3">
+  <label for="id_account_{{ base_account.id }}">
+  <input id="id_account_{{ base_account.id }}" type="radio" name="account" value="{{ base_account.id }}"
+         class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300"
+  />
+  <span class="text-sm md:text-base">{{account.get_brand.name}}</span>
+  </label>
+  </div>
+  {% endwith %}
+  {% endfor %}
+
+  <button type="submit" class="w-full h-12 mt-3 text-white uppercase bg-red-600 rounded md:w-8/12">{% trans 'Remove' %}</button>
+</form>
+
+{% else %}
+<p>{% trans 'You currently have no social network accounts connected to this account.' %}</p>
+{% endif %}
+<div class="flex items-center self-stretch justify-between pt-3 mt-3">
+  <hr class="w-full">
+  <span class="p-2 mb-1 text-gray-400">OR</span>
+  <hr class="w-full">
+</div>
+{% trans 'Add a third party account' %}
+<div class="w-full md:w-8/12">
+{% include "socialaccount/snippets/provider_list.html" with process="connect" %}
+{% include "socialaccount/snippets/login_extra.html" %}
+</div>
+{% endblock %}
