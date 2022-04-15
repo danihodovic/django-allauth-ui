@@ -15,4 +15,10 @@
   .social-linkedin {
     @apply bg-cyan-600 bg-cyan-700
   }
+  .social-strava {
+    @apply bg-orange-400 bg-orange-500
+  }
+  .social-exist {
+    @apply bg-gray-500 bg-gray-600
+  }
 }
