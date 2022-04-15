@@ -261,6 +261,14 @@ python-versions = ">=3.6"
 Django = ">=2.2"
 
 [[package]]
+name = "django-toolset"
+version = "0.1.5"
+description = "A set of helper functions and utilities for a Django application"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "django-widget-tweaks"
 version = "1.4.12"
 description = "Tweak the form field rendering in templates, not in python-level form definitions."
@@ -862,7 +870,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "79244a7578075115d676a4090c6b44ffc3f51247a1b1e1166fff797a611b3c68"
+content-hash = "86c0d25d5d6b1f6f268e856f27c4cb36a461c38b6642d15609406a2a7d7f77ae"
 
 [metadata.files]
 appdirs = [
@@ -1073,6 +1081,9 @@ django-debug-toolbar = [
 django-extensions = [
     {file = "django-extensions-3.1.5.tar.gz", hash = "sha256:28e1e1bf49f0e00307ba574d645b0af3564c981a6dfc87209d48cb98f77d0b1a"},
     {file = "django_extensions-3.1.5-py3-none-any.whl", hash = "sha256:9238b9e016bb0009d621e05cf56ea8ce5cce9b32e91ad2026996a7377ca28069"},
+]
+django-toolset = [
+    {file = "django-toolset-0.1.5.tar.gz", hash = "sha256:9f73756bee90b119b1fe6f68cfb5476767d5304ddf5c69cf9ad4af64b02aab77"},
 ]
 django-widget-tweaks = [
     {file = "django-widget-tweaks-1.4.12.tar.gz", hash = "sha256:9bfc5c705684754a83cc81da328b39ad1b80f32bd0f4340e2a810cbab4b0c00e"},
