@@ -1,5 +1,6 @@
 import re
 from pathlib import Path
+from allauth.socialaccount.models import SocialAccount
 
 from django import template
 
@@ -29,3 +30,13 @@ def socialprovider_color(socialprovider):
     if name in social_colors:
         return f"social-{name}"
     return "bg-stone-900 hover:bg-black"
+
+
+@register.simple_tag
+def provider_connected(socialprovider, user):
+    if not user.is_authenticated:
+        return False
+    # pylint: disable=no-member
+    return bool(
+        SocialAccount.objects.filter(provider=socialprovider.name.lower(), user=user)
+    )
