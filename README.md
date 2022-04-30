@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     "widget_tweaks",
 ]
 ```
+**Note**:
+
+When going to **production** you should run ```python manage.py collectstatic```
 
 ## Screenshots
 
