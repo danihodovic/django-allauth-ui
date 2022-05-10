@@ -32,7 +32,8 @@ Sign in
     {% endif %}
   {% endfor %}
 
-  <button type="submit" class="w-64 h-12 px-6 mt-8 text-lg text-white uppercase bg-blue-600 rounded text-bold hover:bg-blue-700">Login</button>
+
+  {% include "account/_button.html" with text="Login" %}
 
   <div class="flex justify-center mt-6 text-xs">
     <a class="text-blue-400 hover:text-blue-500" href="{% url 'account_reset_password' %}">Forgot Password</a>

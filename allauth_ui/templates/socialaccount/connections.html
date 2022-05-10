@@ -27,7 +27,7 @@
   {% endwith %}
   {% endfor %}
 
-  <button type="submit" class="w-full h-12 mt-3 text-white uppercase bg-red-600 rounded md:w-8/12">{% trans 'Remove' %}</button>
+  {% include "account/_button.html" with text="Remove" %}
 </form>
 
 {% else %}
