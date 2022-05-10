@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-allauth-ui"
-version = "0.0.17"
+version = "0.0.18"
 description = ""
 authors = ["Dani Hodovic <you@example.com>"]
 license = "MIT"
