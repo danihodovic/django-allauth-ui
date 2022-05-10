@@ -3,15 +3,8 @@ from pathlib import Path
 
 from django import template
 
+
 register = template.Library()
-
-
-socialprovider_colors = {
-    "GitHub": "bg-stone-900 hover:bg-black",
-    "Facebook": "bg-blue-700 hover:bg-blue-800",
-    "Google": "bg-red-700 bg-red-800",
-}
-
 
 input_css_path = Path(__file__).parent / ".." / "static" / "allauth_ui" / "input.css"
 social_colors = []
