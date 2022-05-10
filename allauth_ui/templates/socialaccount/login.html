@@ -13,6 +13,6 @@
 </div>
 <form method="POST" class="flex flex-col items-center justify-center pt-5 py-10">
   {% csrf_token %}
-  <button type="submit" class="w-64 h-12 px-6 mt-8 text-lg text-white uppercase bg-blue-600 rounded text-bold hover:bg-blue-700">Continue</button>
+  {% include "account/_button.html" with text="Continue" %}
 </form>
 {% endblock %}

@@ -6,6 +6,6 @@
 <form method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
   <p>Are you sure you want to sign out?</p>
-  <button type="submit" class="w-64 h-12 px-6 mt-8 text-lg text-white uppercase bg-blue-600 rounded text-bold hover:bg-blue-700">Sign Out</button>
+  {% include "account/_button.html" with text="Sign out" %}
 </form>
 {% endblock %}
