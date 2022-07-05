@@ -21,7 +21,7 @@
     </form>
     {% else %}
     {% url 'account_email' as email_url %}
-      {% blocktrans with confirmation.email_address.email as email %}
+      {% blocktrans %}
       This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new e-mail confirmation request.</a>
       {% endblocktrans %}
     {% endif %}
