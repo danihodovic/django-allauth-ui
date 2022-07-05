@@ -10,7 +10,7 @@ packages = [
 include = ["allauth_ui/static/allauth_ui/output.css"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "3.6 - 3.*"
 django-widget-tweaks = "^1.4.12"
 
 [tool.poetry.dev-dependencies]
