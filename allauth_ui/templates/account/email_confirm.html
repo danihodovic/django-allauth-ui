@@ -1,0 +1,18 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account %}
+
+{% block head_title %}{% translate "Confirm E-mail Address" %}{% endblock %}
+
+{% block whitebox %}
+<h1 class="mb-5 text-3xl text-center">Confirm E-mail Address</h1>
+<p class="mb-5 text-sm text-center">
+  Please confirm that.
+</p>
+<form method="POST" action="{% url 'account_confirm_email' confirmation.key %}" class="flex flex-col mt-4">
+  {% include "account/_render_form.html" %}
+  {% include "account/_button.html" with text="Confirm" %}
+</form>
+{% include "account/_links.html" %}
+{% endblock %}
