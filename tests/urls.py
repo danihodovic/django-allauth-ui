@@ -18,9 +18,23 @@ class FakeSocialSignup(TemplateView):
         return context
 
 
+# class ConfirmEmailView(TemplateResponseMixin, LogoutFunctionalityMixin, View):
+class FakeConfirmEmailView(TemplateView):
+    template_name = "account/email_confirm.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.request.GET.get("confirmation"):
+            context["confirmation"] = dict(
+                key="ok", email_address=dict(user="dani", email="dani@hello.com")
+            )
+        return context
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("fake/accounts/social/signup", FakeSocialSignup.as_view()),
+    path("fake/accounts/confirm-email", FakeConfirmEmailView.as_view()),
     path("accounts/", include("allauth.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
     path("__debug__/", include("debug_toolbar.urls")),
