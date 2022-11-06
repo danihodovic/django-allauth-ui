@@ -10,7 +10,7 @@ packages = [
 include = ["allauth_ui/static/allauth_ui/output.css"]
 
 [tool.poetry.dependencies]
-python = ">=3.6,<4.0"
+python = ">=3.8,<4.2"
 django-widget-tweaks = "^1.4.12"
 
 [tool.poetry.dev-dependencies]
@@ -32,6 +32,9 @@ django-debug-toolbar = "^3.2.4"
 Werkzeug = "^2.0.2"
 Django = "^4.0.2"
 django-toolset = "^0.1.5"
+
+[tool.poetry.group.dev.dependencies]
+django-click = "^2.3.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
