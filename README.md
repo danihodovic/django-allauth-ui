@@ -88,8 +88,10 @@ npm install
 # Start the server
 ./manage.py runserver_plus
 
-# Start the tailwind compilation process
+# Start the tailwind compilation process in another terminal
 npm run-script build:watch
 ```
 
-Make changes in allauth_ui/templates and open the browser at http://localhost:8000/accounts/login/
+Make changes in allauth_ui/templates and open the browser at http://localhost:8000/accounts/login/.
+
+Once you're done compile tailwind with `npm run-script build` and submit a pull-request 🃏
