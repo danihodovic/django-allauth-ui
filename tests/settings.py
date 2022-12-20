@@ -30,6 +30,7 @@ THIRD_PARTY_APPS = [
     "allauth.socialaccount.providers.facebook",
     "allauth.socialaccount.providers.linkedin",
     "allauth.socialaccount.providers.digitalocean",
+    "allauth.socialaccount.providers.wahoo",
     "widget_tweaks",
     "django_browser_reload",
     "debug_toolbar",
