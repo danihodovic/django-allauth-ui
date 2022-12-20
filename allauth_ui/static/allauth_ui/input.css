@@ -10,15 +10,18 @@
     @apply bg-blue-700 hover:bg-blue-800
   }
   .social-google {
-    @apply bg-red-700 bg-red-800
+    @apply bg-red-700 hover:bg-red-800
   }
   .social-linkedin {
-    @apply bg-cyan-600 bg-cyan-700
+    @apply bg-cyan-600 hover:bg-cyan-700
   }
   .social-strava {
-    @apply bg-orange-400 bg-orange-500
+    @apply bg-orange-400 hover:bg-orange-500
   }
   .social-exist {
-    @apply bg-gray-500 bg-gray-600
+    @apply bg-gray-500 hover:bg-gray-600
+  }
+  .social-wahoo {
+    @apply bg-cyan-500 hover:bg-cyan-700
   }
 }
