@@ -9,10 +9,12 @@ pages for each new Django project. This library aims at providing decent
 defaults for new projects.
 
 * [AllAuth UI](#allauth-ui)
-   * [Features](#features)
-   * [Installation](#installation)
-   * [Screenshots](#screenshots)
+* [Features](#features)
+* [Installation](#installation)
+* [Screenshots](#screenshots)
    * [Generating screenshots](#generating-screenshots)
+* [Hacking on the project](#hacking-on-the-project)
+* [Contributors](#contributors)
 
 ## Features
 
@@ -95,3 +97,6 @@ npm run-script build:watch
 Make changes in allauth_ui/templates and open the browser at http://localhost:8000/accounts/login/.
 
 Once you're done compile tailwind with `npm run-script build` and submit a pull-request 🃏
+
+## Contributors
+[<img alt="EVELYN-RYAN" src="https://avatars.githubusercontent.com/u/72516405?v=4&s=117" width="117">](https://github.com/EVELYN-RYAN)[<img alt="filip-dobrovolny-csob-cz" src="https://avatars.githubusercontent.com/u/95356884?v=4&s=117" width="117">](https://github.com/filip-dobrovolny-csob-cz)[<img alt="mohmyo" src="https://avatars.githubusercontent.com/u/14170159?v=4&s=117" width="117">](https://github.com/mohmyo)[<img alt="twolfson" src="https://avatars.githubusercontent.com/u/902488?v=4&s=117" width="117">](https://github.com/twolfson)[<img alt="anyidea" src="https://avatars.githubusercontent.com/u/48710760?v=4&s=117" width="117">](https://github.com/anyidea)[<img alt="danihodovic" src="https://avatars.githubusercontent.com/u/5557301?v=4&s=117" width="117">](https://github.com/danihodovic)
