@@ -31,8 +31,10 @@ msgid ""
 "mail address for user %(user_display)s.\n"
 "  "
 msgstr ""
+"\n"
 "Por favor, confirme que <a href=\"mailto:%(email)s\">%(email)s</a> es una "
 "dirección de correo electrónico para el usuario %(user_display)s."
+"  "
 
 #: allauth_ui/templates/account/email_confirm.html:22
 #, python-format
@@ -42,9 +44,11 @@ msgid ""
 "href=\"%(email_url)s\">issue a new e-mail confirmation request.</a>\n"
 "  "
 msgstr ""
+"\n"
 "Este enlace de confirmación de correo electrónico ha caducado o es inválido. "
 "Por favor, <a href=\"%(email_url)s\">solicite una nueva solicitud de "
 "confirmación de correo electrónico.</a>"
+"  "
 
 #: allauth_ui/templates/account/password_reset_from_key.html:8
 msgid "Bad Token"
