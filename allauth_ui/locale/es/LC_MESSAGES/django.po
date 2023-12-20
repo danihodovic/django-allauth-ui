@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-19 06:37-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: allauth_ui/templates/account/email_confirm.html:6
+#: allauth_ui/templates/account/email_confirm.html:9
+msgid "Confirm E-mail Address"
+msgstr "Confirmar dirección de correo electrónico"
+
+#: allauth_ui/templates/account/email_confirm.html:12
+#, python-format
+msgid ""
+"\n"
+"  Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-"
+"mail address for user %(user_display)s.\n"
+"  "
+msgstr ""
+"\n"
+"Por favor, confirme que <a href=\"mailto:%(email)s\">%(email)s</a> es una "
+"dirección de correo electrónico para el usuario %(user_display)s."
+"  "
+
+#: allauth_ui/templates/account/email_confirm.html:22
+#, python-format
+msgid ""
+"\n"
+"  This e-mail confirmation link expired or is invalid. Please <a "
+"href=\"%(email_url)s\">issue a new e-mail confirmation request.</a>\n"
+"  "
+msgstr ""
+"\n"
+"Este enlace de confirmación de correo electrónico ha caducado o es inválido. "
+"Por favor, <a href=\"%(email_url)s\">solicite una nueva solicitud de "
+"confirmación de correo electrónico.</a>"
+"  "
+
+#: allauth_ui/templates/account/password_reset_from_key.html:8
+msgid "Bad Token"
+msgstr "Token incorrecto"
+
+#: allauth_ui/templates/account/password_reset_from_key.html:8
+msgid "Change Password"
+msgstr "Cambiar contraseña"
+
+#: allauth_ui/templates/account/password_reset_from_key.html:14
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. <br>\n"
+"        Please request a\n"
+"        <a class=\"text-blue-400 hover:text-blue-500\" "
+"href=\"%(passwd_reset_url)s\">new password reset</a>."
+msgstr ""
+
+#: allauth_ui/templates/account/password_reset_from_key.html:26
+#: allauth_ui/templates/account/password_reset_from_key_done.html:11
+msgid "Your password is now changed."
+msgstr ""
+
+#: allauth_ui/templates/account/password_reset_from_key_done.html:5
+#: allauth_ui/templates/account/password_reset_from_key_done.html:10
+msgid "Changed Password"
+msgstr ""
+
+#: allauth_ui/templates/account/verification_sent.html:5
+#: allauth_ui/templates/account/verification_sent.html:10
+msgid "Verify Your E-mail Address"
+msgstr ""
+
+#: allauth_ui/templates/account/verification_sent.html:12
+msgid ""
+"\n"
+"      We have sent an e-mail to you for verification. Follow the link "
+"provided to finalize the signup process.\n"
+"      Please contact us if you do not receive it within a few minutes.\n"
+"      "
+msgstr ""
+
+#: allauth_ui/templates/socialaccount/authentication_error.html:5
+#: allauth_ui/templates/socialaccount/authentication_error.html:10
+msgid "Social Network Login Failure"
+msgstr ""
+
+#: allauth_ui/templates/socialaccount/authentication_error.html:13
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr ""
+
+#: allauth_ui/templates/socialaccount/connections.html:4
+#: allauth_ui/templates/socialaccount/connections.html:7
+msgid "Account Connections"
+msgstr ""
+
+#: allauth_ui/templates/socialaccount/connections.html:10
+msgid "You have the following social accounts connected:"
+msgstr ""
+
+#: allauth_ui/templates/socialaccount/connections.html:34
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr ""
+
+#: allauth_ui/templates/socialaccount/connections.html:41
+msgid "Add a third party account"
+msgstr ""
+
+#: allauth_ui/templates/socialaccount/signup.html:5
+#: allauth_ui/templates/socialaccount/signup.html:8
+msgid "Sign Up"
+msgstr ""
+
+#: allauth_ui/templates/socialaccount/signup.html:11
+#, python-format
+msgid ""
+"\n"
+"  You are about to use your %(provider_name)s account to login to\n"
+"  %(site_name)s. As a final step, please complete the following form:\n"
+msgstr ""
