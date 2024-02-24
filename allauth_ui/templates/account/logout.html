@@ -1,11 +1,12 @@
 {% extends "account/base.html" %}
 
-{% block head_title %}Sign out{% endblock %}
+{% block head_title %}{% translate "Sign out" %}{% endblock %}
 
 {% block whitebox %}
 <form method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
-  <p>Are you sure you want to sign out?</p>
-  {% include "account/_button.html" with text="Sign out" %}
+  <p>{% translate "Are you sure you want to sign out? %}</p>
+  {% translate "Sign out" as signout_message }
+  {% include "account/_button.html" with text=signout_message %}
 </form>
 {% endblock %}

@@ -1,6 +1,10 @@
+import os
 from pathlib import Path
 
 from django.utils.translation import gettext_lazy as _
+
+DEEPL_AUTH_KEY = os.environ.get("DEEPL_LANGUAGE_KEY", None)
+ROSETTA_ENABLE_TRANSLATION_SUGGESTIONS = True
 
 DEBUG = True
 USE_TZ = True
@@ -23,6 +27,7 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    "rosetta",
     "django_extensions",
     "allauth_ui",
     "allauth",
@@ -78,6 +83,7 @@ LOCALE_PATHS = [
 LANGUAGES = (
     ("en-us", _("English")),
     ("es", _("Spanish")),
+    ("fr", _("French")),
 )
 
 AUTHENTICATION_BACKENDS = [

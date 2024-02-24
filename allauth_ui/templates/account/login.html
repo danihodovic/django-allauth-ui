@@ -1,10 +1,10 @@
 {% extends "account/base.html" %}
-
+{% load i18n %}
 {% load widget_tweaks %}
 {% load account socialaccount %}
 
 {% block head_title %}
-Sign in
+  {% translate "Sign in" %}
 {% endblock %}
 
 {% block whitebox %}
@@ -32,13 +32,14 @@ Sign in
     {% endif %}
   {% endfor %}
 
-
-  {% include "account/_button.html" with text="Login" %}
+  {% translate "Login" as login_text %}
+  {% include "account/_button.html" with text=login_text %}
 
   <div class="flex justify-center mt-6 text-xs">
-    <a class="text-blue-400 hover:text-blue-500" href="{% url 'account_reset_password' %}">Forgot Password</a>
+    <a class="text-blue-400 hover:text-blue-500" href="{% url 'account_reset_password' %}">{% translate "Forgot Password" %}
+    </a>
     <span class="mx-2 text-gray-300">/</span>
-    <a class="text-blue-400 hover:text-blue-500" href="{% url 'account_signup' %}">Sign Up</a>
+    <a class="text-blue-400 hover:text-blue-500" href="{% url 'account_signup' %}">{% translate "Sign Up" %}</a>
   </div>
 
   {% if redirect_field_value %}
@@ -53,7 +54,7 @@ Sign in
   <hr class="w-full">
 </div>
 
-<p class="text-xs text-center text-gray-500">Sign in with a third party</p>
+<p class="text-xs text-center text-gray-500">{% translate "Sign in with a third party" %}</p>
 
 {% include "socialaccount/snippets/provider_list.html" with process="login" %}
 {% endif %}

@@ -16,6 +16,7 @@
 
 <form class="signup" id="signup_form" method="post" action="{% url 'socialaccount_signup' %}">
   {% include "account/_render_form.html" %}
-  {% include "account/_button.html" with text="Sign up" %}
+  {% translate "Sign up" as signup_text %}
+  {% include "account/_button.html" with text=signup_text %}
 </form>
 {% endblock %}

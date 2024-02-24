@@ -2,7 +2,7 @@ from allauth.socialaccount.forms import SignupForm
 from allauth.socialaccount.models import SocialLogin
 from django.contrib import admin
 from django.contrib.auth import get_user_model
-from django.urls import include, path
+from django.urls import include, path, re_path
 from django.views.generic.base import TemplateView
 
 User = get_user_model()
@@ -33,6 +33,7 @@ class FakeConfirmEmailView(TemplateView):
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    re_path(r'^rosetta/', include('rosetta.urls')),
     path("fake/accounts/social/signup", FakeSocialSignup.as_view()),
     path("fake/accounts/confirm-email", FakeConfirmEmailView.as_view()),
     path("accounts/", include("allauth.urls")),
