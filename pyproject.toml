@@ -16,6 +16,7 @@ include = ["allauth_ui/static/allauth_ui/output.css"]
 [tool.poetry.dependencies]
 python = ">=3.8,<4.2"
 django-widget-tweaks = "^1.4.12"
+django-rosetta = "^0.10.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"

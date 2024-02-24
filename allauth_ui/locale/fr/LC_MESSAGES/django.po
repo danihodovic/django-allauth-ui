@@ -8,21 +8,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-24 13:07-0600\n"
-"PO-Revision-Date: 2024-02-24 13:58-0600\n"
+"POT-Creation-Date: 2024-02-24 13:14-0600\n"
+"PO-Revision-Date: 2024-02-24 14:01-0600\n"
 "Last-Translator:   <cro@ncbt.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
 #: allauth_ui/templates/account/email_confirm.html:6
 #: allauth_ui/templates/account/email_confirm.html:9
 msgid "Confirm E-mail Address"
-msgstr "Confirmar dirección de correo electrónico"
+msgstr "Confirmer l'adresse e-mail"
 
 #: allauth_ui/templates/account/email_confirm.html:12
 #, python-format
@@ -32,7 +32,8 @@ msgid ""
 "  "
 msgstr ""
 "\n"
-"Por favor, confirme que <a href=\"mailto:%(email)s\">%(email)s</a> es una dirección de correo electrónico para el usuario %(user_display)s.  "
+"  Veuillez confirmer que <a href=\"mailto:%(email)s\"><code>%(email)s</a> est une adresse électronique pour l'utilisateur <code>%(user_display)s.\n"
+"  "
 
 #: allauth_ui/templates/account/email_confirm.html:22
 #, python-format
@@ -42,74 +43,73 @@ msgid ""
 "  "
 msgstr ""
 "\n"
-"Este enlace de confirmación de correo electrónico ha caducado o es inválido. Por favor, <a href=\"%(email_url)s\">solicite una nueva solicitud de confirmación de correo electrónico.</a>  "
+"  Ce lien de confirmation par e-mail a expiré ou n'est pas valide. Veuillez <a href=\"%(email_url)s\">émettre une nouvelle demande de confirmation par e-mail.</a>\n"
+"  "
 
 #: allauth_ui/templates/account/login.html:7
 msgid "Sign in"
-msgstr "Iniciar sesión"
+msgstr "S'inscrire"
 
 #: allauth_ui/templates/account/login.html:35
 msgid "Login"
-msgstr "Inicio de sesión"
+msgstr "Connexion"
 
 #: allauth_ui/templates/account/login.html:39
-#, fuzzy
-#| msgid "Change Password"
 msgid "Forgot Password"
-msgstr "Cambiar contraseña"
+msgstr "Mot de passe oublié"
 
 #: allauth_ui/templates/account/login.html:42
 #: allauth_ui/templates/socialaccount/signup.html:5
 #: allauth_ui/templates/socialaccount/signup.html:8
 msgid "Sign Up"
-msgstr "Inscribirse"
+msgstr "S'inscrire"
 
 #: allauth_ui/templates/account/login.html:57
 msgid "Sign in with a third party"
-msgstr "Iniciar sesión con un tercero"
+msgstr "Se connecter avec un tiers"
 
 #: allauth_ui/templates/account/logout.html:3
 msgid "Sign out"
-msgstr "Cerrar sesión"
+msgstr "S'inscrire"
 
 #: allauth_ui/templates/account/password_reset.html:3
 #: allauth_ui/templates/account/password_reset.html:6
 #: allauth_ui/templates/account/password_reset_done.html:3
 msgid "Password Reset"
-msgstr "Restablecer contraseña"
+msgstr "Réinitialisation du mot de passe"
 
 #: allauth_ui/templates/account/password_reset.html:8
 msgid ""
 "Enter your user account's verified email address and we will send you a "
 "password reset link."
 msgstr ""
-"Introduzca la dirección de correo electrónico verificada de su cuenta de "
-"usuario y le enviaremos un enlace para restablecer la contraseña."
+"Saisissez l'adresse électronique vérifiée de votre compte utilisateur et "
+"nous vous enverrons un lien de réinitialisation du mot de passe."
 
 #: allauth_ui/templates/account/password_reset.html:12
 msgid "Reset my password"
-msgstr "Restablecer mi contraseña"
+msgstr "Réinitialiser mon mot de passe"
 
 #: allauth_ui/templates/account/password_reset_done.html:8
 msgid "Reset email sent"
-msgstr "Correo electrónico de restablecimiento enviado"
+msgstr "Envoi d'un courriel de réinitialisation"
 
 #: allauth_ui/templates/account/password_reset_done.html:11
 msgid ""
 "We have sent you an e-mail. Please contact us if you do not receive it "
 "within a few minutes."
 msgstr ""
-"Le hemos enviado un correo electrónico. Póngase en contacto con nosotros si "
-"no lo recibe en unos minutos."
+"Nous vous avons envoyé un e-mail. Veuillez nous contacter si vous ne le "
+"recevez pas dans les minutes qui suivent."
 
 #: allauth_ui/templates/account/password_reset_from_key.html:5
 #: allauth_ui/templates/account/password_reset_from_key.html:8
 msgid "Change Password"
-msgstr "Cambiar contraseña"
+msgstr "Modifier le mot de passe"
 
 #: allauth_ui/templates/account/password_reset_from_key.html:8
 msgid "Bad Token"
-msgstr "Token incorrecto"
+msgstr "Mauvais jeton"
 
 #: allauth_ui/templates/account/password_reset_from_key.html:14
 #, python-format
@@ -118,49 +118,47 @@ msgid ""
 "        Please request a\n"
 "        <a class=\"text-blue-400 hover:text-blue-500\" href=\"%(passwd_reset_url)s\">new password reset</a>."
 msgstr ""
-"El enlace de restablecimiento de contraseña no era válido, posiblemente porque ya se ha utilizado. <br>\n"
-"        Por favor, solicite un\n"
-"        <a class=\"text-blue-400 hover:text-blue-500\" href=\"%(passwd_reset_url)s\">nuevo restablecimiento de contraseña</a>."
+"Le lien de réinitialisation du mot de passe n'était pas valide, peut-être parce qu'il a déjà été utilisé. <br>\n"
+"        Veuillez demander un\n"
+"        <a class=\"text-blue-400 hover:text-blue-500\" href=\"%(passwd_reset_url)s\">nouvelle réinitialisation du mot de passe</a>."
 
 #: allauth_ui/templates/account/password_reset_from_key.html:23
-#, fuzzy
-#| msgid "Change Password"
 msgid "Change password"
-msgstr "Cambiar contraseña"
+msgstr "Modifier le mot de passe"
 
 #: allauth_ui/templates/account/password_reset_from_key.html:27
 #: allauth_ui/templates/account/password_reset_from_key_done.html:11
 msgid "Your password is now changed."
-msgstr "Tu contraseña ha cambiado."
+msgstr "Votre mot de passe est maintenant modifié."
 
 #: allauth_ui/templates/account/password_reset_from_key_done.html:5
 #: allauth_ui/templates/account/password_reset_from_key_done.html:10
 msgid "Changed Password"
-msgstr "Contraseña modificada"
+msgstr "Modification du mot de passe"
 
 #: allauth_ui/templates/account/signup.html:3
 #: allauth_ui/templates/account/signup.html:9
 #: allauth_ui/templates/socialaccount/signup.html:19
 msgid "Sign up"
-msgstr "Inscríbete"
+msgstr "S'inscrire"
 
 #: allauth_ui/templates/account/signup.html:12
 msgid "Already have an account? Sign in."
-msgstr "¿Ya tienes una cuenta? Inicie sesión."
+msgstr "Vous avez déjà un compte ? S'identifier"
 
 #: allauth_ui/templates/account/signup_closed.html:5
 #: allauth_ui/templates/account/signup_closed.html:9
 msgid "Sign Up Closed"
-msgstr "Inscripción cerrada"
+msgstr "Inscription fermée"
 
 #: allauth_ui/templates/account/signup_closed.html:10
 msgid "We are sorry, but the sign up is currently closed."
-msgstr "Lo sentimos, pero la inscripción está cerrada."
+msgstr "Nous sommes désolés, mais l'inscription est actuellement fermée."
 
 #: allauth_ui/templates/account/verification_sent.html:5
 #: allauth_ui/templates/account/verification_sent.html:10
 msgid "Verify Your E-mail Address"
-msgstr "Verifique su dirección de correo electrónico"
+msgstr "Vérifiez votre adresse e-mail"
 
 #: allauth_ui/templates/account/verification_sent.html:12
 msgid ""
@@ -170,52 +168,54 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"      Le hemos enviado un correo electrónico para su verificación. Siga el enlace proporcionado para finalizar el proceso de registro.\n"
-"      Póngase en contacto con nosotros si no lo recibe en unos minutos.\n"
+"      Nous vous avons envoyé un e-mail pour vérification. Suivez le lien fourni pour finaliser la procédure d'inscription.\n"
+"      Veuillez nous contacter si vous ne le recevez pas dans les minutes qui suivent.\n"
 "      "
 
 #: allauth_ui/templates/socialaccount/authentication_error.html:5
 #: allauth_ui/templates/socialaccount/authentication_error.html:10
 msgid "Social Network Login Failure"
-msgstr "Fallo de inicio de sesión en redes sociales"
+msgstr "Échec de la connexion à un réseau social"
 
 #: allauth_ui/templates/socialaccount/authentication_error.html:13
 msgid ""
 "An error occurred while attempting to login via your social network account."
 msgstr ""
-"Se ha producido un error al intentar iniciar sesión a través de su cuenta de"
-" red social."
+"Une erreur s'est produite lors de la tentative de connexion via votre compte"
+" de réseau social."
 
 #: allauth_ui/templates/socialaccount/connections.html:4
 #: allauth_ui/templates/socialaccount/connections.html:7
 msgid "Account Connections"
-msgstr "Conexiones de cuentas"
+msgstr "Connexions de compte"
 
 #: allauth_ui/templates/socialaccount/connections.html:10
 msgid "You have the following social accounts connected:"
-msgstr "Tienes conectadas las siguientes cuentas sociales:"
+msgstr "Vous avez connecté les comptes sociaux suivants :"
 
 #: allauth_ui/templates/socialaccount/connections.html:34
 msgid ""
 "You currently have no social network accounts connected to this account."
 msgstr ""
-"Actualmente no tienes ninguna cuenta de red social conectada a esta cuenta."
+"Vous n'avez actuellement aucun compte de réseau social connecté à ce compte."
 
 #: allauth_ui/templates/socialaccount/connections.html:41
 msgid "Add a third party account"
-msgstr "Añadir una cuenta de terceros"
+msgstr "Ajouter un compte tiers"
 
 #: allauth_ui/templates/socialaccount/login.html:8
 msgid "You are about to connect a new third party account from"
-msgstr "Está a punto de conectar una nueva cuenta de terceros de"
+msgstr ""
+"Vous êtes sur le point de connecter un nouveau compte tiers à partir de"
 
 #: allauth_ui/templates/socialaccount/login.html:10
 msgid "You are about to sign in using a third party account from"
-msgstr "Está a punto de iniciar sesión utilizando una cuenta de terceros de"
+msgstr ""
+"Vous êtes sur le point de vous connecter à l'aide d'un compte tiers de"
 
 #: allauth_ui/templates/socialaccount/login.html:16
 msgid "Continue"
-msgstr "Continúe en"
+msgstr "Continuer"
 
 #: allauth_ui/templates/socialaccount/signup.html:11
 #, python-format
@@ -225,5 +225,5 @@ msgid ""
 "  %(site_name)s. As a final step, please complete the following form:\n"
 msgstr ""
 "\n"
-"  Está a punto de utilizar su cuenta de %(nombre_proveedor)s para iniciar sesión en\n"
-"  <code>%(nombre_del_sitio)s. Como paso final, rellene el siguiente formulario:\n"
+"  Vous êtes sur le point d'utiliser votre compte %(nom_du_fournisseur) pour vous connecter à\n"
+"  <code>%(nom_du_site)s. Pour terminer, veuillez remplir le formulaire suivant :\n"

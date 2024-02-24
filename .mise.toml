@@ -1,0 +1,13 @@
+# This a template for .rtx.toml for python
+# In many cases we also symlink .venv in the current directory to
+# the .pyenv version because tools can pick up the correct env more easily
+[env]
+PYTHON_KEYRING_BACKEND = 'keyring.backends.null.Keyring'
+# PYTHONPATH = "{{config_root}}/odmn:{{config_root}}/odmn/odmn"
+# DJANGO_SETTINGS_MODULE = 'odmn.settings.development'
+DEEPL_LANGUAGE_KEY = 'fb1c4913-9629-486a-906c-55b1e57bd98e:fx'
+
+[tools]
+python = {version='3.12.2', virtualenv='{{env.HOME}}/.pyenv/versions/allauthui'}
+
+
