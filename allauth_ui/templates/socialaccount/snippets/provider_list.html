@@ -4,13 +4,15 @@
 {% get_providers as socialaccount_providers %}
 
 {% for provider in socialaccount_providers %}
-   {% if provider.id == "openid" %}
-   {% for brand in provider.get_brands %}
-      <a class="flex items-center self-stretch justify-center h-12 mt-3 text-white uppercase rounded bg-stone-900 hover:bg-black"
-        href="{% provider_login_url provider.id  openid=brand.openid_url process=process  %}">{{brand.name}}</a>
-   {% endfor %}
-   {% endif %}
+   {% provider_connected provider user as is_connected %}
+   {% if not is_connected %}
+      {% if provider.id == "openid" %}
+         {% for brand in provider.get_brands %}
+            <a class="flex items-center self-stretch justify-center h-12 mt-3 text-white uppercase rounded bg-stone-900 hover:bg-black"
+              href="{% provider_login_url provider.id  openid=brand.openid_url process=process  %}">{{brand.name}}</a>
+         {% endfor %}
+      {% endif %}
       <a class="flex items-center justify-center h-12 mt-3 text-white uppercase self-stretch rounded {{ provider | socialprovider_color }}"
         href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">{{provider.name}}</a>
-
+   {% endif %}
 {% endfor %}
