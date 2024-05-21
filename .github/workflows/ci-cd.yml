@@ -1,0 +1,106 @@
+---
+name: CI/CD
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        id: setup-python
+        with:
+          python-version: 3.11
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 1.8.3
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+          installer-parallel: true
+
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: |
+          poetry install --no-interaction --no-root
+
+      - name: Format (black)
+        run: |
+          source .venv/bin/activate
+          black --check $(git ls-files -- '*.py' ':!:**/migrations/*.py')
+
+      - name: Sort imports (isort)
+        run: |
+          source .venv/bin/activate
+          isort --check-only $(git ls-files -- '*.py' ':!:**/migrations/*.py')
+
+      - name: Lint (pylint)
+        run: |
+          source .venv/bin/activate
+          pylint $(git ls-files -- '*.py' ':!:**/migrations/*.py')
+
+      - name: Validate templates
+        run: |
+          source .venv/bin/activate
+          ./manage.py validate_templates
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        id: setup-python
+        with:
+          python-version: 3.11
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: 1.8.3
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+          installer-parallel: true
+
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v3
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: |
+          poetry install --no-interaction --no-root
+          source .venv/bin/activate
+
+      - name: Run Migrations
+        run: |
+          source .venv/bin/activate
+          ./manage.py migrate
+
+      - name: Run Pytest
+        run: |
+          source .venv/bin/activate
+          pytest tests

@@ -33,7 +33,7 @@ class FakeConfirmEmailView(TemplateView):
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    re_path(r'^rosetta/', include('rosetta.urls')),
+    re_path(r"^rosetta/", include("rosetta.urls")),
     path("fake/accounts/social/signup", FakeSocialSignup.as_view()),
     path("fake/accounts/confirm-email", FakeConfirmEmailView.as_view()),
     path("accounts/", include("allauth.urls")),
