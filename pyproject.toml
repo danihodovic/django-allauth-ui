@@ -12,6 +12,7 @@ packages = [
     { include = "allauth_ui" },
 ]
 include = ["allauth_ui/static/allauth_ui/output.css"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0.0"
