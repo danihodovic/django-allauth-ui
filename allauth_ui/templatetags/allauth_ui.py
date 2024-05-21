@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 
 from django import template
-
+from django.conf import settings
 
 register = template.Library()
 
@@ -22,3 +22,8 @@ def socialprovider_color(socialprovider):
     if name in social_colors:
         return f"social-{name}"
     return "bg-stone-900 hover:bg-black"
+
+
+@register.simple_tag
+def check_allauth_socialaccount_installed():
+    return "allauth.socialaccount" in settings.INSTALLED_APPS

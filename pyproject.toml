@@ -40,3 +40,8 @@ django-toolset = "^0.1.5"
 [tool.poetry.group.dev.dependencies]
 django-click = "^2.3.0"
 django-allauth = "<0.58.0"
+black = {extras = ["d"], version = "^24.4.2"}
+
+[tool.pytest.ini_options]
+addopts = "--ds=tests.settings --reuse-db --pdbcls=pudb.debugger:Debugger"
+python_files = "tests.py test_*.py"
