@@ -1,5 +1,5 @@
 {% extends "account/base.html" %}
-{% load i18n %}
+{% load i18n allauth_ui %}
 {% block head_title %}
     {% translate "Sign up" %}
 {% endblock %}
@@ -15,4 +15,8 @@
     </form>
     <a class="self-center pt-8 text-xs text-blue-400 justify-self-center hover:text-blue-500"
        href="{{ login_url }}">{% translate "Already have an account? Sign in." %}</a>
+    {% check_allauth_socialaccount_installed as is_allauth_socialaccount_installed %}
+    {% if is_allauth_socialaccount_installed %}
+        {% include "socialaccount/snippets/social_login.html" %}
+    {% endif %}
 {% endblock %}
