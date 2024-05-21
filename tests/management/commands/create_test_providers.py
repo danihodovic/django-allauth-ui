@@ -16,5 +16,5 @@ def command():
             secret="y",
         )
         app.save()
-        app.sites.set(Site.objects.all())
+        app.sites.set(Site.objects.all())  # pylint: disable=no-member
         click.secho(f"Created {app}", fg="green")
