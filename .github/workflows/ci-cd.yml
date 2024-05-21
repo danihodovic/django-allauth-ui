@@ -62,6 +62,11 @@ jobs:
           source .venv/bin/activate
           ./manage.py validate_templates
 
+      - name: Django Template/Html Lint (djlint)
+        run: |
+          source .venv/bin/activate
+          djlint . --check
+
   test:
     name: Test
     runs-on: ubuntu-latest

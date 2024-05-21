@@ -1,13 +1,18 @@
 {% extends "account/base.html" %}
-
-{% block head_title %}{% translate "Sign up" %}{% endblock %}
-
+{% load i18n %}
+{% block head_title %}
+    {% translate "Sign up" %}
+{% endblock %}
 {% block whitebox %}
-<h1 class="mb-5 text-3xl text-center">Sign up</h1>
-<form id="signup_form" method="post" action="{% url 'account_signup' %}" novalidate>
-  {% include "account/_render_form.html" %}
-  {% translate "Sign up" as signup_text %}
-  {% include "account/_button.html" with text=signup_text %}
-</form>
-<a class="self-center pt-8 text-xs text-blue-400 justify-self-center hover:text-blue-500" href="{{ login_url }}">{% translate "Already have an account? Sign in." %}</a>
+    <h1 class="mb-5 text-3xl text-center">Sign up</h1>
+    <form id="signup_form"
+          method="post"
+          action="{% url 'account_signup' %}"
+          novalidate>
+        {% include "account/_render_form.html" %}
+        {% translate "Sign up" as signup_text %}
+        {% include "account/_button.html" with text=signup_text %}
+    </form>
+    <a class="self-center pt-8 text-xs text-blue-400 justify-self-center hover:text-blue-500"
+       href="{{ login_url }}">{% translate "Already have an account? Sign in." %}</a>
 {% endblock %}
