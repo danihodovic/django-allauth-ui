@@ -1,7 +1,5 @@
 {% extends "account/base.html" %}
-{% load i18n %}
-{% load widget_tweaks %}
-{% load account socialaccount %}
+{% load i18n account allauth_ui widget_tweaks %}
 
 {% block head_title %}
   {% translate "Sign in" %}
@@ -46,18 +44,11 @@
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
 </form>
-{% get_providers as socialaccount_providers %}
-{% if socialaccount_providers %}
-<div class="flex items-center self-stretch justify-between pt-3 mt-3">
-  <hr class="w-full">
-  <span class="p-2 mb-1 text-gray-400">OR</span>
-  <hr class="w-full">
-</div>
 
-<p class="text-xs text-center text-gray-500">{% translate "Sign in with a third party" %}</p>
 
-{% include "socialaccount/snippets/provider_list.html" with process="login" %}
+{% check_allauth_socialaccount_installed as is_allauth_socialaccount_installed %}
+{% if is_allauth_socialaccount_installed %}
+{% include "socialaccount/snippets/social_login.html" %}
 {% endif %}
 
-{% include "socialaccount/snippets/login_extra.html" %}
 {% endblock %}
