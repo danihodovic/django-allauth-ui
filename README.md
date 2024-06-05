@@ -99,4 +99,8 @@ Make changes in allauth_ui/templates and open the browser at http://localhost:80
 Once you're done compile tailwind with `npm run-script build` and submit a pull-request 🃏
 
 ## Contributors
-[<img alt="EVELYN-RYAN" src="https://avatars.githubusercontent.com/u/72516405?v=4&s=117" width="117">](https://github.com/EVELYN-RYAN)[<img alt="filip-dobrovolny-csob-cz" src="https://avatars.githubusercontent.com/u/95356884?v=4&s=117" width="117">](https://github.com/filip-dobrovolny-csob-cz)[<img alt="mohmyo" src="https://avatars.githubusercontent.com/u/14170159?v=4&s=117" width="117">](https://github.com/mohmyo)[<img alt="twolfson" src="https://avatars.githubusercontent.com/u/902488?v=4&s=117" width="117">](https://github.com/twolfson)[<img alt="anyidea" src="https://avatars.githubusercontent.com/u/48710760?v=4&s=117" width="117">](https://github.com/anyidea)[<img alt="danihodovic" src="https://avatars.githubusercontent.com/u/5557301?v=4&s=117" width="117">](https://github.com/danihodovic)
+<a href="https://github.com/danihodovic/django-allauth-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=danihodovic/django-allauth-ui" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
