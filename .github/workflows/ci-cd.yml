@@ -79,6 +79,9 @@ jobs:
         with:
           python-version: 3.11
 
+      - name: Install GNU gettext
+        run: sudo apt-get install -y gettext
+
       - name: Install Poetry
         uses: snok/install-poetry@v1
         with:
@@ -104,6 +107,11 @@ jobs:
         run: |
           source .venv/bin/activate
           ./manage.py migrate
+  
+      - name: Run compile messages
+        run: |
+          source .venv/bin/activate
+          ./manage.py compilemessages
 
       - name: Run Pytest
         run: |
