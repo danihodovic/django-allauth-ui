@@ -1,0 +1,39 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en" data-theme="dracula">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>django-allauth-ui demo</title>
+        {% tailwind_css %}
+    </head>
+    <body>
+        <div class="flex justify-around navbar bg-base-100 mb-7">
+            <div class="justify-self-start">
+                <a href="{% url "home" %}" class="text-xl btn btn-ghost">django-allauth-ui demo</a>
+            </div>
+            <div class="flex justify-center">
+                {% if extra_data %}
+                    <div class="avatar">
+                        <div class="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                            <img src="{{ extra_data.avatar_url }}" />
+                        </div>
+                    </div>
+                {% endif %}
+                {% if not request.user.is_authenticated %}
+                    <a href="{% url "account_login" %}">
+                        <button class="btn btn-link">Log in</button>
+                    </a>
+                {% else %}
+                    <a href="{% url "account_logout" %}">
+                        <button class="btn btn-link">Log out</button>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="container flex flex-col items-center justify-start h-screen mx-auto">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>

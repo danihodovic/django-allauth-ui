@@ -1,0 +1,17 @@
+---
+version: '3.8'
+services:
+  postgres:
+    image: postgres:14
+    container_name: postgres
+    environment:
+      POSTGRES_DB: sample_deployment
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - sample-deployment:/var/lib/postgresql/data
+      - ./db_dump:/tmp/db_dump
+    ports: ['5432:5432']
+
+volumes:
+  sample-deployment:
