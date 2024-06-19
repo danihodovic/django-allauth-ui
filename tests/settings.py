@@ -84,6 +84,7 @@ LANGUAGES = (
     ("en-us", _("English")),
     ("es", _("Spanish")),
     ("fr", _("French")),
+    ("pt-br", _("Portuguese (Brazil)")),
 )
 
 AUTHENTICATION_BACKENDS = [
