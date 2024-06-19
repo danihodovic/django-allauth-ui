@@ -67,6 +67,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "allauth.account.middleware.AccountMiddleware",
 ]
 
@@ -127,9 +128,16 @@ AUTHENTICATION_BACKENDS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+LANGUAGES = (
+    ("en", "English"),
+    ("fr", "French"),
+    ("es", "Spanish"),
+    ("pt-br", "Portuguese (Brazil)"),
+)
 
 USE_I18N = True
+
+TIME_ZONE = "UTC"
 
 USE_TZ = True
 
