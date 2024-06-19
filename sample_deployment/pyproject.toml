@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "sample-deployment"
+version = "0.0.1"
+description = ""
+authors = ["Dani Hodovic <dani.hodovic@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django-allauth-ui = "^0.3.6"
+gunicorn = "^22.0.0"
+django-allauth = "^0.63.3"
+django-widget-tweaks = "^1.5.0"
+django-environ = "^0.11.2"
+setuptools = "69.5.1"
+django-tailwind = {extras = ["reload"], version = "^3.8.0"}
+django-extensions = "^3.2.3"
+werkzeug = "^3.0.3"
+djhtml = "^3.0.6"
+pudb = "^2024.1"
+ptpython = "^3.0.27"
+psycopg2 = "^2.9.9"
+whitenoise = "^6.6.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.2.3"
+black = {extras = ["d"], version = "^24.4.2"}
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

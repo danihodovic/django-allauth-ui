@@ -1,0 +1,31 @@
+{% extends "example/base.html" %}
+{% block content %}
+    <ul class="w-8/12 text-lg menu bg-base-200 rounded-box">
+        <li>
+            <a href="{% url "home" %}">Pages</a>
+            <ul>
+                <li>
+                    <a href="{% url "account_signup" %}">Account Signup</a>
+                </li>
+                <li>
+                    <a href="{% url "socialaccount_signup" %}">Social Account Signup</a>
+                </li>
+                <li>
+                    <a href="{% url "socialaccount_connections" %}">Connected Social Accounts</a>
+                </li>
+                <li>
+                    <a href="{% url "account_email" %}">Account Emails</a>
+                </li>
+                <li>
+                    <a href="{% url "account_change_password" %}">Change Password</a>
+                </li>
+                <li>
+                    <a href="{% url "account_reset_password" %}">Reset Password</a>
+                </li>
+                <li>
+                    <a href="{% url "social-metadata" %}">Social Account Metadata</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+{% endblock content %}

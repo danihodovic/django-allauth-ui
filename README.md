@@ -8,7 +8,10 @@ are minimal html. I usually end up re-designing the login / logout / signup
 pages for each new Django project. This library aims at providing decent
 defaults for new projects.
 
-* [AllAuth UI](#allauth-ui)
+See the deployed demo at: https://django-allauth-ui.hodovi.ch.
+
+## Table of contents
+
 * [Features](#features)
 * [Installation](#installation)
 * [Screenshots](#screenshots)
