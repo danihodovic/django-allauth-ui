@@ -1,0 +1,9 @@
+{% extends "account/account_inactive.html" %}
+{% load i18n %}
+{% load slippers %}
+{% block content %}
+    {% trans "Account Inactive" as heading %}
+    {% trans "This account is inactive." as subheading %}
+    {% #container heading=heading subheading=subheading %}
+    {% /container %}
+{% endblock content %}

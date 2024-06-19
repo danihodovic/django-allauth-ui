@@ -1,13 +1,15 @@
-{% extends "account/base.html" %}
+{% extends "account/logout.html" %}
 {% load i18n %}
-{% block head_title %}
-    {% translate "Sign out" %}
-{% endblock %}
-{% block whitebox %}
-    <form method="post" action="{% url 'account_logout' %}">
-        {% csrf_token %}
-        <p>{% translate "Are you sure you want to sign out?" %}</p>
-        {% translate "Sign out" as signout_message %}
-        {% include "account/_button.html" with text=signout_message %}
-    </form>
-{% endblock %}
+{% load slippers %}
+{% block content %}
+    {% trans "Sign Out" as heading %}
+    {% trans "Are you sure you want to sign out?" as subheading %}
+    {% url 'account_logout' as url %}
+    {% #container heading=heading subheading=subheading %}
+    {% trans "Continue" as button_text %}
+    {% #form url=url button_text=heading %}
+    {% csrf_token %}
+    {{ redirect_field }}
+    {% /form %}
+    {% /container %}
+{% endblock content %}

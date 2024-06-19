@@ -13,5 +13,9 @@ services:
       - ./db_dump:/tmp/db_dump
     ports: ['5432:5432']
 
+  mailpit:
+    image: axllent/mailpit:v1.12
+    network_mode: host
+
 volumes:
   sample-deployment:

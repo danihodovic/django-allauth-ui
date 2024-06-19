@@ -1,22 +1,20 @@
-{% extends "account/base.html" %}
-{% load i18n allauth_ui %}
-{% block head_title %}
-    {% translate "Sign up" %}
-{% endblock %}
-{% block whitebox %}
-    <h1 class="mb-5 text-3xl text-center">Sign up</h1>
-    <form id="signup_form"
-          method="post"
-          action="{% url 'account_signup' %}"
-          novalidate>
-        {% include "account/_render_form.html" %}
-        {% translate "Sign up" as signup_text %}
-        {% include "account/_button.html" with text=signup_text %}
-    </form>
-    <a class="self-center pt-8 text-xs text-blue-400 justify-self-center hover:text-blue-500"
-       href="{{ login_url }}">{% translate "Already have an account? Sign in." %}</a>
-    {% check_allauth_socialaccount_installed as is_allauth_socialaccount_installed %}
-    {% if is_allauth_socialaccount_installed %}
-        {% include "socialaccount/snippets/social_login.html" %}
+{% extends "account/signup.html" %}
+{% load i18n %}
+{% load slippers %}
+{% load widget_tweaks %}
+{% block content %}
+    {% trans "Sign Up" as heading %}
+    {% blocktranslate asvar subheading %}Already have an account? Then please <a href="{{ login_url }}" class="link">sign in</a>.{% endblocktranslate %}
+    {% #container heading=heading subheading=subheading  %}
+    {% if not SOCIALACCOUNT_ONLY %}
+        {% url 'account_signup' as action_url %}
+        {% #form form=form url=url button_text=heading %}
+        {{ redirect_field }}
+        {% csrf_token %}
+        {% /form %}
     {% endif %}
+    {% if SOCIALACCOUNT_ENABLED %}
+        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+    {% endif %}
+    {% /container %}
 {% endblock %}

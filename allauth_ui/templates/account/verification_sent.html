@@ -1,19 +1,9 @@
-{% extends "account/base.html" %}
+{% extends "account/verification_sent.html" %}
 {% load i18n %}
-{% block head_title %}
-    {% trans "Verify Your E-mail Address" %}
-{% endblock %}
+{% load slippers %}
 {% block content %}
-    <div class="flex flex-col items-center justify-center w-screen h-screen text-gray-700 bg-gray-200">
-        <div class="flex flex-col items-center p-12 bg-white rounded shadow-lg md:w-7/12 xl:w-5/12">
-            <h1 class="mb-5 text-3xl text-center">{% trans "Verify Your E-mail Address" %}</h1>
-            <p class="py-3">
-                {% blocktrans %}
-      We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process.
-      Please contact us if you do not receive it within a few minutes.
-      {% endblocktrans %}
-            </p>
-            {% include "account/_links.html" %}
-        </div>
-    </div>
-{% endblock %}
+    {% trans "Confirm Email Address" as heading %}
+    {% blocktrans asvar subheading %}We have sent an email to you for verification. Follow the link provided to finalize the signup process. If you do not see the verification email in your main inbox, check your spam folder. Please contact us if you do not receive the verification email within a few minutes.{% endblocktrans %}
+    {% #container heading=heading subheading=subheading %}
+    {% /container %}
+{% endblock content %}

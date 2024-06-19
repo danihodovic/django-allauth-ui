@@ -1,13 +1,21 @@
-{% load socialaccount %}
+{% load allauth socialaccount %}
 {% load allauth_ui %}
 {% get_providers as socialaccount_providers %}
-{% for provider in socialaccount_providers %}
-    {% if provider.id == "openid" %}
-        {% for brand in provider.get_brands %}
-            <a class="flex items-center self-stretch justify-center h-12 mt-3 text-white uppercase rounded bg-stone-900 hover:bg-black"
-               href="{% provider_login_url provider.id  openid=brand.openid_url process=process %}">{{ brand.name }}</a>
-        {% endfor %}
-    {% endif %}
-    <a class="flex items-center justify-center h-12 mt-3 text-white uppercase self-stretch rounded {{ provider | socialprovider_color }}"
-       href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">{{ provider.name }}</a>
-{% endfor %}
+{% if socialaccount_providers %}
+    <div>
+        {% for provider in socialaccount_providers %}
+            {% if provider.id == "openid" %}
+                {% for brand in provider.get_brands %}
+                    {% provider_login_url provider openid=brand.openid_url process=process as href %}
+                    {% element provider name=brand.name provider_id=provider.id href=href %}
+                {% endelement %}
+                <a class="btn w-full my-1" title="{{ brand.name }}" href="{{ href }}">{{ brand.name }}</a>
+            {% endfor %}
+        {% endif %}
+        {% provider_login_url provider process=process scope=scope auth_params=auth_params as href %}
+        <a class="btn w-full my-1 text-white {{ provider | socialprovider_color }}"
+           title="{{ provider.name }}"
+           href="{{ href }}">{{ provider.name }}</a>
+    {% endfor %}
+</div>
+{% endif %}

@@ -31,10 +31,12 @@ See the deployed demo at: https://django-allauth-ui.hodovi.ch.
 ```
 pip install django-allauth-ui
 pip install django-widget-tweaks
+pip install slippers
 ```
 
-django-allauth-ui depends on django-widget-tweaks to render form fields. Make
-sure to install django-widget-tweaks and add it to the INSTALLED_APPS.
+django-allauth-ui depends on [jazzband/django-widget-tweaks](https://github.com/jazzband/django-widget-tweaks)
+and [mixxorz/slippers](https://github.com/mixxorz/slippers) to render templates. Make
+sure to install both packages and add them to the INSTALLED_APPS.
 
 Add django-allauth-ui **before** django-allauth in your INSTALLED_APPS. See
 [./tests/settings.py](./tests/settings.py) for an example.
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
     "widget_tweaks",
+    "slippers",
 ]
 ```
 **Note**:
