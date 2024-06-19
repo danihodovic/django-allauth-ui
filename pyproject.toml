@@ -54,3 +54,10 @@ pytest-django = "4.1.0"
 [tool.pytest.ini_options]
 addopts = "--ds=tests.settings --reuse-db --pdbcls=pudb.debugger:Debugger"
 python_files = "tests.py test_*.py"
+
+[tool.black]
+exclude = ".*(venv|virtualenv|.poetry|migrations|node_modules)"
+
+[tool.isort]
+skip_glob = "**/migrations/*.py,**/fixtures/*.py"
+profile = "black"
