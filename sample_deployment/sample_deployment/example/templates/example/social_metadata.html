@@ -3,16 +3,16 @@
     {% if code_block %}
         <div class="">
             <div class="mockup-code">
-  <pre data-prefix="$" class="text-success"><code>SocialAccount.objects.first().extra_data</code></pre>
+                <pre data-prefix="$" class="text-success"><code>SocialAccount.objects.first().extra_data</code></pre>
                 {{ code_block | safe }}
             </div>
         </div>
     {% else %}
         You need to <a href="{% url "account_login" %}">
-            <button class="btn btn-link">
-                log
-                in
-            </button>
-        </a> to display social account metadata
-    {% endif %}
+        <button class="btn btn-link">
+            log
+            in
+        </button>
+    </a> to display social account metadata
+{% endif %}
 {% endblock content %}
