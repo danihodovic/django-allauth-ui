@@ -125,7 +125,10 @@ msgid ""
 "href=\"%(passwd_reset_url)s\">new password reset</a>."
 msgstr ""
 "O link de redefinição de senha era inválido, possivelmente porque já foi "
-
+"used. <br>\n"
+"        Please request a\n"
+"        <a class=\"text-blue-400 hover:text-blue-500\" "
+"href=\"%(passwd_reset_url)s\">new password reset</a>."
 #: allauth_ui/templates/account/password_reset_from_key.html:28
 msgid "Change password"
 msgstr "Alterar senha"
@@ -229,7 +232,7 @@ msgid ""
 msgstr ""
 "\n"
 "  Você está prestes a usar sua conta %(provider_name)s para fazer login no\n"
-"  %(site_name)s. Como etapa final, por favor, complete o seguinte formulário:"
+"  %(site_name)s. Como etapa final, por favor, complete o seguinte formulário:\n"
 
 #: allauth_ui/templates/socialaccount/snippets/social_login.html:9
 msgid "Sign in with a third party"
