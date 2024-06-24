@@ -16,7 +16,7 @@
                 {% if extra_data %}
                     <div class="avatar">
                         <div class="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                            <img src="{{ extra_data.avatar_url }}" />
+                            <img alt="avatar" src="{{ extra_data.avatar_url }}" />
                         </div>
                     </div>
                 {% endif %}
@@ -57,7 +57,8 @@
             </div>
             {% if "localhost" not in request.get_host %}
                 <noscript>
-                    <img src="https://s.depode.com/ingress/739a9ce3-0cd5-42be-89c0-6b9d0d16e305/pixel.gif">
+                    <img alt="s"
+                         src="https://s.depode.com/ingress/739a9ce3-0cd5-42be-89c0-6b9d0d16e305/pixel.gif">
                 </noscript>
                 <script defer
                         src="https://s.depode.com/ingress/739a9ce3-0cd5-42be-89c0-6b9d0d16e305/script.js"></script>
