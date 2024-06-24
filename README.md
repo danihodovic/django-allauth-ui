@@ -1,14 +1,15 @@
 # AllAuth UI
 
+![django-allauth-ui](./django-allauth-vs-allauth-ui.png)
+
+
 UI templates for [django-allauth](https://github.com/pennersr/django-allauth)
-built with Tailwind.
+built with Tailwind. https://django-allauth-ui.hodovi.ch.
 
 django-allauth is a great library, but the templates it provides out of the box
 are minimal html. I usually end up re-designing the login / logout / signup
-pages for each new Django project. This library aims at providing decent
+pages for each new Django project. This library aims at providing good
 defaults for new projects.
-
-See the deployed demo at: https://django-allauth-ui.hodovi.ch.
 
 ## Table of contents
 
@@ -55,18 +56,6 @@ INSTALLED_APPS = [
 **Note**:
 
 When going to **production** you should run ```python manage.py collectstatic```
-
-## Screenshots
-
-![Log In](./images/signin.png)
-![Sign Up](./images/signup.png)
-![Password Reset](./images/password_reset.png)
-
-### Generating screenshots
-
-```
-convert "$1" -crop 1072x901+436+200 crop_signin.png
-```
 
 ### Hacking on the project
 
