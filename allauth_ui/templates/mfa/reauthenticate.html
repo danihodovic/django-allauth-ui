@@ -1,0 +1,12 @@
+{% extends "mfa/reauthenticate.html" %}
+{% load i18n %}
+{% load slippers %}
+{% block reauthenticate_content %}
+    <div class="mt-5">{% blocktranslate %}Enter an authenticator code:{% endblocktranslate %}</div>
+    {% url 'mfa_reauthenticate' as action_url %}
+    {% trans "Confirm" as button_text %}
+    {% #form form=form url=url button_text=button_text %}
+    {{ redirect_field }}
+    {% csrf_token %}
+    {% /form %}
+{% endblock reauthenticate_content %}

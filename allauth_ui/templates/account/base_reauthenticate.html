@@ -1,0 +1,23 @@
+{% extends "account/base_reauthenticate.html" %}
+{% load i18n %}
+{% load slippers %}
+{% block content %}
+    {% trans "Confirm Access" as heading %}
+    {% blocktranslate asvar subheading %}
+    Please reauthenticate to safeguard your account.
+    {% endblocktranslate %}
+    {% #container heading=heading subheading=subheading %}
+    {% block reauthenticate_content %}{% endblock %}
+    {% if reauthentication_alternatives %}
+        <div class="divider divider-neutral"></div>
+        <h2 class="text-lg my-3">{% translate "Alternative options" %}</h2>
+        <ul>
+            {% for alt in reauthentication_alternatives %}
+                <li>
+                    <a class="link" href="{{ alt.url }}">{{ alt.description }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% /container %}
+{% endblock content %}

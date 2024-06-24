@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
     "django_extensions",
+    "sample_deployment.example",
     "allauth_ui",
     "allauth",
     "allauth.account",
@@ -53,8 +54,8 @@ INSTALLED_APPS = [
     "widget_tweaks",
     "tailwind",
     "sample_deployment.theme",
-    "sample_deployment.example",
     "django_browser_reload",
+    "slippers",
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,7 @@ ROOT_URLCONF = "sample_deployment.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [str(BASE_DIR / "sample_deployment" / "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -123,6 +124,9 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 
+EMAIL_HOST = env("EMAIL_HOST", default="localhost")
+EMAIL_PORT = 1025
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -153,7 +157,7 @@ STATIC_ROOT = "staticfiles"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "http"
 SOCIALACCOUNT_PROVIDERS = {
     "github": {
         "SCOPE": [

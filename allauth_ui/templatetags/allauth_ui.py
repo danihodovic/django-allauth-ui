@@ -21,7 +21,7 @@ def socialprovider_color(socialprovider):
     name = socialprovider.name.lower()
     if name in social_colors:
         return f"social-{name}"
-    return "bg-stone-900 hover:bg-black"
+    return "bg-stone-900 hover:bg-stone-700"
 
 
 @register.simple_tag

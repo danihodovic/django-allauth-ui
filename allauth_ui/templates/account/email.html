@@ -1,0 +1,55 @@
+{% extends "account/email.html" %}
+{% load i18n %}
+{% load slippers %}
+{% block content %}
+    {% trans "Email Addresses" as heading %}
+    {% #container heading=heading %}
+    {% if emailaddresses %}
+        <div>{% trans 'The following email addresses are associated with your account:' %}</div>
+        {% url 'account_email' as url %}
+        {% #form url=url use_default_button="false" %}
+        {{ redirect_field }}
+        {% csrf_token %}
+        <div class="py-3">
+            {% for radio in emailaddress_radios %}
+                {% with emailaddress=radio.emailaddress %}
+                    <div class="form-control">
+                        <label class="cursor-pointer label border p-3 rounded">
+                            <span class="label-text">{{ emailaddress.email }}
+                                {% if emailaddress.verified %}
+                                    <div class="badge badge-primary badge-outline">verified</div>
+                                {% endif %}
+                                {% if emailaddress.primary %}
+                                    <div class="badge badge-secondary badge-outline">primary</div>
+                                {% endif %}
+                            </span>
+                            <input type="radio"
+                                   name="email"
+                                   value="{{ emailaddress.email }}"
+                                   id="{{ radio.id }}"
+                                   class="radio checked:bg-primary"
+                                   {% if radio.checked %}checked{% endif %} />
+                        </label>
+                    </div>
+                {% endwith %}
+            {% endfor %}
+        </div>
+        <div class="flex flex-col mt-3 gap-1.5 ">
+            <button name="action_primary" type="submit" class="btn btn-primary">Make Primary</button>
+            <button name="action_send" type="submit" class="btn btn-secondary">Re-send verification</button>
+            <button name="action_remove" type="submit" class="btn btn-warning">Remove</button>
+        </div>
+        {% /form %}
+    {% else %}
+        {% include "account/snippets/warn_no_email.html" %}
+    {% endif %}
+    {% if can_add_email %}
+        <div class="divider"></div>
+        <h2 class="py-3 text-lg">{% trans "Add Email Address" %}</h2>
+        {% trans "Add Email" as button_text %}
+        {% #form form=form url=url button_text=button_text %}
+        {% csrf_token %}
+        {% /form %}
+    {% endif %}
+    {% /container %}
+{% endblock content %}

@@ -65,7 +65,7 @@ jobs:
       - name: Django Template/Html Lint (djlint)
         run: |
           source .venv/bin/activate
-          djlint . --check
+          djlint . --check --max-line-length 80
 
   test:
     name: Test
@@ -107,7 +107,7 @@ jobs:
         run: |
           source .venv/bin/activate
           ./manage.py migrate
-  
+
       - name: Run compile messages
         run: |
           source .venv/bin/activate

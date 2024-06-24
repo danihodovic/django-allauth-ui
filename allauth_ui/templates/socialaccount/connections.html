@@ -1,46 +1,40 @@
-{% extends "socialaccount/base.html" %}
+{% extends "socialaccount/connections.html" %}
 {% load i18n %}
-{% block head_title %}
-    {% trans "Account Connections" %}
-{% endblock %}
-{% block whitebox %}
-    <h1 class="mb-5 text-xl text-center md:text-3xl">{% trans "Account Connections" %}</h1>
+{% load slippers %}
+{% load widget_tweaks %}
+{% block content %}
+    {% trans "Account Connections" as heading %}
     {% if form.accounts %}
-        <p class="text-sm md:text-base">
-            {% blocktrans %}You have the following social accounts connected:{% endblocktrans %}
-        </p>
-        <form class="flex flex-col items-center w-full m-4"
-              method="post"
-              action="{% url 'socialaccount_connections' %}">
-            {% csrf_token %}
-            {% include "account/_non_field_errors.html" %}
-            {% for base_account in form.accounts %}
-                {% with base_account.get_provider_account as account %}
-                    <div class="mb-3">
-                        <label for="id_account_{{ base_account.id }}">
-                            <input id="id_account_{{ base_account.id }}"
-                                   type="radio"
-                                   name="account"
-                                   value="{{ base_account.id }}"
-                                   class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300" />
-                            <span class="text-sm md:text-base">{{ account.get_brand.name }}</span>
-                        </label>
-                    </div>
-                {% endwith %}
-            {% endfor %}
-            {% include "account/_button.html" with text="Remove" base_color="bg-red" %}
-        </form>
+        {% blocktrans asvar subheading %}
+	    You can sign in to your account using any of the following third-party accounts:
+    	{% endblocktrans %}
     {% else %}
-        <p>{% trans 'You currently have no social network accounts connected to this account.' %}</p>
+        {% trans "You currently have no third-party accounts connected to this account." as subheading %}
     {% endif %}
-    <div class="flex items-center self-stretch justify-between pt-3 mt-3">
-        <hr class="w-full">
-        <span class="p-2 mb-1 text-gray-400">OR</span>
-        <hr class="w-full">
-    </div>
-    {% trans 'Add a third party account' %}
-    <div class="w-full md:w-8/12">
-        {% include "socialaccount/snippets/provider_list.html" with process="connect" %}
-        {% include "socialaccount/snippets/login_extra.html" %}
-    </div>
-{% endblock %}
+    {% #container heading=heading subheading=subheading %}
+    {% if form.accounts %}
+        {% url 'socialaccount_connections' as url %}
+        {% #form form=form url=url render_fields="false" use_default_button="false" %}
+        {% csrf_token %}
+        {% for acc in form.fields.account.choices %}
+            {% var account=acc.0.instance.get_provider_account %}
+            <div class="form-control">
+                <label class="cursor-pointer label border p-3 rounded">
+                    <span class="label-text">{{ account.get_brand.name }}</span>
+                    <input type="radio"
+                           id="id_account_{{ account.account.pk }}"
+                           name="account"
+                           value="{{ account.account.pk }}"
+                           class="radio checked:bg-primary"
+                           {% if radio.checked %}checked{% endif %} />
+                </label>
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-warning my-3">{% trans "Remove" %}</button>
+        {% /form %}
+    {% endif %}
+    <h2 class="py-3 text-lg">{% trans "Add a Third-Party Account" %}</h2>
+    {% include "socialaccount/snippets/provider_list.html" with process="connect" %}
+    {% include "socialaccount/snippets/login_extra.html" %}
+    {% /container %}
+{% endblock content %}

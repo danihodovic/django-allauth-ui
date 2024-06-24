@@ -1,47 +1,37 @@
-{% extends "account/base.html" %}
-{% load i18n account allauth_ui widget_tweaks %}
-{% block head_title %}
-    {% translate "Sign in" %}
-{% endblock %}
-{% block whitebox %}
-    <h1 class="mb-5 text-3xl text-center">Sign in</h1>
-    <form method="POST"
-          action="{% url 'account_login' %}"
-          class="flex flex-col items-center grow-0">
-        {% csrf_token %}
-        {% include "account/_non_field_errors.html" %}
-        {% for field in form.visible_fields %}
-            {% if field.name != "remember" %}
-                <div class="mb-4">
-                    {{ field|add_label_class:"font-semibold text-xs" }}
-                    {% if field.errors %}
-                        {% render_field field class="flex items-center w-64 h-12 px-4 pb-2 mt-2 border-red-500 rounded focus:outline-none focus:ring-2" %}
-                    {% else %}
-                        {% render_field field class="flex items-center w-64 h-12 px-4 pb-2 mt-2 rounded focus:outline-none focus:ring-2" %}
-                    {% endif %}
-                    {% for error in field.errors %}
-                        <span class="flex items-center max-w-xs mt-1 ml-1 text-xs font-medium tracking-wide text-red-500">{{ error }}</span>
-                    {% endfor %}
-                </div>
-            {% endif %}
-        {% endfor %}
-        {% translate "Login" as login_text %}
-        {% include "account/_button.html" with text=login_text %}
-        <div class="flex justify-center mt-6 text-xs">
-            <a class="text-blue-400 hover:text-blue-500"
-               href="{% url 'account_reset_password' %}">{% translate "Forgot Password" %}</a>
-            <span class="mx-2 text-gray-300">/</span>
-            <a class="text-blue-400 hover:text-blue-500"
-               href="{% url 'account_signup' %}">{% translate "Sign Up" %}</a>
+{% extends "account/login.html" %}
+{% load i18n %}
+{% load slippers %}
+{% load widget_tweaks %}
+{% block content %}
+    {% trans "Sign In" as heading %}
+    {% #container heading=heading  %}
+    {% if not SOCIALACCOUNT_ONLY %}
+        <div class="py-3">
+            {% blocktranslate %}If you have not created an account yet, then please
+		    <a class="link" href="{{ signup_url }}">sign up</a> first.{% endblocktranslate %}
         </div>
-        {% if redirect_field_value %}
-            <input type="hidden"
-                   name="{{ redirect_field_name }}"
-                   value="{{ redirect_field_value }}" />
-        {% endif %}
-    </form>
-    {% check_allauth_socialaccount_installed as is_allauth_socialaccount_installed %}
-    {% if is_allauth_socialaccount_installed %}
-        {% include "socialaccount/snippets/social_login.html" %}
+        {% url 'account_login' as login_url %}
+        {% #form form=form url=url button_text=heading %}
+        <div class="items-start my-2 form-control">
+            <label class="cursor-pointer label">
+                {% render_field form.remember class="checkbox checkbox-accent" %}
+                <span class="ml-2 label-text text-neutral">Remember me</span>
+            </label>
+        </div>
+        {{ redirect_field }}
+        {% csrf_token %}
+        <div class="flex flex-col">
+            <a class="link self-end text-sm"
+               href="{% url "account_reset_password" %}">Forgot password?</a>
+        </div>
+        {% /form %}
     {% endif %}
-{% endblock %}
+    {% if LOGIN_BY_CODE_ENABLED %}
+        <div class="divider divider-neutral"></div>
+        <a href="{{ request_login_code_url }}" class="btn btn-neutral">{% trans "Mail me a sign-in code" %}</a>
+    {% endif %}
+    {% if SOCIALACCOUNT_ENABLED %}
+        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+    {% endif %}
+    {% /container %}
+{% endblock content %}
