@@ -1,6 +1,6 @@
 {% extends "example/base.html" %}
 {% block content %}
-    <ul class="w-8/12 text-lg menu bg-base-200 rounded-box">
+    <ul class="w-full md:w-8/12 text-lg menu bg-base-200 rounded-box">
         <li>
             <a href="{% url "home" %}">Pages</a>
             <ul>
@@ -8,19 +8,37 @@
                     <a href="{% url "account_signup" %}">Account Signup</a>
                 </li>
                 <li>
-                    <a href="{% url "socialaccount_signup" %}">Social Account Signup</a>
+                    <a href="{% url "account_email" %}">Account Emails</a>
                 </li>
                 <li>
                     <a href="{% url "socialaccount_connections" %}">Connected Social Accounts</a>
-                </li>
-                <li>
-                    <a href="{% url "account_email" %}">Account Emails</a>
                 </li>
                 <li>
                     <a href="{% url "account_change_password" %}">Change Password</a>
                 </li>
                 <li>
                     <a href="{% url "account_reset_password" %}">Reset Password</a>
+                </li>
+                <li>
+                    <a href="{% url "account_set_password" %}">Set Password</a>
+                </li>
+                <li>
+                    <a href="{% url "account_reauthenticate" %}">Reauthenticate</a>
+                </li>
+                <li>
+                    <a href="{% url "account_logout" %}">Logout</a>
+                </li>
+                <li>
+                    <a href="{% url "account_email_verification_sent" %}">Email Verification Sent</a>
+                </li>
+                <li>
+                    <a href="{% url "account_reset_password_done" %}">Password Reset Done</a>
+                </li>
+                <li>
+                    <a href="{% url "account_reset_password_from_key_done" %}">Password Reset From Key Done</a>
+                </li>
+                <li>
+                    <a href="{% url "account_inactive" %}">Account Inactive</a>
                 </li>
                 <li>
                     <a href="{% url "social-metadata" %}">Social Account Metadata</a>

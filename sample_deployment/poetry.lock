@@ -309,17 +309,18 @@ steam = ["python3-openid (>=3.0.8)"]
 
 [[package]]
 name = "django-allauth-ui"
-version = "0.3.7"
+version = "1.0.0b1"
 description = ""
 optional = false
 python-versions = "<4.0.0,>=3.8"
 files = [
-    {file = "django_allauth_ui-0.3.7-py3-none-any.whl", hash = "sha256:1706b9f7495c79c813b3afd6ece18e2835732fce7f808696f877a6acd01b9350"},
-    {file = "django_allauth_ui-0.3.7.tar.gz", hash = "sha256:90d61973f7ccc7322c02c5f5a860e7817649c1b44ee127173ad959c561389dcb"},
+    {file = "django_allauth_ui-1.0.0b1-py3-none-any.whl", hash = "sha256:62b3129992a6e50a7b401cfac56fa920fe5f2275d5a0b80211ba0d357ad498de"},
+    {file = "django_allauth_ui-1.0.0b1.tar.gz", hash = "sha256:0e92005ff07d4065aef6c169f81d478c1b8bf40940832528f94f364481b500e2"},
 ]
 
 [package.dependencies]
-django-widget-tweaks = ">=1.4.12,<2.0.0"
+django-widget-tweaks = ">=1.5.0,<2.0.0"
+slippers = ">=0.6.2,<0.7.0"
 
 [[package]]
 name = "django-browser-reload"
@@ -1178,6 +1179,23 @@ files = [
 ]
 
 [[package]]
+name = "slippers"
+version = "0.6.2"
+description = "Build reusable components in Django without writing a single line of Python."
+optional = false
+python-versions = ">=3.8.0"
+files = [
+    {file = "slippers-0.6.2-py3-none-any.whl", hash = "sha256:739e05f85354becbf0a65daab831eea62557d89e7512042209ab629af4378bca"},
+    {file = "slippers-0.6.2.tar.gz", hash = "sha256:4cb555b8822ba0d404e5405723f5d723994022c29046008ee917081031bc0cf1"},
+]
+
+[package.dependencies]
+Django = ">=3.2"
+PyYAML = ">=5.4.0"
+typeguard = ">=2.13.3,<3.0.0"
+typing-extensions = ">=4.4.0"
+
+[[package]]
 name = "sqlparse"
 version = "0.5.0"
 description = "A non-validating SQL parser."
@@ -1222,6 +1240,21 @@ dev = ["pytest (>=6)", "pytest-cov", "pytest-timeout", "pytest-xdist"]
 notebook = ["ipywidgets (>=6)"]
 slack = ["slack-sdk"]
 telegram = ["requests"]
+
+[[package]]
+name = "typeguard"
+version = "2.13.3"
+description = "Run-time type checker for Python"
+optional = false
+python-versions = ">=3.5.3"
+files = [
+    {file = "typeguard-2.13.3-py3-none-any.whl", hash = "sha256:5e3e3be01e887e7eafae5af63d1f36c849aaa94e3a0112097312aabfa16284f1"},
+    {file = "typeguard-2.13.3.tar.gz", hash = "sha256:00edaa8da3a133674796cf5ea87d9f4b4c367d77476e185e80251cc13dfbb8c4"},
+]
+
+[package.extras]
+doc = ["sphinx-autodoc-typehints (>=1.2.0)", "sphinx-rtd-theme"]
+test = ["mypy", "pytest", "typing-extensions"]
 
 [[package]]
 name = "typing-extensions"
@@ -1434,4 +1467,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "6f18dbdb005efd559864cc9048c5a2c4f79d1c400b344292fc8208b1ad5b573d"
+content-hash = "46846f11a97d4da69fea930a9f5ac8b4499ca1ce546462ae7b4ec36fe29a7188"

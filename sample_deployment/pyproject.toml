@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-django-allauth-ui = "^0.3.7"
+django-allauth-ui = {version = "1.0.0b1", allow-prereleases = true}
 gunicorn = "^22.0.0"
 django-allauth = "^0.63.3"
 django-widget-tweaks = "^1.5.0"
