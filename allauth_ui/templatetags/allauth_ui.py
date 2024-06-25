@@ -25,5 +25,5 @@ def socialprovider_color(socialprovider):
 
 
 @register.simple_tag
-def check_allauth_socialaccount_installed():
-    return "allauth.socialaccount" in settings.INSTALLED_APPS
+def allauth_ui_theme():
+    return settings.ALLAUTH_UI_THEME

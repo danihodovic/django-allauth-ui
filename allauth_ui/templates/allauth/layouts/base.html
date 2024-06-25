@@ -1,7 +1,8 @@
 {% load i18n %}
 {% load static %}
+{% load allauth_ui %}
 <!DOCTYPE html>
-<html data-theme="emerald">
+<html data-theme="{% allauth_ui_theme %}">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
             <link rel="stylesheet" href="{% static 'allauth_ui/output.css' %}">
         {% endblock extra_head %}
     </head>
-    <body class="min-h-screen bg-neutral">
+    <body class="min-h-screen bg-base-200">
         {% block body %}
             {% if messages %}
                 {% for message in messages %}
@@ -25,7 +26,7 @@
             {% endif %}
             {% block content %}
             {% endblock content %}
-            <div class="mx-auto text-base-300 [&_a]:link text-sm flex flex-col md:flex-row items-center justify-center gap-3 mt-3">
+            <div class="mx-auto text-neutral [&_a]:link text-sm flex flex-col md:flex-row items-center justify-center gap-3 mt-3">
                 {% if user.is_authenticated %}
                     {% url 'account_email' as email_url %}
                     {% if email_url %}
