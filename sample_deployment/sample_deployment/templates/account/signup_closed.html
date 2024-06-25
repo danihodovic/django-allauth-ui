@@ -1,0 +1,9 @@
+{% extends "account/signup_closed.html" %}
+{% load i18n %}
+{% load slippers %}
+{% block content %}
+    {% trans "Sign Up Closed" as heading %}
+    {% trans "We are sorry, but the sign up is currently closed." as subheading %}
+    {% #container heading=heading subheading=subheading %}
+    {% /container %}
+{% endblock content %}
