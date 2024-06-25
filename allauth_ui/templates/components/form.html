@@ -9,7 +9,7 @@
         {% for field in form.visible_fields %}
             {% if field.name != "remember" %}
                 <label class="label" for="{{ field.id_for_label }}">
-                    <span class="label-text text-neutral">{{ field.label }}</span>
+                    <span class="label-text">{{ field.label }}</span>
                 </label>
                 {% if field.errors %}
                     {% render_field field placeholder="" class="w-full input input-bordered text-primary input-error" %}
