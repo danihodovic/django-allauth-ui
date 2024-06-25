@@ -2,9 +2,8 @@
 {% load static %}
 {% load tailwind_tags %}
 {% block extra_head %}
-    {{ block.super }}
     {% tailwind_css %}
-{% endblock %}
+{% endblock extra_head %}
 {% block body %}
     <div class="fixed hidden top-5 right-5 md:block w-28">
         <select id="select-theme"
