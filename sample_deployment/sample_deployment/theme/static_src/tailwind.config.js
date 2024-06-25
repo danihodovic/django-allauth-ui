@@ -26,6 +26,11 @@ module.exports = {
 		 */
 		'../../**/templates/**/*.html',
 
+		/*
+		 * Templates from allauth_ui
+		 */
+		'../../../../allauth_ui/templates/**/*.html',
+
 		/**
 		 * JS: If you use Tailwind CSS in JavaScript, uncomment the following lines and make sure
 		 * patterns match your project structure.
