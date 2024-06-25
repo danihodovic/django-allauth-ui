@@ -1,0 +1,50 @@
+{% extends "allauth/layouts/base.html" %}
+{% load static %}
+{% load tailwind_tags %}
+{% block extra_head %}
+    {{ block.super }}
+    {% tailwind_css %}
+{% endblock %}
+{% block body %}
+    <div class="fixed hidden top-5 right-5 md:block w-28">
+        <select id="select-theme"
+                class="w-full px-5 py-1 text-sm text-primary"
+                onchange="onSelectChange()">
+            <option disabled selected>Theme</option>
+            <option>light</option>
+            <option>dark</option>
+            <option>cupcake</option>
+            <option>bumblebee</option>
+            <option>emerald</option>
+            <option>corporate</option>
+            <option>synthwave</option>
+            <option>retro</option>
+            <option>cyberpunk</option>
+            <option>valentine</option>
+            <option>halloween</option>
+            <option>garden</option>
+            <option>forest</option>
+            <option>aqua</option>
+            <option>lofi</option>
+            <option>pastel</option>
+            <option>fantasy</option>
+            <option>wireframe</option>
+            <option>black</option>
+            <option>luxury</option>
+            <option>dracula</option>
+            <option>cmyk</option>
+            <option>autumn</option>
+            <option>business</option>
+            <option>acid</option>
+            <option>lemonade</option>
+            <option>night</option>
+            <option>coffee</option>
+            <option>winter</option>
+            <option>dim</option>
+            <option>nord</option>
+            <option>sunset</option>
+        </select>
+    </div>
+    {{ block.super }}
+    <script src="{% static "theme.js" %}"></script>
+{% endblock body %}
