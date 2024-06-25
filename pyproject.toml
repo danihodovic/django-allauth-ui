@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "django-allauth-ui"
-version = "1.0.0"
+version = "1.1.0"
 description = ""
 authors = ["Dani Hodovic <you@example.com>"]
 license = "MIT"
