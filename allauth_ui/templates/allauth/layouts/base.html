@@ -26,7 +26,7 @@
             {% endif %}
             {% block content %}
             {% endblock content %}
-            <div class="mx-auto text-neutral [&_a]:link text-sm flex flex-col md:flex-row items-center justify-center gap-3 mt-3">
+            <div class="mx-auto [&_a]:link text-sm flex flex-col md:flex-row items-center justify-center gap-3 mt-3">
                 {% if user.is_authenticated %}
                     {% url 'account_email' as email_url %}
                     {% if email_url %}

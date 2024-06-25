@@ -183,3 +183,5 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
+ALLAUTH_UI_THEME = "business"
