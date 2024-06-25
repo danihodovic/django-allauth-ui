@@ -9,11 +9,11 @@
                     {% provider_login_url provider openid=brand.openid_url process=process as href %}
                     {% element provider name=brand.name provider_id=provider.id href=href %}
                 {% endelement %}
-                <a class="btn w-full my-1" title="{{ brand.name }}" href="{{ href }}">{{ brand.name }}</a>
+                <a class="w-full my-1 btn" title="{{ brand.name }}" href="{{ href }}">{{ brand.name }}</a>
             {% endfor %}
         {% endif %}
         {% provider_login_url provider process=process scope=scope auth_params=auth_params as href %}
-        <a class="btn w-full my-1 text-white {{ provider | socialprovider_color }}"
+        <a class="btn w-full my-1 text-primary-content bg-primary hover:bg-accent "
            title="{{ provider.name }}"
            href="{{ href }}">{{ provider.name }}</a>
     {% endfor %}
