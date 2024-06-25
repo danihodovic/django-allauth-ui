@@ -15,19 +15,20 @@ defaults for new projects.
 
 * [Features](#features)
 * [Installation](#installation)
-* [Screenshots](#screenshots)
-   * [Generating screenshots](#generating-screenshots)
+* [Configuration](#configuration)
 * [Hacking on the project](#hacking-on-the-project)
 * [Contributors](#contributors)
 
 ## Features
 
-- Responsive design suitable for device sizes from mobile to desktop
-- Styled social login themes
-- Additional error information when [social logins fail](https://github.com/pennersr/django-allauth/issues/2142)
+- 📱 Mobile-friendly design
+- 💄 Confiugrable themes
+- 🗣️ Translations
+  - 🇪🇸 Spanish
+  - 🇫🇷 French
+  - 🇧🇷 Portuguese
 
 ## Installation
-
 
 ```
 pip install django-allauth-ui
@@ -57,7 +58,16 @@ INSTALLED_APPS = [
 
 When going to **production** you should run ```python manage.py collectstatic```
 
-### Hacking on the project
+## Configuration
+
+The templates can be themed using Django settings. The theme value corresponds to [DaisyUI themes](https://daisyui.com/docs/themes/).
+
+```python
+# settings.py
+ALLAUTH_UI_THEME = "light"
+```
+
+## Hacking on the project
 
 ```sh
 # Clone the repo
