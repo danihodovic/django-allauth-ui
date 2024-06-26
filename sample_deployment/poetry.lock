@@ -309,13 +309,13 @@ steam = ["python3-openid (>=3.0.8)"]
 
 [[package]]
 name = "django-allauth-ui"
-version = "1.1.2"
+version = "1.1.6"
 description = ""
 optional = false
 python-versions = "<4.0.0,>=3.8"
 files = [
-    {file = "django_allauth_ui-1.1.2-py3-none-any.whl", hash = "sha256:0cf64e2e4debb87b58abfedd6e3528d5aa070fe78dd70a2220870523174ca3dc"},
-    {file = "django_allauth_ui-1.1.2.tar.gz", hash = "sha256:b017cdf9e0d321f2ae4a0861d4f8b4f68b4c6b086b2809918fefc87b32e9bb86"},
+    {file = "django_allauth_ui-1.1.6-py3-none-any.whl", hash = "sha256:3f7687744570345be78a8de318abd0c59700d4b7d1cc5e2a1f07ff4ca6b004a5"},
+    {file = "django_allauth_ui-1.1.6.tar.gz", hash = "sha256:0c15d1213508e754ae79c2a04032edf4ab8b834133e5ab7ea90d0ede83c9bf17"},
 ]
 
 [package.dependencies]
@@ -1467,4 +1467,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "013ec67a22e675bd331621585771928b519bc8415e5ba3dbebf6fa60432b631d"
+content-hash = "2d6119f0641e1e7d46498c90a952637e45ed887babc4e655e28def9c62be80c7"
