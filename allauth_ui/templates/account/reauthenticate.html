@@ -1,6 +1,6 @@
 {% extends "account/reauthenticate.html" %}
 {% load i18n %}
-{% load slippers %}
+{% load allauth_ui %}
 {% block reauthenticate_content %}
     <div class="mt-5">{% blocktranslate %}Enter your password:{% endblocktranslate %}</div>
     {% url 'account_reauthenticate' as url %}

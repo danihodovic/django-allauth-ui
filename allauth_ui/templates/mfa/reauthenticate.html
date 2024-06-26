@@ -1,6 +1,6 @@
 {% extends "mfa/reauthenticate.html" %}
 {% load i18n %}
-{% load slippers %}
+{% load allauth_ui %}
 {% block reauthenticate_content %}
     <div class="mt-5">{% blocktranslate %}Enter an authenticator code:{% endblocktranslate %}</div>
     {% url 'mfa_reauthenticate' as action_url %}
