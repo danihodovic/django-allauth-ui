@@ -1,6 +1,6 @@
 {% extends "account/verification_sent.html" %}
 {% load i18n %}
-{% load slippers %}
+{% load allauth_ui %}
 {% block content %}
     {% trans "Confirm Email Address" as heading %}
     {% blocktrans asvar subheading %}We have sent an email to you for verification. Follow the link provided to finalize the signup process. If you do not see the verification email in your main inbox, check your spam folder. Please contact us if you do not receive the verification email within a few minutes.{% endblocktrans %}

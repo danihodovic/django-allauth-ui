@@ -22,7 +22,7 @@ defaults for new projects.
 ## Features
 
 - 📱 Mobile-friendly design
-- 💄 Confiugrable themes
+- 💄 Configurable themes
 - 🗣️ Translations
   - 🇪🇸 Spanish
   - 🇫🇷 French
