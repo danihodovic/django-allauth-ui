@@ -4,10 +4,10 @@
 {% block content %}
     {% trans "Sign Out" as heading %}
     {% trans "Are you sure you want to sign out?" as subheading %}
-    {% url 'account_logout' as url %}
+    {% url 'account_logout' as action_url %}
     {% #container heading=heading subheading=subheading %}
     {% trans "Continue" as button_text %}
-    {% #form url=url button_text=heading %}
+    {% #form url=action_url button_text=heading %}
     {% csrf_token %}
     {{ redirect_field }}
     {% /form %}

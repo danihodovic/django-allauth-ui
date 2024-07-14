@@ -10,8 +10,8 @@
             {% blocktranslate %}If you have not created an account yet, then please
 		    <a class="link" href="{{ signup_url }}">sign up</a> first.{% endblocktranslate %}
         </div>
-        {% url 'account_login' as login_url %}
-        {% #form form=form url=url button_text=heading %}
+        {% url 'account_login' as action_url %}
+        {% #form form=form url=action_url button_text=heading %}
         <div class="items-start my-2 form-control">
             <label class="cursor-pointer label">
                 {% render_field form.remember class="checkbox checkbox-accent" %}

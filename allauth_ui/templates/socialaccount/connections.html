@@ -13,8 +13,8 @@
     {% endif %}
     {% #container heading=heading subheading=subheading %}
     {% if form.accounts %}
-        {% url 'socialaccount_connections' as url %}
-        {% #form form=form url=url render_fields="false" use_default_button="false" %}
+        {% url 'socialaccount_connections' as action_url %}
+        {% #form form=form url=action_url render_fields="false" use_default_button="false" %}
         {% csrf_token %}
         {% for acc in form.fields.account.choices %}
             {% var account=acc.0.instance.get_provider_account %}

@@ -8,7 +8,7 @@
     {% #container heading=heading subheading=subheading  %}
     {% if not SOCIALACCOUNT_ONLY %}
         {% url 'account_signup' as action_url %}
-        {% #form form=form url=url button_text=heading %}
+        {% #form form=form url=action_url button_text=heading %}
         {{ redirect_field }}
         {% csrf_token %}
         {% /form %}
