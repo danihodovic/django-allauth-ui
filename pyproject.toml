@@ -51,6 +51,7 @@ pylint-django = "^2.5.0"
 pytest = "^8.2.1"
 pytest-cov = "2.10.0"
 pytest-django = "4.1.0"
+django-fastdev = {git = "https://github.com/boxed/django-fastdev.git"}
 
 [tool.pytest.ini_options]
 addopts = "--ds=tests.settings --reuse-db --pdbcls=pudb.debugger:Debugger"
