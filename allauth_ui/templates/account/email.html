@@ -6,8 +6,8 @@
     {% #container heading=heading %}
     {% if emailaddresses %}
         <div>{% trans 'The following email addresses are associated with your account:' %}</div>
-        {% url 'account_email' as url %}
-        {% #form url=url use_default_button="false" %}
+        {% url 'account_email' as action_url %}
+        {% #form url=action_url use_default_button="false" %}
         {{ redirect_field }}
         {% csrf_token %}
         <div class="py-3">
@@ -47,7 +47,7 @@
         <div class="divider"></div>
         <h2 class="py-3 text-lg">{% trans "Add Email Address" %}</h2>
         {% trans "Add Email" as button_text %}
-        {% #form form=form url=url button_text=button_text %}
+        {% #form form=form url=action_url button_text=button_text %}
         {% csrf_token %}
         {% /form %}
     {% endif %}
