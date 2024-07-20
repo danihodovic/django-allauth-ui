@@ -137,6 +137,7 @@ LANGUAGES = (
     ("fr", "French"),
     ("es", "Spanish"),
     ("pt-br", "Portuguese (Brazil)"),
+    ("tr", "Turkish"),
 )
 
 USE_I18N = True
