@@ -27,6 +27,7 @@ defaults for new projects.
   - 🇪🇸 Spanish
   - 🇫🇷 French
   - 🇧🇷 Portuguese
+  - 🇹🇷 Turkish
 
 ## Installation
 
