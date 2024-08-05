@@ -1,0 +1,62 @@
+{% extends "usersessions/usersession_list.html" %}
+{% load i18n %}
+{% load humanize %}
+{% load allauth_ui %}
+{% block content %}
+    {% trans "Sessions" as heading %}
+    <div class="container mx-auto pt-1 bg-base-200">
+        <div class="w-11/12 p-10 mx-auto mt-5 md:mt-15 lg:mt-32 rounded-lg shadow-md sm:p-5 lg:w-9/12 xl:w-8/12 md:p-10 xl:p-13 bg-base-300">
+            <h1 class="mb-3 text-2xl">{{ heading }}</h1>
+            {% if session_count > 1 %}
+                {% url 'usersessions_list' as action_url %}
+                {% translate "Sign Out Other Sessions"  as button_text %}
+            {% else %}
+                {% url 'account_logout' as action_url %}
+                {% translate "Sign Out" as button_text %}
+            {% endif %}
+            {% #form form=form url=action_url button_text=button_text %}
+            {% csrf_token %}
+            <div class="overflow-x-auto">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>{% translate "Started At" %}</th>
+                            <th>{% translate "IP Address" %}</th>
+                            <th>{% translate "Browser" %}</th>
+                            {% if show_last_seen_at %}
+                                <th>{% translate "Last seen at" %}</th>
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for session in sessions %}
+                            <tr class="hover">
+                                <td>
+                                    <span title="{{ session.created_at }}">{{ session.created_at|naturaltime }}</span>
+                                </td>
+                                <td>{{ session.ip }}</td>
+                                <td>
+                                    <div class="tooltip" data-tip="{{ session.user_agent }}">
+                                        {{ session.user_agent | truncatechars:23 }}
+                                    </div>
+                                </td>
+                                {% if show_last_seen_at %}
+                                    <td>
+                                        <span title="{{ session.last_seen_at }}">{{ session.last_seen_at|naturaltime }}</span>
+                                    </td>
+                                {% endif %}
+                                <td>
+                                    {% if session.is_current %}
+                                        <div class="badge badge-md">{% translate "Current" %}</div>
+                                    {% else %}
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% /form %}
+        </div>
+    </div>
+{% endblock content %}
