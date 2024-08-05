@@ -41,7 +41,6 @@ THIRD_PARTY_APPS = [
     "widget_tweaks",
     "django_browser_reload",
     "debug_toolbar",
-    "django_fastdev",
 ]
 
 LOCAL_APPS = ["tests"]
@@ -112,7 +111,3 @@ ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 1000
 ALLAUTH_UI_THEME = "light"
 
 BASE_DIR = Path(__file__).parent.parent
-
-FASTDEV_IGNORED_TEMPLATES = [
-    r".*.allauth_ui/templates/components.*",
-]
