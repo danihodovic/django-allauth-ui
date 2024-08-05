@@ -27,20 +27,22 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    "rosetta",
-    "django_extensions",
     "allauth_ui",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
-    "allauth.socialaccount.providers.github",
-    "allauth.socialaccount.providers.facebook",
     "allauth.socialaccount.providers.digitalocean",
+    "allauth.socialaccount.providers.facebook",
+    "allauth.socialaccount.providers.github",
     "allauth.socialaccount.providers.wahoo",
+    "debug_toolbar",
+    "django_browser_reload",
+    "django_extensions",
+    "rosetta",
     "slippers",
     "widget_tweaks",
-    "django_browser_reload",
-    "debug_toolbar",
+    "allauth.usersessions",
+    "django.contrib.humanize",
 ]
 
 LOCAL_APPS = ["tests"]
@@ -55,6 +57,7 @@ MIDDLEWARE = [
     "django.middleware.csrf.CsrfViewMiddleware",
     "allauth.account.middleware.AccountMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "allauth.usersessions.middleware.UserSessionsMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware",
@@ -111,3 +114,5 @@ ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 1000
 ALLAUTH_UI_THEME = "light"
 
 BASE_DIR = Path(__file__).parent.parent
+
+USERSESSIONS_TRACK_ACTIVITY = True
