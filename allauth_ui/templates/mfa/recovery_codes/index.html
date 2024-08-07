@@ -1,0 +1,27 @@
+{% extends "mfa/recovery_codes/index.html" %}
+{% load i18n %}
+{% load allauth %}
+{% load allauth_ui %}
+{% block content %}
+    {% translate "Recovery Codes" as heading %}
+    {% blocktranslate asvar subheading count unused_count=unused_codes|length %}There is {{ unused_count }} out of {{ total_count }} recovery codes available.{% plural %}There are {{ unused_count }} out of {{ total_count }} recovery codes available.{% endblocktranslate %}
+    {% #container heading=heading subheading=subheading %}
+    <div class="my-3">
+        <label class="label" for="codes">
+            <span class="label-text">{% translate "Unused codes" %}</span>
+        </label>
+        <textarea id="codes" class="w-full m-3 mx-auto textarea" rows="{{unused_codes|length}}" disabled readonly>
+		{% for code in unused_codes %}{{ code }}
+		{% endfor %}
+    </textarea>
+    </div>
+    <div class="flex flex-col mx-auto sm:w-8/12 xl:w-7/12">
+        {% if unused_codes %}
+            <a href="{% url "mfa_download_recovery_codes" %}"
+               class="md:w-full btn btn-neutral">{% trans "Download codes" %}</a>
+        {% endif %}
+        <a href="{% url "mfa_generate_recovery_codes" %}"
+           class="mt-4 md:w-full btn btn-neutral">{% trans "Generate new codes" %}</a>
+    </div>
+    {% /container %}
+{% endblock content %}

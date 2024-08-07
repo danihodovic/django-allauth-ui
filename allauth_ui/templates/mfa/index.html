@@ -1,0 +1,73 @@
+{% extends "mfa/index.html" %}
+{% load i18n %}
+{% load allauth_ui %}
+{% block content %}
+    {% trans "Two-Factor Authentication" as heading %}
+    {% #container heading=heading %}
+    {% if "totp" in MFA_SUPPORTED_TYPES %}
+        <h2 class="mt-6 mb-3 text-lg">{% translate "Authenticator App" %}</h2>
+        {% if authenticators.totp %}
+            <p class="my-2">
+                {% translate "Authentication using an authenticator app is active." %}
+                <div>
+                    <a href="{% url "mfa_activate_totp" %}"
+                       role="button"
+                       class="my-3 btn btn-warning">{% translate "Deactivate" %}</a>
+                </div>
+            </p>
+        {% else %}
+            <p class="my-2">{% translate "An authenticator app is not active." %}</p>
+            <a href="{% url "mfa_activate_totp" %}"
+               role="button"
+               class="btn btn-neutral">{% translate "Activate" %}</a>
+        {% endif %}
+    {% endif %}
+    {% if "webauthn" in MFA_SUPPORTED_TYPES %}
+        <div class="divider divider-neutral"></div>
+        <h2 class="mt-6 mb-3 text-lg">{% translate "Security Keys" %}</h2>
+        {% if authenticators.webauthn|length %}
+            <p class="my-2">
+                {% blocktranslate count count=authenticators.webauthn|length %}You have added {{ count }} security key.{% plural %}You have added {{ count }} security keys.{% endblocktranslate %}
+            </p>
+            <a href="{% url "mfa_list_webauthn" %}"
+               role="button"
+               class="btn btn-neutral">{% translate "Manage" %}</a>
+        {% else %}
+            <p class="my-2">{% translate "No security keys have been added." %}</p>
+            <a href="{% url "mfa_add_webauthn" %}"
+               role="button"
+               class="btn btn-neutral">{% translate "Add" %}</a>
+        {% endif %}
+    {% endif %}
+    {% if "recovery_codes" in MFA_SUPPORTED_TYPES %}
+        <div class="divider divider-neutral"></div>
+        {% with total_count=authenticators.recovery_codes.generate_codes|length unused_count=authenticators.recovery_codes.get_unused_codes|length %}
+            <h2 class="mt-6 mb-3 text-lg">{% translate "Recovery Codes" %}</h2>
+            <p>
+                {% if authenticators.recovery_codes %}
+                    {% blocktranslate count unused_count=unused_count %}There is {{ unused_count }} out of {{ total_count }} recovery codes available.{% plural %}There are {{ unused_count }} out of {{ total_count }} recovery codes available.{% endblocktranslate %}
+                {% else %}
+                    {% translate "No recovery codes set up." %}
+                {% endif %}
+            </p>
+            {% if is_mfa_enabled %}
+                <div class="flex flex-col justify-evenly my-3 md:flex-row gap-1">
+                    {% if authenticators.recovery_codes %}
+                        {% if unused_count > 0 %}
+                            <a href="{% url "mfa_view_recovery_codes" %}"
+                               role="button"
+                               class="btn btn-neutral">{% translate "View" %}</a>
+                            <a href="{% url "mfa_download_recovery_codes" %}"
+                               role="button"
+                               class="btn btn-neutral">{% translate "Download" %}</a>
+                        {% endif %}
+                    {% endif %}
+                    <a href="{% url "mfa_generate_recovery_codes" %}"
+                       role="button"
+                       class="btn btn-neutral">{% translate "Generate" %}</a>
+                </div>
+            {% endif %}
+        {% endwith %}
+    {% endif %}
+    {% /container %}
+{% endblock content %}

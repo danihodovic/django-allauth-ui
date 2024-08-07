@@ -1,0 +1,12 @@
+{% load widget_tweaks %}
+<label class="label" for="{{ field.id_for_label }}">
+    <span class="label-text">{{ field.label }}</span>
+</label>
+{% if field.errors %}
+    {% render_field field placeholder="" class="w-full input input-bordered text-primary input-error" %}
+{% else %}
+    {% render_field field placeholder="" class="w-full input input-bordered text-primary" %}
+{% endif %}
+{% for error in field.errors %}
+    <span class="flex items-center max-w-xs mt-1 ml-1 text-xs font-medium tracking-wide text-error">{{ error }}</span>
+{% endfor %}

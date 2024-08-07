@@ -1,0 +1,21 @@
+{% extends "mfa/recovery_codes/index.html" %}
+{% load i18n %}
+{% load allauth %}
+{% load allauth_ui %}
+{% block content %}
+    {% translate "Recovery Codes" as heading %}
+    {% blocktranslate asvar subheading %}You are about to generate a new set of recovery codes for your account.{% endblocktranslate %}
+    {% #container heading=heading subheading=subheading %}
+    <p class="py-3">
+        {% if unused_code_count %}
+            {% blocktranslate %}This action will invalidate your existing codes.{% endblocktranslate %}
+        {% endif %}
+        {% blocktranslate %}Are you sure?{% endblocktranslate %}
+    </p>
+    {% url 'mfa_generate_recovery_codes' as action_url %}
+    {% trans "Generate" as button_text %}
+    {% #form url=action_url form=form button_text=button_text %}
+    {% csrf_token %}
+    {% /form %}
+    {% /container %}
+{% endblock content %}

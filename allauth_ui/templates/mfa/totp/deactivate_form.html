@@ -1,0 +1,14 @@
+{% extends "mfa/totp/deactivate_form.html" %}
+{% load i18n %}
+{% load allauth_ui %}
+{% block content %}
+    {% trans "Deactivate Authenticator App" as heading %}
+    {% blocktranslate asvar subheading %}You are about to deactivate authenticator app based authentication. Are you sure?{% endblocktranslate %}
+    {% #container heading=heading subheading=subheading %}
+    {% url 'mfa_deactivate_totp' as action_url %}
+    {% #form form=form url=action_url button_text=button_text use_default_button="false"%}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-warning">{% trans "Deactivate" %}</button>
+    {% /form %}
+    {% /container %}
+{% endblock content %}

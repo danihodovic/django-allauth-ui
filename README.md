@@ -22,7 +22,9 @@ defaults for new projects.
 ## Features
 
 - 📱 Mobile-friendly design
-- 💄 Configurable themes
+- 💄 [Configurable themes](https://daisyui.com/docs/themes/)
+- 🕵️ Support for [Allauth User Sessions](https://docs.allauth.org/en/latest/usersessions/index.html)
+- 📱Support for [Multi-Factor Authentication](https://docs.allauth.org/en/latest/mfa/index.html)
 - 🗣️ Translations
   - 🇪🇸 Spanish
   - 🇫🇷 French
