@@ -9,7 +9,7 @@
             <h1 class="mb-3 text-2xl">{{ heading }}</h1>
             {% if session_count > 1 %}
                 {% url 'usersessions_list' as action_url %}
-                {% translate "Sign Out Other Sessions"  as button_text %}
+                {% translate "Sign Out Other Sessions" as button_text %}
             {% else %}
                 {% url 'account_logout' as action_url %}
                 {% translate "Sign Out" as button_text %}
