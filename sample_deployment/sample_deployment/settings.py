@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "allauth_ui",
     "allauth",
     "allauth.account",
+    "allauth.mfa",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.github",
     "allauth.socialaccount.providers.gitlab",
@@ -218,3 +219,5 @@ LOGGING = {
 }
 
 USERSESSIONS_TRACK_ACTIVITY = True
+MFA_SUPPORTED_TYPES = ["totp", "recovery_codes"]
+MFA_TOTP_ISSUER = "django-allauth-ui.hodovi.ch"
