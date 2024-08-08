@@ -119,3 +119,4 @@ BASE_DIR = Path(__file__).parent.parent
 USERSESSIONS_TRACK_ACTIVITY = True
 
 MFA_SUPPORTED_TYPES = ["totp", "webauthn", "recovery_codes"]
+MFA_TOTP_ISSUER = "AllAuth UI"
