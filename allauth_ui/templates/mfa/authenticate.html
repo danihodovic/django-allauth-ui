@@ -1,0 +1,38 @@
+{% extends "mfa/authenticate.html" %}
+{% load allauth %}
+{% load allauth_ui %}
+{% load i18n %}
+{% block content %}
+    {% trans "Two-Factor Authentication" as heading %}
+    {% blocktranslate asvar subheading %}Your account is protected by two-factor authentication. Please enter an authenticator code:{% endblocktranslate %}
+    {% url 'mfa_authenticate' as action_url %}
+    {% #container heading=heading subheading=subheading %}
+    {% translate "Activate" as button_text %}
+    {% trans "Sign In" as button_text %}
+    {% #form form=form url=action_url button_text=button_text %}
+    {% csrf_token %}
+    {% /form %}
+    {% if "webauthn" in MFA_SUPPORTED_TYPES %}
+        <div class="divider"></div>
+        <h2 class="my-3 text-lg">{% translate "Alternative options" %}</h2>
+        {% #form form=webauthn_form url=action_url use_default_button="false" %}
+        <button type="submit" class="btn btn-neutral">{% trans "Use a security key" %}</button>
+        <a href="{% url "account_login" %}" class="btn btn-accent">{% trans "Cancel" %}</a>
+        {% csrf_token %}
+        {% /form %}
+    {% endif %}
+    {% /container %}
+    {{ js_data|json_script:"js_data" }}
+    {% include "mfa/webauthn/snippets/scripts.html" %}
+    {# djlint:off #}
+<script type="text/javascript">
+allauth.webauthn.forms.authenticateForm({
+  ids: {
+    authenticate: "mfa_webauthn_authenticate",
+    credential: "{{ webauthn_form.credential.auto_id }}"
+  },
+  data: JSON.parse(document.getElementById('js_data').textContent)
+})
+</script>
+    {# djlint:on #}
+{% endblock content %}
