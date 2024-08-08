@@ -112,11 +112,10 @@ ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 1000
 
-ALLAUTH_UI_THEME = "light"
-
 BASE_DIR = Path(__file__).parent.parent
 
 USERSESSIONS_TRACK_ACTIVITY = True
 
 MFA_SUPPORTED_TYPES = ["totp", "webauthn", "recovery_codes"]
 MFA_TOTP_ISSUER = "AllAuth UI"
+ALLAUTH_UI_THEME = "business"

@@ -10,16 +10,18 @@
     {% translate "Activate" as button_text %}
     {% url 'mfa_activate_totp' as action_url %}
     {% #form form=form method="post" url=action_url button_text=button_text render_fields="false" %}
-    <img src="{{ totp_svg_data_uri }}"
-         alt="{{ form.secret }}"
-         class="mx-auto my-5" />
+    {# <div class="p-1 bg-gray-300 rounded"> #}
+    <img class="py-3 px-5 mx-auto my-5 bg-gray-300 rounded"
+         src="{{ totp_svg_data_uri }}"
+         alt="{{ form.secret }}" />
+    {# </div> #}
     {% #form_field field=form.code %}
     {% /form_field %}
     <div class="my-3">
         <label class="label" for="authenticator_secret">
             <span class="label-text">{% translate "Authenticator secret" %}</span>
         </label>
-        <p class="text-xs mb-2">
+        <p class="mb-2 text-xs">
             {% translate "You can store this secret and use it to reinstall your authenticator app at a later time." %}
         </p>
         <input type="text" id="authenticator_secret"" value="{{ form.secret }}" disabled
