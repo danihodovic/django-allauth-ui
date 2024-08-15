@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "django-allauth-ui"
-version = "1.4.0"
+version = "1.4.1"
 description = ""
 authors = ["Dani Hodovic <you@example.com>"]
 license = "MIT"
@@ -22,7 +22,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.8,<4.0.0"
+python = ">=3.8"
 django-widget-tweaks = "^1.5.0"
 slippers = "^0.6.2"
 
