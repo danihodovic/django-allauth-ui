@@ -16,7 +16,9 @@
         <div class="divider"></div>
         <h2 class="my-3 text-lg">{% translate "Alternative options" %}</h2>
         {% #form form=webauthn_form url=action_url use_default_button="false" %}
-        <button type="submit" class="btn btn-neutral">{% trans "Use a security key" %}</button>
+        <button type="submit" class="btn btn-neutral">
+            {% trans "Use a security key" %}
+        </button>
         <a href="{% url "account_login" %}" class="btn btn-accent">{% trans "Cancel" %}</a>
         {% csrf_token %}
         {% /form %}
