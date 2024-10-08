@@ -19,10 +19,10 @@
                         <label class="cursor-pointer label border p-3 rounded">
                             <span class="label-text">{{ emailaddress.email }}
                                 {% if emailaddress.verified %}
-                                    <div class="badge badge-primary badge-outline">verified</div>
+                                    <div class="badge badge-primary badge-outline">{% trans "verified" %}</div>
                                 {% endif %}
                                 {% if emailaddress.primary %}
-                                    <div class="badge badge-secondary badge-outline">primary</div>
+                                    <div class="badge badge-secondary badge-outline">{% trans "primary" %}</div>
                                 {% endif %}
                             </span>
                             <input type="radio"
@@ -38,13 +38,13 @@
         </div>
         <div class="flex flex-col mt-3 gap-1.5 ">
             <button name="action_primary" type="submit" class="btn btn-primary">
-                Make Primary
+                {% trans "Make Primary" %}
             </button>
             <button name="action_send" type="submit" class="btn btn-secondary">
-                Re-send verification
+                {% trans "Re-send verification" %}
             </button>
             <button name="action_remove" type="submit" class="btn btn-warning">
-                Remove
+                {% trans "Remove" %}
             </button>
         </div>
         {% /form %}

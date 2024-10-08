@@ -5,8 +5,8 @@
 {% block content %}
     {% trans "Sign Up" as heading %}
     {% blocktrans asvar subheading with provider_name=account.get_provider.name site_name=site.name %}
-	    You are about to use your {{provider_name}} account to login to {{site_name}}.
-	    As a final step, please complete the following form:
+        You are about to use your {{provider_name}} account to login to {{site_name}}.
+        As a final step, please complete the following form:
     {% endblocktrans %}
     {% #container heading=heading subheading=subheading %}
     {% trans "Continue" as button_text %}

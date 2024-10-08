@@ -7,8 +7,8 @@
     {% trans "Account Connections" as heading %}
     {% if form.accounts %}
         {% blocktrans asvar subheading %}
-	    You can sign in to your account using any of the following third-party accounts:
-    	{% endblocktrans %}
+        You can sign in to your account using any of the following third-party accounts:
+        {% endblocktrans %}
     {% else %}
         {% trans "You currently have no third-party accounts connected to this account." as subheading %}
     {% endif %}

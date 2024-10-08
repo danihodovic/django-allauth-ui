@@ -11,8 +11,8 @@
             <span class="label-text">{% translate "Unused codes" %}</span>
         </label>
         <textarea id="codes" class="w-full m-3 mx-auto textarea" rows="{{unused_codes|length}}" disabled readonly>
-		{% for code in unused_codes %}{{ code }}
-		{% endfor %}
+        {% for code in unused_codes %}{{ code }}
+        {% endfor %}
     </textarea>
     </div>
     <div class="flex flex-col mx-auto sm:w-8/12 xl:w-7/12">
