@@ -8,21 +8,21 @@
     {% if not SOCIALACCOUNT_ONLY %}
         <div class="py-3">
             {% blocktranslate %}If you have not created an account yet, then please
-		    <a class="link" href="{{ signup_url }}">sign up</a> first.{% endblocktranslate %}
+            <a class="link" href="{{ signup_url }}">sign up</a> first.{% endblocktranslate %}
         </div>
         {% url 'account_login' as action_url %}
         {% #form form=form url=action_url button_text=heading %}
         <div class="items-start my-2 form-control">
             <label class="cursor-pointer label">
                 {% render_field form.remember class="checkbox checkbox-accent" %}
-                <span class="ml-2 label-text">Remember me</span>
+                <span class="ml-2 label-text">{% trans "Remember me" %}</span>
             </label>
         </div>
         {{ redirect_field }}
         {% csrf_token %}
         <div class="flex flex-col">
             <a class="link self-end text-sm"
-               href="{% url "account_reset_password" %}">Forgot password?</a>
+               href="{% url "account_reset_password" %}">{% trans "Forgot password?" %}</a>
         </div>
         {% /form %}
     {% endif %}
