@@ -5,7 +5,9 @@
     {% trans "Email Addresses" as heading %}
     {% #container heading=heading %}
     {% if emailaddresses %}
-        <div>{% trans 'The following email addresses are associated with your account:' %}</div>
+        <div>
+            {% trans 'The following email addresses are associated with your account:' %}
+        </div>
         {% url 'account_email' as action_url %}
         {% #form url=action_url use_default_button="false" %}
         {{ redirect_field }}
@@ -35,9 +37,15 @@
             {% endfor %}
         </div>
         <div class="flex flex-col mt-3 gap-1.5 ">
-            <button name="action_primary" type="submit" class="btn btn-primary">Make Primary</button>
-            <button name="action_send" type="submit" class="btn btn-secondary">Re-send verification</button>
-            <button name="action_remove" type="submit" class="btn btn-warning">Remove</button>
+            <button name="action_primary" type="submit" class="btn btn-primary">
+                Make Primary
+            </button>
+            <button name="action_send" type="submit" class="btn btn-secondary">
+                Re-send verification
+            </button>
+            <button name="action_remove" type="submit" class="btn btn-warning">
+                Remove
+            </button>
         </div>
         {% /form %}
     {% else %}
