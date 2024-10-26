@@ -158,6 +158,8 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "            <a class=\"link\" href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
+"Se você ainda não criou uma conta, por favor\n"
+"            <a class=\"link\" href=\"%(signup_url)s\">cadastre-se</a> primeiro."
 
 #: allauth_ui/templates/account/login.html:18
 msgid "Remember me"
@@ -165,7 +167,7 @@ msgstr "Lembrar-me"
 
 #: allauth_ui/templates/account/login.html:25
 #, fuzzy
-#| msgid "Forgot Password"
+#| msgid "Forgot Password?"
 msgid "Forgot password?"
 msgstr "Esqueceu a senha"
 
@@ -201,7 +203,7 @@ msgstr "Alterar senha"
 
 #: allauth_ui/templates/account/password_change.html:14
 #, fuzzy
-#| msgid "Forgot Password"
+#| msgid "Forgot Password?"
 msgid "Forgot Password?"
 msgstr "Esqueceu a senha"
 
@@ -273,7 +275,7 @@ msgstr "Sua senha foi alterada."
 
 #: allauth_ui/templates/account/password_set.html:6
 #, fuzzy
-#| msgid "Forgot Password"
+#| msgid "Forgot Password?"
 msgid "Set Password"
 msgstr "Esqueceu a senha"
 
@@ -296,6 +298,8 @@ msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\" "
 "class=\"link\">sign in</a>."
 msgstr ""
+"Já tem uma conta? Então por favor <a href=\"%(login_url)s\" "
+"class=\"link\">entre</a>."
 
 #: allauth_ui/templates/account/signup_closed.html:5
 msgid "Sign Up Closed"
