@@ -5,9 +5,7 @@
     {% trans "Email Addresses" as heading %}
     {% #container heading=heading %}
     {% if emailaddresses %}
-        <div>
-            {% trans 'The following email addresses are associated with your account:' %}
-        </div>
+        <div>{% trans 'The following email addresses are associated with your account:' %}</div>
         {% url 'account_email' as action_url %}
         {% #form url=action_url use_default_button="false" %}
         {{ redirect_field }}
@@ -37,15 +35,9 @@
             {% endfor %}
         </div>
         <div class="flex flex-col mt-3 gap-1.5 ">
-            <button name="action_primary" type="submit" class="btn btn-primary">
-                {% trans "Make Primary" %}
-            </button>
-            <button name="action_send" type="submit" class="btn btn-secondary">
-                {% trans "Re-send verification" %}
-            </button>
-            <button name="action_remove" type="submit" class="btn btn-warning">
-                {% trans "Remove" %}
-            </button>
+            <button name="action_primary" type="submit" class="btn btn-primary">{% trans "Make Primary" %}</button>
+            <button name="action_send" type="submit" class="btn btn-secondary">{% trans "Re-send verification" %}</button>
+            <button name="action_remove" type="submit" class="btn btn-warning">{% trans "Remove" %}</button>
         </div>
         {% /form %}
     {% else %}
@@ -56,8 +48,8 @@
         <h2 class="py-3 text-lg">{% trans "Add Email Address" %}</h2>
         {% trans "Add Email" as button_text %}
         {% #form form=form url=action_url button_text=button_text use_default_button="false" %}
-            {% csrf_token %}
-            <button type="submit" name="action_add" class="my-3 btn">{{ button_text }}</button>
+        {% csrf_token %}
+        <button type="submit" name="action_add" class="my-3 btn">{{ button_text }}</button>
         {% /form %}
     {% endif %}
     {% /container %}
