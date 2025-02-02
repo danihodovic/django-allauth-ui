@@ -56,8 +56,10 @@
         <h2 class="py-3 text-lg">{% trans "Add Email Address" %}</h2>
         {% trans "Add Email" as button_text %}
         {% #form form=form url=action_url button_text=button_text use_default_button="false" %}
-            {% csrf_token %}
-            <button type="submit" name="action_add" class="my-3 btn">{{ button_text }}</button>
+        {% csrf_token %}
+        <button type="submit" name="action_add" class="my-3 btn">
+            {{ button_text }}
+        </button>
         {% /form %}
     {% endif %}
     {% /container %}
