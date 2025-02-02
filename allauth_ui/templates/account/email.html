@@ -16,8 +16,8 @@
             {% for radio in emailaddress_radios %}
                 {% with emailaddress=radio.emailaddress %}
                     <div class="form-control">
-                        <label class="cursor-pointer label border p-3 rounded">
-                            <span class="label-text">{{ emailaddress.email }}
+                        <label class="flex gap-3 cursor-pointer label border rounded px-3">
+                            <span class="grow label-text overflow-auto py-3">{{ emailaddress.email }}
                                 {% if emailaddress.verified %}
                                     <div class="badge badge-primary badge-outline">{% trans "verified" %}</div>
                                 {% endif %}
