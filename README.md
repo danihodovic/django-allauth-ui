@@ -72,15 +72,16 @@ ALLAUTH_UI_THEME = "light"
 
 ## Hacking on the project
 
+- Install direnv: https://direnv.net/docs/installation.html
+- Setup direnv: https://direnv.net/docs/hook.html
+
 ```sh
 # Clone the repo
 git clone git@github.com:danihodovic/django-allauth-ui.git
 cd django-allauth-ui.git
 
-# Create the virtual env
-python -m venv .venv
-# Activate the virtual env. This has to be done every time you enter the directory.
-source .venv/bin/activate
+# Active the virtual env
+direnv allow
 
 # Install the dependencies
 pip install --upgrade pip poetry
