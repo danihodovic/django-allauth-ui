@@ -113,3 +113,4 @@ tests/media
 
 allauth_ui/static/allauth_ui/output.css
 node_modules
+.direnv
