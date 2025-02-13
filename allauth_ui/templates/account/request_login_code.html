@@ -1,0 +1,17 @@
+{% extends "account/request_login_code.html" %}
+{% load i18n %}
+{% load allauth_ui %}
+{% load widget_tweaks %}
+{% block content %}
+    {% trans "Mail me a sign-in code" as heading %}
+    {% #container heading=heading  %}
+    <div class="py-3">
+        {% blocktranslate %}You will receive an email containing a special code for a password-free sign-in.{% endblocktranslate %}
+    </div>
+    {% url 'account_request_login_code' as action_url %}
+    {% #form form=form url=action_url button_text=heading %}
+    {{ redirect_field }}
+    {% csrf_token %}
+    {% /form %}
+    {% /container %}
+{% endblock content %}
