@@ -4,14 +4,16 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "django-allauth-ui"
-version = "1.6.1"
+version = "1.7.0"
 description = ""
 authors = ["Dani Hodovic <you@example.com>"]
 license = "MIT"
 packages = [
     { include = "allauth_ui" },
 ]
-include = ["allauth_ui/static/allauth_ui/output.css"]
+include = [
+  {path = "allauth_ui/static/allauth_ui/output.css", format = ["sdist", "wheel"]}
+]
 readme = "README.md"
 repository = "https://github.com/danihodovic/django-allauth-ui"
 keywords = ["django", "allauth", "social-login", "auth"]
