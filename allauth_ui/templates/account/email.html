@@ -16,8 +16,8 @@
             {% for radio in emailaddress_radios %}
                 {% with emailaddress=radio.emailaddress %}
                     <div class="form-control">
-                        <label class="cursor-pointer label border p-3 rounded">
-                            <span class="label-text">{{ emailaddress.email }}
+                        <label class="flex gap-3 cursor-pointer label border rounded px-3">
+                            <span class="grow label-text overflow-auto py-3">{{ emailaddress.email }}
                                 {% if emailaddress.verified %}
                                     <div class="badge badge-primary badge-outline">{% trans "verified" %}</div>
                                 {% endif %}
@@ -56,8 +56,10 @@
         <h2 class="py-3 text-lg">{% trans "Add Email Address" %}</h2>
         {% trans "Add Email" as button_text %}
         {% #form form=form url=action_url button_text=button_text use_default_button="false" %}
-            {% csrf_token %}
-            <button type="submit" name="action_add" class="my-3 btn">{{ button_text }}</button>
+        {% csrf_token %}
+        <button type="submit" name="action_add" class="my-3 btn">
+            {{ button_text }}
+        </button>
         {% /form %}
     {% endif %}
     {% /container %}
