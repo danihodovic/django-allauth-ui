@@ -1,0 +1,17 @@
+{% if messages %}
+<ul class="max-w-screen-lg mx-auto flex flex-col gap-4 mb-5 pt-5">
+    {% for message in messages %}
+    <li class="*:!mb-0">
+        {% if message.tags == 'info' %}
+        {% include "helpers/messages/info.html" with message=message %}
+        {% elif message.tags == 'success' %}
+        {% include "helpers/messages/success.html" with message=message %}
+        {% elif message.tags == 'warning' %}
+        {% include "helpers/messages/warning.html" with message=message %}
+        {% elif message.tags == 'error' %}
+        {% include "helpers/messages/error.html" with message=message %}
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
