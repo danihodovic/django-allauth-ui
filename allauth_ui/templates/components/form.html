@@ -10,8 +10,13 @@
     {% if render_fields == "true" %}
         {% for field in form.visible_fields %}
             {% if field.name != "remember" %}
-                {% #form_field field=field %}
-                {% /form_field %}
+                {% if field.name == "password" %}
+                    {% #form_field field=field is_password='true' %}
+                    {% /form_field %}
+                {% else %}
+                    {% #form_field field=field %}
+                    {% /form_field %}
+                {% endif %}
             {% endif %}
         {% endfor %}
     {% endif %}
