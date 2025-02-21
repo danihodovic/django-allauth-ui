@@ -28,9 +28,10 @@ function togglePassword() {
         <div class="relative flex w-full">
             {% render_field field placeholder="" class="w-full input input-bordered text-primary password-field"%}
             <button type="button" onclick="togglePassword()" 
-                class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-transparent text-gray-500 hover:text-gray-700 text-sm">
+                class="btn btn-neutral text-gray-500 hover:text-gray-700 text-sm">
                 Show
             </button>
+            
         </div>
     {% else %}
         {% render_field field placeholder="" class="w-full input input-bordered text-primary" %}
