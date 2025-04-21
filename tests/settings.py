@@ -119,4 +119,4 @@ USERSESSIONS_TRACK_ACTIVITY = True
 
 MFA_SUPPORTED_TYPES = ["totp", "webauthn", "recovery_codes"]
 MFA_TOTP_ISSUER = "AllAuth UI"
-ALLAUTH_UI_THEME = "business"
+ALLAUTH_UI_THEME = "cyberpunk"
