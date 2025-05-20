@@ -217,6 +217,7 @@ msgid "Your password is now changed."
 msgstr "La tua password è stata cambiata."
 
 #: templates/account/password_set.html:6
+#: templates/allauth/layouts/base.html:47
 msgid "Set Password"
 msgstr "Imposta password"
 
@@ -269,10 +270,6 @@ msgstr "Account"
 #: templates/allauth/layouts/base.html:43
 msgid "Change Email"
 msgstr "Cambia email"
-
-#: templates/allauth/layouts/base.html:47
-msgid "Set Password"
-msgstr "Imposta password"
 
 #: templates/allauth/layouts/base.html:66
 msgid "Connections"
