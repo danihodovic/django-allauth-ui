@@ -1,0 +1,375 @@
+# TRADUZIONE ITALIANA PER django-allauth-ui
+# Copyright (C) 2025 Massimiliano Federici
+# Questo file è distribuito sotto la stessa licenza del pacchetto django-allauth-ui.
+# Massimiliano Federici <massyfederici@gmail.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: django-allauth-ui 1.7.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-08 15:30-0300\n"
+"PO-Revision-Date: 2025-05-10 00:00+0000\n"
+"Last-Translator: Massimiliano Federici <massyfederici@gmail.com>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/account/account_inactive.html:5
+msgid "Account Inactive"
+msgstr "Account inattivo"
+
+#: templates/account/account_inactive.html:6
+msgid "This account is inactive."
+msgstr "Questo account è inattivo."
+
+#: templates/account/base_reauthenticate.html:5
+msgid "Confirm Access"
+msgstr "Conferma accesso"
+
+#: templates/account/base_reauthenticate.html:6
+msgid ""
+"\n"
+"    Please reauthenticate to safeguard your account.\n"
+"    "
+msgstr ""
+"\n"
+"    Per favore, riautenticati per proteggere il tuo account.\n"
+"    "
+
+#: templates/account/base_reauthenticate.html:13
+#: templates/mfa/authenticate.html:17
+msgid "Alternative options"
+msgstr "Opzioni alternative"
+
+#: templates/account/email.html:5
+msgid "Email Addresses"
+msgstr "Indirizzi email"
+
+#: templates/account/email.html:9
+msgid "The following email addresses are associated with your account:"
+msgstr "I seguenti indirizzi email sono associati al tuo account:"
+
+#: templates/account/email.html:22
+msgid "verified"
+msgstr "verificato"
+
+#: templates/account/email.html:25
+msgid "primary"
+msgstr "principale"
+
+#: templates/account/email.html:41
+msgid "Make Primary"
+msgstr "Rendi principale"
+
+#: templates/account/email.html:44
+msgid "Re-send verification"
+msgstr "Invia nuovamente la verifica"
+
+#: templates/account/email.html:47 templates/socialaccount/connections.html:35
+msgid "Remove"
+msgstr "Rimuovi"
+
+#: templates/account/email.html:56
+msgid "Add Email Address"
+msgstr "Aggiungi indirizzo email"
+
+#: templates/account/email.html:57
+msgid "Add Email"
+msgstr "Aggiungi email"
+
+#: templates/account/email_confirm.html:7
+#: templates/account/verification_sent.html:5
+msgid "Confirm Email Address"
+msgstr "Conferma indirizzo email"
+
+#: templates/account/email_confirm.html:13
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an email "
+"address for user %(user_display)s."
+msgstr ""
+"Conferma che <a href=\"mailto:%(email)s\">%(email)s</a> è un indirizzo email "
+"associato all'utente %(user_display)s."
+
+#: templates/account/email_confirm.html:16
+#: templates/account/reauthenticate.html:9 templates/mfa/reauthenticate.html:9
+msgid "Confirm"
+msgstr "Conferma"
+
+#: templates/account/email_confirm.html:23
+#, python-format
+msgid ""
+"Unable to confirm %(email)s because it is already confirmed by a different "
+"account."
+msgstr ""
+"Impossibile confermare %(email)s perché è già stato confermato da un altro "
+"account."
+
+#: templates/account/email_confirm.html:29
+#, python-format
+msgid ""
+"This email confirmation link expired or is invalid. Please <a "
+"href=\"%(email_url)s\">issue a new email confirmation request</a>."
+msgstr ""
+"Questo link di conferma email è scaduto o non è valido. <a "
+"href=\"%(email_url)s\">Richiedi un nuovo link di conferma</a>."
+
+#: templates/account/login.html:6 templates/allauth/layouts/base.html:55
+#: templates/mfa/authenticate.html:11
+msgid "Sign In"
+msgstr "Accedi"
+
+#: templates/account/login.html:10
+#, python-format
+msgid ""
+"If you have not created an account yet, then please\n"
+"            <a class=\"link\" href=\"%(signup_url)s\">sign up</a> first."
+msgstr ""
+"Se non hai ancora creato un account,\n"
+"            <a class=\"link\" href=\"%(signup_url)s\">registrati</a> prima."
+
+#: templates/account/login.html:18
+msgid "Remember me"
+msgstr "Ricordami"
+
+#: templates/account/login.html:25
+msgid "Forgot password?"
+msgstr "Password dimenticata?"
+
+#: templates/account/login.html:31
+msgid "Mail me a sign-in code"
+msgstr "Inviami un codice di accesso"
+
+#: templates/account/logout.html:5 templates/allauth/layouts/base.html:50
+#: templates/usersessions/usersession_list.html:15
+msgid "Sign Out"
+msgstr "Disconnettiti"
+
+#: templates/account/logout.html:6
+msgid "Are you sure you want to sign out?"
+msgstr "Sei sicuro di voler uscire?"
+
+#: templates/account/logout.html:9 templates/socialaccount/login.html:14
+#: templates/socialaccount/signup.html:12
+msgid "Continue"
+msgstr "Continua"
+
+#: templates/account/password_change.html:6
+#: templates/account/password_reset_from_key.html:8
+#: templates/account/password_reset_from_key.html:18
+#: templates/account/password_reset_from_key_done.html:5
+#: templates/allauth/layouts/base.html:38
+msgid "Change Password"
+msgstr "Cambia password"
+
+#: templates/account/password_change.html:14
+msgid "Forgot Password?"
+msgstr "Password dimenticata?"
+
+#: templates/account/password_reset.html:5
+#: templates/account/password_reset_done.html:5
+msgid "Password Reset"
+msgstr "Reimposta password"
+
+#: templates/account/password_reset.html:11
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll send you "
+"an email allowing you to reset it."
+msgstr ""
+"Hai dimenticato la password? Inserisci il tuo indirizzo email qui sotto e ti "
+"invieremo un'email per reimpostarla."
+
+#: templates/account/password_reset.html:14
+msgid "Reset My Password"
+msgstr "Reimposta la mia password"
+
+#: templates/account/password_reset.html:20
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "Contattaci se hai problemi a reimpostare la password."
+
+#: templates/account/password_reset_done.html:11
+msgid ""
+"We have sent you an email. If you have not received it please check your "
+"spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr ""
+"Ti abbiamo inviato un'email. Se non la ricevi, controlla la cartella spam. "
+"In caso contrario, contattaci."
+
+#: templates/account/password_reset_from_key.html:6
+msgid "Bad Token"
+msgstr "Token non valido"
+
+#: templates/account/password_reset_from_key.html:14
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+"Il link per reimpostare la password non è valido, forse è già stato usato. "
+"<a href=\"%(passwd_reset_url)s\">Richiedi un nuovo link</a>."
+
+#: templates/account/password_reset_from_key_done.html:6
+msgid "Your password is now changed."
+msgstr "La tua password è stata cambiata."
+
+#: templates/account/password_set.html:6
+#: templates/allauth/layouts/base.html:47
+msgid "Set Password"
+msgstr "Imposta password"
+
+#: templates/account/reauthenticate.html:6
+msgid "Enter your password:"
+msgstr "Inserisci la tua password:"
+
+#: templates/account/signup.html:6 templates/allauth/layouts/base.html:59
+#: templates/socialaccount/signup.html:6 templates/socialaccount/signup.html:14
+msgid "Sign Up"
+msgstr "Registrati"
+
+#: templates/account/signup.html:7
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\" "
+"class=\"link\">sign in</a>."
+msgstr ""
+"Hai già un account? <a href=\"%(login_url)s\" class=\"link\">Accedi</a>."
+
+#: templates/account/signup_closed.html:5
+msgid "Sign Up Closed"
+msgstr "Registrazione chiusa"
+
+#: templates/account/signup_closed.html:6
+msgid "We are sorry, but the sign up is currently closed."
+msgstr "Ci dispiace, la registrazione è attualmente chiusa."
+
+#: templates/account/snippets/already_logged_in.html:5
+msgid "Note"
+msgstr "Nota"
+
+#: templates/account/snippets/already_logged_in.html:6
+msgid "You are already logged in."
+msgstr "Sei già connesso."
+
+#: templates/account/verification_sent.html:7
+#, python-format
+msgid ""
+"We have sent an email to <a href=\"mailto:%(email)s\">%(email)s</a>. Please "
+"follow the link in the email to verify your email address."
+msgstr ""
+"Abbiamo inviato un'email a <a href=\"mailto:%(email)s\">%(email)s</a>. "
+"Segui il link presente nell'email per verificare il tuo indirizzo."
+
+#: templates/allauth/layouts/base.html:34
+msgid "Account"
+msgstr "Account"
+
+#: templates/allauth/layouts/base.html:43
+msgid "Change Email"
+msgstr "Cambia email"
+
+#: templates/allauth/layouts/base.html:66
+msgid "Connections"
+msgstr "Connessioni"
+
+#: templates/allauth/layouts/base.html:72
+msgid "Multi-Factor Authentication"
+msgstr "Autenticazione a più fattori"
+
+#: templates/allauth/layouts/base.html:77
+msgid "Sessions"
+msgstr "Sessioni"
+
+#: templates/allauth/layouts/base.html:84
+msgid "Logout"
+msgstr "Disconnetti"
+
+#: templates/mfa/authenticate.html:6
+msgid "Two-Factor Authentication"
+msgstr "Autenticazione a due fattori"
+
+#: templates/mfa/authenticate.html:13
+msgid "Enter the verification code from your authenticator app:"
+msgstr "Inserisci il codice di verifica dalla tua app di autenticazione:"
+
+#: templates/mfa/authenticate.html:20
+msgid "Use recovery code"
+msgstr "Usa codice di recupero"
+
+#: templates/mfa/authenticate.html:23
+msgid "Use backup method"
+msgstr "Usa metodo di backup"
+
+#: templates/mfa/reauthenticate.html:6
+msgid "Enter the code from your authenticator app:"
+msgstr "Inserisci il codice dalla tua app di autenticazione:"
+
+#: templates/socialaccount/authentication_error.html:5
+msgid "Social Network Login Failure"
+msgstr "Errore di accesso con social network"
+
+#: templates/socialaccount/authentication_error.html:6
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr ""
+"Si è verificato un errore durante il tentativo di accesso con il tuo account "
+"social."
+
+#: templates/socialaccount/connections.html:5
+msgid "Account Connections"
+msgstr "Connessioni account"
+
+#: templates/socialaccount/connections.html:9
+msgid ""
+"The following services are connected to your account. You may disconnect "
+"them at any time."
+msgstr ""
+"I seguenti servizi sono collegati al tuo account. Puoi disconnetterli in "
+"qualsiasi momento."
+
+#: templates/socialaccount/connections.html:32
+msgid "Disconnect"
+msgstr "Disconnetti"
+
+#: templates/socialaccount/login_cancelled.html:5
+msgid "Login Cancelled"
+msgstr "Accesso annullato"
+
+#: templates/socialaccount/login_cancelled.html:6
+msgid "You cancelled the login process."
+msgstr "Hai annullato il processo di accesso."
+
+#: templates/socialaccount/messages/account_connected.txt:1
+msgid "The social account has been connected."
+msgstr "L'account social è stato collegato."
+
+#: templates/socialaccount/messages/account_connected_other.txt:1
+msgid "The social account is already connected to another user."
+msgstr "L'account social è già collegato a un altro utente."
+
+#: templates/socialaccount/messages/account_disconnected.txt:1
+msgid "The social account has been disconnected."
+msgstr "L'account social è stato disconnesso."
+
+#: templates/socialaccount/signup.html:9
+msgid "Create an account"
+msgstr "Crea un account"
+
+#: templates/usersessions/usersession_list.html:5
+msgid "Active Sessions"
+msgstr "Sessioni attive"
+
+#: templates/usersessions/usersession_list.html:9
+msgid "This device"
+msgstr "Questo dispositivo"
+
+#: templates/usersessions/usersession_list.html:18
+msgid "Sign Out Session"
+msgstr "Disconnetti sessione"
+
+#: templates/usersessions/usersession_list.html:23
+msgid "You have no active sessions."
+msgstr "Non hai sessioni attive."
