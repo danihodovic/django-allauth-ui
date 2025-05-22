@@ -30,6 +30,7 @@ defaults for new projects.
   - 🇫🇷 French
   - 🇧🇷 Portuguese
   - 🇹🇷 Turkish
+  - 🇮🇹 Italian
 
 ## Installation
 
