@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-08 15:30-0300\n"
+"POT-Creation-Date: 2025-05-28 13:52-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: templates/account/account_inactive.html:5
+#: allauth_ui/templates/account/account_inactive.html:5
 msgid "Account Inactive"
 msgstr "Cuenta Inactiva"
 
-#: templates/account/account_inactive.html:6
+#: allauth_ui/templates/account/account_inactive.html:6
 msgid "This account is inactive."
 msgstr "Esta cuenta está inactiva."
 
-#: templates/account/base_reauthenticate.html:5
+#: allauth_ui/templates/account/base_reauthenticate.html:5
 msgid "Confirm Access"
 msgstr "Confirmar Acceso"
 
-#: templates/account/base_reauthenticate.html:6
+#: allauth_ui/templates/account/base_reauthenticate.html:6
 msgid ""
 "\n"
 "    Please reauthenticate to safeguard your account.\n"
@@ -40,55 +40,79 @@ msgstr ""
 "    Por favor, vuelve a autenticarte para proteger tu cuenta.\n"
 "    "
 
-#: templates/account/base_reauthenticate.html:13
-#: templates/mfa/authenticate.html:17
+#: allauth_ui/templates/account/base_reauthenticate.html:13
+#: allauth_ui/templates/mfa/authenticate.html:17
 msgid "Alternative options"
 msgstr "Opciones alternativas"
 
-#: templates/account/email.html:5
+#: allauth_ui/templates/account/confirm_login_code.html:8
+#: allauth_ui/templates/account/login.html:6
+#: allauth_ui/templates/allauth/layouts/base.html:55
+#: allauth_ui/templates/mfa/authenticate.html:11
+msgid "Sign In"
+msgstr "Iniciar sesión"
+
+#: allauth_ui/templates/account/confirm_login_code.html:10
+msgid "Enter Sign-In Code"
+msgstr ""
+
+#: allauth_ui/templates/account/confirm_login_code.html:15
+#, python-format
+msgid ""
+"We’ve sent a code to %(email_link)s. The code expires shortly, so please "
+"enter it soon."
+msgstr ""
+
+#: allauth_ui/templates/account/confirm_login_code.html:22
+#: allauth_ui/templates/mfa/authenticate.html:22
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: allauth_ui/templates/account/email.html:5
 msgid "Email Addresses"
 msgstr "Direcciones de Correo Electrónico"
 
-#: templates/account/email.html:9
+#: allauth_ui/templates/account/email.html:9
 msgid "The following email addresses are associated with your account:"
 msgstr ""
 "Las siguientes direcciones de correo electrónico están asociadas con tu "
 "cuenta:"
 
-#: templates/account/email.html:22
+#: allauth_ui/templates/account/email.html:22
 msgid "verified"
 msgstr "verificado"
 
-#: templates/account/email.html:25
+#: allauth_ui/templates/account/email.html:25
 msgid "primary"
 msgstr "principal"
 
-#: templates/account/email.html:41
+#: allauth_ui/templates/account/email.html:41
 msgid "Make Primary"
 msgstr "Hacer principal"
 
-#: templates/account/email.html:44
+#: allauth_ui/templates/account/email.html:44
 msgid "Re-send verification"
 msgstr "Reenviar verificación"
 
-#: templates/account/email.html:47 templates/socialaccount/connections.html:35
+#: allauth_ui/templates/account/email.html:47
+#: allauth_ui/templates/socialaccount/connections.html:35
 msgid "Remove"
 msgstr "Eliminar"
 
-#: templates/account/email.html:56
+#: allauth_ui/templates/account/email.html:56
 msgid "Add Email Address"
 msgstr "Agregar Dirección de Correo Electrónico"
 
-#: templates/account/email.html:57
+#: allauth_ui/templates/account/email.html:57
 msgid "Add Email"
 msgstr "Agregar Correo"
 
-#: templates/account/email_confirm.html:7
-#: templates/account/verification_sent.html:5
+#: allauth_ui/templates/account/email_confirm.html:7
+#: allauth_ui/templates/account/verification_sent.html:5
 msgid "Confirm Email Address"
 msgstr "Confirmar Dirección de Correo Electrónico"
 
-#: templates/account/email_confirm.html:13
+#: allauth_ui/templates/account/email_confirm.html:13
 #, python-format
 msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an email "
@@ -97,12 +121,13 @@ msgstr ""
 "Por favor, confirma que <a href=\"mailto:%(email)s\">%(email)s</a> es una "
 "dirección de correo para el usuario %(user_display)s."
 
-#: templates/account/email_confirm.html:16
-#: templates/account/reauthenticate.html:9 templates/mfa/reauthenticate.html:9
+#: allauth_ui/templates/account/email_confirm.html:16
+#: allauth_ui/templates/account/reauthenticate.html:9
+#: allauth_ui/templates/mfa/reauthenticate.html:9
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: templates/account/email_confirm.html:23
+#: allauth_ui/templates/account/email_confirm.html:23
 #, python-format
 msgid ""
 "Unable to confirm %(email)s because it is already confirmed by a different "
@@ -111,7 +136,7 @@ msgstr ""
 "No se puede confirmar %(email)s porque ya está confirmado por una cuenta "
 "diferente."
 
-#: templates/account/email_confirm.html:29
+#: allauth_ui/templates/account/email_confirm.html:29
 #, python-format
 msgid ""
 "This email confirmation link expired or is invalid. Please <a "
@@ -121,12 +146,7 @@ msgstr ""
 "Por favor, <a href=\"%(email_url)s\">solicita un nuevo enlace de "
 "confirmación</a>."
 
-#: templates/account/login.html:6 templates/allauth/layouts/base.html:55
-#: templates/mfa/authenticate.html:11
-msgid "Sign In"
-msgstr "Iniciar sesión"
-
-#: templates/account/login.html:10
+#: allauth_ui/templates/account/login.html:10
 #, python-format
 msgid ""
 "If you have not created an account yet, then please\n"
@@ -135,50 +155,53 @@ msgstr ""
 "Si no has creado una cuenta aún, por favor\n"
 "            <a class=\"link\" href=\"%(signup_url)s\">regístrate</a> primero."
 
-#: templates/account/login.html:18
+#: allauth_ui/templates/account/login.html:19
 msgid "Remember me"
 msgstr "Recordarme"
 
-#: templates/account/login.html:25
+#: allauth_ui/templates/account/login.html:27
 msgid "Forgot password?"
 msgstr "Recuperar clave"
 
-#: templates/account/login.html:31
+#: allauth_ui/templates/account/login.html:33
+#: allauth_ui/templates/account/request_login_code.html:6
 msgid "Mail me a sign-in code"
 msgstr "Envíame un código de inicio de sesión"
 
-#: templates/account/logout.html:5 templates/allauth/layouts/base.html:50
-#: templates/usersessions/usersession_list.html:15
+#: allauth_ui/templates/account/logout.html:5
+#: allauth_ui/templates/allauth/layouts/base.html:50
+#: allauth_ui/templates/usersessions/usersession_list.html:15
 msgid "Sign Out"
 msgstr "Cerrar Sesión"
 
-#: templates/account/logout.html:6
+#: allauth_ui/templates/account/logout.html:6
 msgid "Are you sure you want to sign out?"
 msgstr "¿Estás seguro de que deseas cerrar sesión?"
 
-#: templates/account/logout.html:9 templates/socialaccount/login.html:14
-#: templates/socialaccount/signup.html:12
+#: allauth_ui/templates/account/logout.html:9
+#: allauth_ui/templates/socialaccount/login.html:14
+#: allauth_ui/templates/socialaccount/signup.html:12
 msgid "Continue"
 msgstr "Continuar"
 
-#: templates/account/password_change.html:6
-#: templates/account/password_reset_from_key.html:8
-#: templates/account/password_reset_from_key.html:18
-#: templates/account/password_reset_from_key_done.html:5
-#: templates/allauth/layouts/base.html:38
+#: allauth_ui/templates/account/password_change.html:6
+#: allauth_ui/templates/account/password_reset_from_key.html:8
+#: allauth_ui/templates/account/password_reset_from_key.html:18
+#: allauth_ui/templates/account/password_reset_from_key_done.html:5
+#: allauth_ui/templates/allauth/layouts/base.html:38
 msgid "Change Password"
 msgstr "Cambiar Contraseña"
 
-#: templates/account/password_change.html:14
+#: allauth_ui/templates/account/password_change.html:14
 msgid "Forgot Password?"
 msgstr "Recuperar Clave"
 
-#: templates/account/password_reset.html:5
-#: templates/account/password_reset_done.html:5
+#: allauth_ui/templates/account/password_reset.html:5
+#: allauth_ui/templates/account/password_reset_done.html:5
 msgid "Password Reset"
 msgstr "Recuperar Clave"
 
-#: templates/account/password_reset.html:11
+#: allauth_ui/templates/account/password_reset.html:11
 msgid ""
 "Forgotten your password? Enter your email address below, and we'll send you "
 "an email allowing you to reset it."
@@ -186,16 +209,16 @@ msgstr ""
 "¿Olvidaste tu contraseña? Ingresa tu dirección de correo electrónico a "
 "continuación y te enviaremos un correo para restablecerla."
 
-#: templates/account/password_reset.html:14
+#: allauth_ui/templates/account/password_reset.html:14
 msgid "Reset My Password"
 msgstr "Restablecer Mi Contraseña"
 
-#: templates/account/password_reset.html:20
+#: allauth_ui/templates/account/password_reset.html:20
 msgid "Please contact us if you have any trouble resetting your password."
 msgstr ""
 "Por favor contáctanos si tienes algún problema restableciendo tu contraseña."
 
-#: templates/account/password_reset_done.html:11
+#: allauth_ui/templates/account/password_reset_done.html:11
 msgid ""
 "We have sent you an email. If you have not received it please check your "
 "spam folder. Otherwise contact us if you do not receive it in a few minutes."
@@ -203,11 +226,11 @@ msgstr ""
 "Te hemos enviado un correo electrónico. Si no lo has recibido, por favor "
 "revisa tu carpeta de spam. Si no lo recibes en unos minutos, contáctanos."
 
-#: templates/account/password_reset_from_key.html:6
+#: allauth_ui/templates/account/password_reset_from_key.html:6
 msgid "Bad Token"
 msgstr "Token Inválido"
 
-#: templates/account/password_reset_from_key.html:14
+#: allauth_ui/templates/account/password_reset_from_key.html:14
 #, python-format
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
@@ -218,24 +241,32 @@ msgstr ""
 "ya ha sido usado. Por favor, solicita un <a "
 "href=\"%(passwd_reset_url)s\">nuevo restablecimiento de contraseña</a>."
 
-#: templates/account/password_reset_from_key_done.html:6
+#: allauth_ui/templates/account/password_reset_from_key_done.html:6
 msgid "Your password is now changed."
 msgstr "Tu contraseña ha sido cambiada."
 
-#: templates/account/password_set.html:6
+#: allauth_ui/templates/account/password_set.html:6
 msgid "Set Password"
 msgstr "Establecer Contraseña"
 
-#: templates/account/reauthenticate.html:6
+#: allauth_ui/templates/account/reauthenticate.html:6
 msgid "Enter your password:"
 msgstr "Ingresa tu contraseña:"
 
-#: templates/account/signup.html:6 templates/allauth/layouts/base.html:59
-#: templates/socialaccount/signup.html:6 templates/socialaccount/signup.html:14
+#: allauth_ui/templates/account/request_login_code.html:9
+msgid ""
+"You will receive an email containing a special code for a password-free sign-"
+"in."
+msgstr ""
+
+#: allauth_ui/templates/account/signup.html:6
+#: allauth_ui/templates/allauth/layouts/base.html:59
+#: allauth_ui/templates/socialaccount/signup.html:6
+#: allauth_ui/templates/socialaccount/signup.html:14
 msgid "Sign Up"
 msgstr "Crear cuenta"
 
-#: templates/account/signup.html:7
+#: allauth_ui/templates/account/signup.html:7
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\" "
@@ -244,15 +275,15 @@ msgstr ""
 "¿Ya tienes una cuenta? <a href=\"%(login_url)s\" class=\"link\">Inicia "
 "sesión</a>."
 
-#: templates/account/signup_closed.html:5
+#: allauth_ui/templates/account/signup_closed.html:5
 msgid "Sign Up Closed"
 msgstr "Registro Cerrado"
 
-#: templates/account/signup_closed.html:6
+#: allauth_ui/templates/account/signup_closed.html:6
 msgid "We are sorry, but the sign up is currently closed."
 msgstr "Lo sentimos, pero el registro está cerrado actualmente."
 
-#: templates/account/verification_sent.html:6
+#: allauth_ui/templates/account/verification_sent.html:6
 msgid ""
 "We have sent an email to you for verification. Follow the link provided to "
 "finalize the signup process. If you do not see the verification email in "
@@ -264,21 +295,22 @@ msgstr ""
 "verificación en tu bandeja de entrada, revisa tu carpeta de spam. Por favor, "
 "contáctanos si no recibes el correo de verificación en unos minutos."
 
-#: templates/allauth/layouts/base.html:34
+#: allauth_ui/templates/allauth/layouts/base.html:34
 msgid "Change Email"
 msgstr "Cambiar Correo Electrónico"
 
-#: templates/allauth/layouts/base.html:42 templates/mfa/authenticate.html:6
-#: templates/mfa/index.html:5
+#: allauth_ui/templates/allauth/layouts/base.html:42
+#: allauth_ui/templates/mfa/authenticate.html:6
+#: allauth_ui/templates/mfa/index.html:5
 msgid "Two-Factor Authentication"
 msgstr "Autenticación de Dos Factores"
 
-#: templates/allauth/layouts/base.html:46
-#: templates/usersessions/usersession_list.html:6
+#: allauth_ui/templates/allauth/layouts/base.html:46
+#: allauth_ui/templates/usersessions/usersession_list.html:6
 msgid "Sessions"
 msgstr "Sesiones"
 
-#: templates/mfa/authenticate.html:7
+#: allauth_ui/templates/mfa/authenticate.html:7
 msgid ""
 "Your account is protected by two-factor authentication. Please enter an "
 "authenticator code:"
@@ -286,64 +318,64 @@ msgstr ""
 "Tu cuenta está protegida por autenticación de dos factores. Por favor, "
 "ingresa un código de autenticador:"
 
-#: templates/mfa/authenticate.html:10 templates/mfa/index.html:22
-#: templates/mfa/totp/activate_form.html:10
+#: allauth_ui/templates/mfa/authenticate.html:10
+#: allauth_ui/templates/mfa/index.html:22
+#: allauth_ui/templates/mfa/totp/activate_form.html:10
 msgid "Activate"
 msgstr "Activar"
 
-#: templates/mfa/authenticate.html:20
+#: allauth_ui/templates/mfa/authenticate.html:20
 msgid "Use a security key"
 msgstr "Usar una clave de seguridad"
 
-#: templates/mfa/authenticate.html:22
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: templates/mfa/index.html:8
+#: allauth_ui/templates/mfa/index.html:8
 msgid "Authenticator App"
 msgstr "Aplicación de autenticación"
 
-#: templates/mfa/index.html:11
+#: allauth_ui/templates/mfa/index.html:11
 msgid "Authentication using an authenticator app is active."
 msgstr "La autenticación mediante una aplicación de autenticación está activa."
 
-#: templates/mfa/index.html:15 templates/mfa/totp/deactivate_form.html:11
+#: allauth_ui/templates/mfa/index.html:15
+#: allauth_ui/templates/mfa/totp/deactivate_form.html:11
 msgid "Deactivate"
 msgstr "Desactivar"
 
-#: templates/mfa/index.html:19
+#: allauth_ui/templates/mfa/index.html:19
 msgid "An authenticator app is not active."
 msgstr "No hay una aplicación de autenticación activa."
 
-#: templates/mfa/index.html:27
+#: allauth_ui/templates/mfa/index.html:27
 msgid "Security Keys"
 msgstr "Claves de seguridad"
 
-#: templates/mfa/index.html:30
+#: allauth_ui/templates/mfa/index.html:30
 #, python-format
 msgid "You have added %(count)s security key."
 msgid_plural "You have added %(count)s security keys."
 msgstr[0] "Has añadido una clave de seguridad."
 msgstr[1] "Has añadido %(count)s claves de seguridad."
 
-#: templates/mfa/index.html:34
+#: allauth_ui/templates/mfa/index.html:34
 msgid "Manage"
 msgstr "Administrar"
 
-#: templates/mfa/index.html:36
+#: allauth_ui/templates/mfa/index.html:36
 msgid "No security keys have been added."
 msgstr "No se han añadido claves de seguridad."
 
-#: templates/mfa/index.html:39
+#: allauth_ui/templates/mfa/index.html:39
 msgid "Add"
 msgstr "Añadir"
 
-#: templates/mfa/index.html:45 templates/mfa/recovery_codes/generate.html:6
-#: templates/mfa/recovery_codes/index.html:6
+#: allauth_ui/templates/mfa/index.html:45
+#: allauth_ui/templates/mfa/recovery_codes/generate.html:6
+#: allauth_ui/templates/mfa/recovery_codes/index.html:6
 msgid "Recovery Codes"
 msgstr "Códigos de recuperación"
 
-#: templates/mfa/index.html:48 templates/mfa/recovery_codes/index.html:7
+#: allauth_ui/templates/mfa/index.html:48
+#: allauth_ui/templates/mfa/recovery_codes/index.html:7
 #, python-format
 msgid ""
 "There is %(unused_count)s out of %(total_count)s recovery codes available."
@@ -354,57 +386,58 @@ msgstr[0] ""
 msgstr[1] ""
 "Hay %(unused_count)s de %(total_count)s códigos de recuperación disponibles."
 
-#: templates/mfa/index.html:50
+#: allauth_ui/templates/mfa/index.html:50
 msgid "No recovery codes set up."
 msgstr "No hay códigos de recuperación configurados."
 
-#: templates/mfa/index.html:59
+#: allauth_ui/templates/mfa/index.html:59
 msgid "View"
 msgstr "Ver"
 
-#: templates/mfa/index.html:62
+#: allauth_ui/templates/mfa/index.html:62
 msgid "Download"
 msgstr "Descargar"
 
-#: templates/mfa/index.html:67 templates/mfa/recovery_codes/generate.html:16
+#: allauth_ui/templates/mfa/index.html:67
+#: allauth_ui/templates/mfa/recovery_codes/generate.html:16
 msgid "Generate"
 msgstr "Generar"
 
-#: templates/mfa/reauthenticate.html:6
+#: allauth_ui/templates/mfa/reauthenticate.html:6
 msgid "Enter an authenticator code:"
 msgstr "Introduce un código de autenticación:"
 
-#: templates/mfa/recovery_codes/generate.html:7
+#: allauth_ui/templates/mfa/recovery_codes/generate.html:7
 msgid "You are about to generate a new set of recovery codes for your account."
 msgstr ""
 "Estás a punto de generar un nuevo conjunto de códigos de recuperación para "
 "tu cuenta."
 
-#: templates/mfa/recovery_codes/generate.html:11
+#: allauth_ui/templates/mfa/recovery_codes/generate.html:11
 msgid "This action will invalidate your existing codes."
 msgstr "Esta acción invalidará tus códigos existentes."
 
-#: templates/mfa/recovery_codes/generate.html:13
+#: allauth_ui/templates/mfa/recovery_codes/generate.html:13
 msgid "Are you sure?"
 msgstr "¿Estás seguro?"
 
-#: templates/mfa/recovery_codes/index.html:11
+#: allauth_ui/templates/mfa/recovery_codes/index.html:11
 msgid "Unused codes"
 msgstr "Códigos no utilizados"
 
-#: templates/mfa/recovery_codes/index.html:21
+#: allauth_ui/templates/mfa/recovery_codes/index.html:21
 msgid "Download codes"
 msgstr "Descargar códigos"
 
-#: templates/mfa/recovery_codes/index.html:24
+#: allauth_ui/templates/mfa/recovery_codes/index.html:24
 msgid "Generate new codes"
 msgstr "Generar nuevos códigos"
 
-#: templates/mfa/totp/activate_form.html:7
+#: allauth_ui/templates/mfa/totp/activate_form.html:7
 msgid "Activate Authenticator App"
 msgstr "Activar la aplicación de autenticación"
 
-#: templates/mfa/totp/activate_form.html:8
+#: allauth_ui/templates/mfa/totp/activate_form.html:8
 msgid ""
 "To protect your account with two-factor authentication, scan the QR code "
 "below with your authenticator app. Then, input the verification code "
@@ -415,11 +448,11 @@ msgstr ""
 "Luego, ingresa el código de verificación generado por la aplicación a "
 "continuación."
 
-#: templates/mfa/totp/activate_form.html:22
+#: allauth_ui/templates/mfa/totp/activate_form.html:22
 msgid "Authenticator secret"
 msgstr "Secreto de autenticación"
 
-#: templates/mfa/totp/activate_form.html:25
+#: allauth_ui/templates/mfa/totp/activate_form.html:25
 msgid ""
 "You can store this secret and use it to reinstall your authenticator app at "
 "a later time."
@@ -427,11 +460,11 @@ msgstr ""
 "Puedes almacenar este secreto y usarlo para reinstalar tu aplicación de "
 "autenticación más adelante."
 
-#: templates/mfa/totp/deactivate_form.html:5
+#: allauth_ui/templates/mfa/totp/deactivate_form.html:5
 msgid "Deactivate Authenticator App"
 msgstr "Desactivar la aplicación de autenticación"
 
-#: templates/mfa/totp/deactivate_form.html:6
+#: allauth_ui/templates/mfa/totp/deactivate_form.html:6
 msgid ""
 "You are about to deactivate authenticator app based authentication. Are you "
 "sure?"
@@ -439,22 +472,22 @@ msgstr ""
 "Estás a punto de desactivar la autenticación basada en la aplicación de "
 "autenticación. ¿Estás seguro?"
 
-#: templates/socialaccount/authentication_error.html:5
+#: allauth_ui/templates/socialaccount/authentication_error.html:5
 msgid "Third-Party Login Failure"
 msgstr "Error en el inicio de sesión de terceros"
 
-#: templates/socialaccount/authentication_error.html:6
+#: allauth_ui/templates/socialaccount/authentication_error.html:6
 msgid ""
 "An error occurred while attempting to login via your third-party account."
 msgstr ""
 "Ocurrió un error al intentar iniciar sesión a través de tu cuenta de "
 "terceros."
 
-#: templates/socialaccount/connections.html:7
+#: allauth_ui/templates/socialaccount/connections.html:7
 msgid "Account Connections"
 msgstr "Conexiones de cuenta"
 
-#: templates/socialaccount/connections.html:9
+#: allauth_ui/templates/socialaccount/connections.html:9
 msgid ""
 "\n"
 "        You can sign in to your account using any of the following third-"
@@ -466,38 +499,38 @@ msgstr ""
 "siguientes cuentas de terceros:\n"
 "        "
 
-#: templates/socialaccount/connections.html:13
+#: allauth_ui/templates/socialaccount/connections.html:13
 msgid "You currently have no third-party accounts connected to this account."
 msgstr "Actualmente no tienes cuentas de terceros conectadas a esta cuenta."
 
-#: templates/socialaccount/connections.html:39
+#: allauth_ui/templates/socialaccount/connections.html:39
 msgid "Add a Third-Party Account"
 msgstr "Añadir una cuenta de terceros"
 
-#: templates/socialaccount/login.html:7
+#: allauth_ui/templates/socialaccount/login.html:7
 #, python-format
 msgid "Connect %(provider)s"
 msgstr "Conectar %(provider)s"
 
-#: templates/socialaccount/login.html:8
+#: allauth_ui/templates/socialaccount/login.html:8
 #, python-format
 msgid "You are about to connect a new third-party account from %(provider)s."
 msgstr ""
 "Estás a punto de conectar una nueva cuenta de terceros de %(provider)s."
 
-#: templates/socialaccount/login.html:10
+#: allauth_ui/templates/socialaccount/login.html:10
 #, python-format
 msgid "Sign In Via %(provider)s"
 msgstr "Iniciar sesión a través de %(provider)s"
 
-#: templates/socialaccount/login.html:11
+#: allauth_ui/templates/socialaccount/login.html:11
 #, python-format
 msgid "You are about to sign in using a third-party account from %(provider)s."
 msgstr ""
 "Estás a punto de iniciar sesión utilizando una cuenta de terceros de "
 "%(provider)s."
 
-#: templates/socialaccount/signup.html:7
+#: allauth_ui/templates/socialaccount/signup.html:7
 #, python-format
 msgid ""
 "\n"
@@ -512,30 +545,50 @@ msgstr ""
 "        Como último paso, completa el siguiente formulario:\n"
 "    "
 
-#: templates/socialaccount/snippets/login.html:8
+#: allauth_ui/templates/socialaccount/snippets/login.html:8
 msgid "Or use a third-party"
 msgstr "O usa un tercero"
 
-#: templates/usersessions/usersession_list.html:12
+#: allauth_ui/templates/usersessions/usersession_list.html:12
 msgid "Sign Out Other Sessions"
 msgstr "Cerrar sesión en otras sesiones"
 
-#: templates/usersessions/usersession_list.html:23
+#: allauth_ui/templates/usersessions/usersession_list.html:23
 msgid "Started At"
 msgstr "Iniciado en"
 
-#: templates/usersessions/usersession_list.html:24
+#: allauth_ui/templates/usersessions/usersession_list.html:24
 msgid "IP Address"
 msgstr "Dirección IP"
 
-#: templates/usersessions/usersession_list.html:25
+#: allauth_ui/templates/usersessions/usersession_list.html:25
 msgid "Browser"
 msgstr "Navegador"
 
-#: templates/usersessions/usersession_list.html:27
+#: allauth_ui/templates/usersessions/usersession_list.html:27
 msgid "Last seen at"
 msgstr "Última vez visto"
 
-#: templates/usersessions/usersession_list.html:50
+#: allauth_ui/templates/usersessions/usersession_list.html:50
 msgid "Current"
 msgstr "Actual"
+
+#: tests/settings.py:88
+msgid "English"
+msgstr ""
+
+#: tests/settings.py:89
+msgid "Spanish"
+msgstr ""
+
+#: tests/settings.py:90
+msgid "French"
+msgstr ""
+
+#: tests/settings.py:91
+msgid "Portuguese (Brazil)"
+msgstr ""
+
+#: tests/settings.py:92
+msgid "Turkish)"
+msgstr ""
