@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-13 16:52+0100\n"
+"POT-Creation-Date: 2025-05-28 13:53-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Marcelo Lino <mdslino@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,11 +49,37 @@ msgstr ""
 msgid "Alternative options"
 msgstr ""
 
+#: allauth_ui/templates/account/confirm_login_code.html:8
+#: allauth_ui/templates/account/login.html:6
+#: allauth_ui/templates/allauth/layouts/base.html:55
+#: allauth_ui/templates/mfa/authenticate.html:11
+#, fuzzy
+#| msgid "Sign in"
+msgid "Sign In"
+msgstr "Entrar"
+
+#: allauth_ui/templates/account/confirm_login_code.html:10
+msgid "Enter Sign-In Code"
+msgstr ""
+
+#: allauth_ui/templates/account/confirm_login_code.html:15
+#, python-format
+msgid ""
+"We’ve sent a code to %(email_link)s. The code expires shortly, so please "
+"enter it soon."
+msgstr ""
+
+#: allauth_ui/templates/account/confirm_login_code.html:22
+#: allauth_ui/templates/mfa/authenticate.html:22
+msgid "Cancel"
+msgstr "Cancelar"
+
 #: allauth_ui/templates/account/email.html:5
 #, fuzzy
 #| msgid "Confirm E-mail Address"
 msgid "Email Addresses"
 msgstr "Confirmar endereço de e-mail"
+
 #: allauth_ui/templates/account/email.html:9
 msgid "The following email addresses are associated with your account:"
 msgstr "Os seguintes endereços de e-mail estão associados à sua conta:"
@@ -144,14 +170,6 @@ msgstr ""
 "a>\n"
 "  "
 
-#: allauth_ui/templates/account/login.html:6
-#: allauth_ui/templates/allauth/layouts/base.html:57
-#: allauth_ui/templates/mfa/authenticate.html:11
-#, fuzzy
-#| msgid "Sign in"
-msgid "Sign In"
-msgstr "Entrar"
-
 #: allauth_ui/templates/account/login.html:10
 #, python-format
 msgid ""
@@ -159,24 +177,26 @@ msgid ""
 "            <a class=\"link\" href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
 "Se você ainda não criou uma conta, por favor\n"
-"            <a class=\"link\" href=\"%(signup_url)s\">cadastre-se</a> primeiro."
+"            <a class=\"link\" href=\"%(signup_url)s\">cadastre-se</a> "
+"primeiro."
 
-#: allauth_ui/templates/account/login.html:18
+#: allauth_ui/templates/account/login.html:19
 msgid "Remember me"
 msgstr "Lembrar-me"
 
-#: allauth_ui/templates/account/login.html:25
+#: allauth_ui/templates/account/login.html:27
 #, fuzzy
 #| msgid "Forgot Password?"
 msgid "Forgot password?"
 msgstr "Esqueceu a senha"
 
-#: allauth_ui/templates/account/login.html:31
+#: allauth_ui/templates/account/login.html:33
+#: allauth_ui/templates/account/request_login_code.html:6
 msgid "Mail me a sign-in code"
 msgstr "Enviar-me um código de acesso"
 
 #: allauth_ui/templates/account/logout.html:5
-#: allauth_ui/templates/allauth/layouts/base.html:52
+#: allauth_ui/templates/allauth/layouts/base.html:50
 #: allauth_ui/templates/usersessions/usersession_list.html:15
 #, fuzzy
 #| msgid "Sign out"
@@ -197,7 +217,7 @@ msgstr "Continuar"
 #: allauth_ui/templates/account/password_reset_from_key.html:8
 #: allauth_ui/templates/account/password_reset_from_key.html:18
 #: allauth_ui/templates/account/password_reset_from_key_done.html:5
-#: allauth_ui/templates/allauth/layouts/base.html:40
+#: allauth_ui/templates/allauth/layouts/base.html:38
 msgid "Change Password"
 msgstr "Alterar senha"
 
@@ -232,7 +252,9 @@ msgstr "Redefinir minha senha"
 
 #: allauth_ui/templates/account/password_reset.html:20
 msgid "Please contact us if you have any trouble resetting your password."
-msgstr "Entre em contato conosco se tiver alguma dificuldade para redefinir sua senha."
+msgstr ""
+"Entre em contato conosco se tiver alguma dificuldade para redefinir sua "
+"senha."
 
 #: allauth_ui/templates/account/password_reset_done.html:11
 #, fuzzy
@@ -285,8 +307,14 @@ msgstr "Esqueceu a senha"
 msgid "Enter your password:"
 msgstr "Redefinir minha senha"
 
+#: allauth_ui/templates/account/request_login_code.html:9
+msgid ""
+"You will receive an email containing a special code for a password-free sign-"
+"in."
+msgstr ""
+
 #: allauth_ui/templates/account/signup.html:6
-#: allauth_ui/templates/allauth/layouts/base.html:61
+#: allauth_ui/templates/allauth/layouts/base.html:59
 #: allauth_ui/templates/socialaccount/signup.html:6
 #: allauth_ui/templates/socialaccount/signup.html:14
 msgid "Sign Up"
@@ -329,17 +357,17 @@ msgstr ""
 "      Entre em contato conosco se você não o receber em alguns minutos.\n"
 "      "
 
-#: allauth_ui/templates/allauth/layouts/base.html:36
+#: allauth_ui/templates/allauth/layouts/base.html:34
 msgid "Change Email"
 msgstr "Alterar E-mail"
 
-#: allauth_ui/templates/allauth/layouts/base.html:44
+#: allauth_ui/templates/allauth/layouts/base.html:42
 #: allauth_ui/templates/mfa/authenticate.html:6
 #: allauth_ui/templates/mfa/index.html:5
 msgid "Two-Factor Authentication"
 msgstr "Autenticação em Dois Fatores"
 
-#: allauth_ui/templates/allauth/layouts/base.html:48
+#: allauth_ui/templates/allauth/layouts/base.html:46
 #: allauth_ui/templates/usersessions/usersession_list.html:6
 msgid "Sessions"
 msgstr "Sessões"
@@ -349,8 +377,8 @@ msgid ""
 "Your account is protected by two-factor authentication. Please enter an "
 "authenticator code:"
 msgstr ""
-"Sua conta está protegida por autenticação em dois fatores. Por favor, digite um "
-"código do autenticador:"
+"Sua conta está protegida por autenticação em dois fatores. Por favor, digite "
+"um código do autenticador:"
 
 #: allauth_ui/templates/mfa/authenticate.html:10
 #: allauth_ui/templates/mfa/index.html:22
@@ -361,10 +389,6 @@ msgstr "Ativar"
 #: allauth_ui/templates/mfa/authenticate.html:20
 msgid "Use a security key"
 msgstr "Usar uma chave de segurança"
-
-#: allauth_ui/templates/mfa/authenticate.html:22
-msgid "Cancel"
-msgstr "Cancelar"
 
 #: allauth_ui/templates/mfa/index.html:8
 msgid "Authenticator App"
@@ -420,9 +444,11 @@ msgid ""
 msgid_plural ""
 "There are %(unused_count)s out of %(total_count)s recovery codes available."
 msgstr[0] ""
-"Existe %(unused_count)s de %(total_count)s códigos de recuperação disponíveis."
+"Existe %(unused_count)s de %(total_count)s códigos de recuperação "
+"disponíveis."
 msgstr[1] ""
-"Existem %(unused_count)s de %(total_count)s códigos de recuperação disponíveis."
+"Existem %(unused_count)s de %(total_count)s códigos de recuperação "
+"disponíveis."
 
 #: allauth_ui/templates/mfa/index.html:50
 msgid "No recovery codes set up."
@@ -481,9 +507,9 @@ msgid ""
 "below with your authenticator app. Then, input the verification code "
 "generated by the app below."
 msgstr ""
-"Para proteger sua conta com autenticação em dois fatores, escaneie o código QR "
-"abaixo com seu aplicativo autenticador. Em seguida, digite o código de verificação "
-"gerado pelo aplicativo abaixo."
+"Para proteger sua conta com autenticação em dois fatores, escaneie o código "
+"QR abaixo com seu aplicativo autenticador. Em seguida, digite o código de "
+"verificação gerado pelo aplicativo abaixo."
 
 #: allauth_ui/templates/mfa/totp/activate_form.html:22
 msgid "Authenticator secret"
@@ -506,8 +532,8 @@ msgid ""
 "You are about to deactivate authenticator app based authentication. Are you "
 "sure?"
 msgstr ""
-"Você está prestes a desativar a autenticação baseada no aplicativo autenticador. "
-"Tem certeza?"
+"Você está prestes a desativar a autenticação baseada no aplicativo "
+"autenticador. Tem certeza?"
 
 #: allauth_ui/templates/socialaccount/authentication_error.html:5
 #, fuzzy
@@ -536,8 +562,8 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"        Você pode entrar em sua conta usando qualquer uma das seguintes contas de "
-"terceiros:\n"
+"        Você pode entrar em sua conta usando qualquer uma das seguintes "
+"contas de terceiros:\n"
 "        "
 
 #: allauth_ui/templates/socialaccount/connections.html:13
@@ -624,6 +650,26 @@ msgstr "Visto por último em"
 msgid "Current"
 msgstr "Atual"
 
+#: tests/settings.py:88
+msgid "English"
+msgstr "Inglês"
+
+#: tests/settings.py:89
+msgid "Spanish"
+msgstr "Espanhol"
+
+#: tests/settings.py:90
+msgid "French"
+msgstr "Francês"
+
+#: tests/settings.py:91
+msgid "Portuguese (Brazil)"
+msgstr "Português (Brasil)"
+
+#: tests/settings.py:92
+msgid "Turkish)"
+msgstr ""
+
 #~ msgid "Login"
 #~ msgstr "Entrar"
 
@@ -647,15 +693,3 @@ msgstr "Atual"
 
 #~ msgid "You have the following social accounts connected:"
 #~ msgstr "Você tem as seguintes contas sociais conectadas:"
-
-#~ msgid "English"
-#~ msgstr "Inglês"
-
-#~ msgid "Spanish"
-#~ msgstr "Espanhol"
-
-#~ msgid "French"
-#~ msgstr "Francês"
-
-#~ msgid "Portuguese (Brazil)"
-#~ msgstr "Português (Brasil)"
