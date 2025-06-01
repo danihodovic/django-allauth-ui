@@ -4,64 +4,62 @@
 {% load allauth_ui %}
 <!DOCTYPE html>
 <html data-theme="{% allauth_ui_theme %}">
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            {% block head_title %}
-            {% endblock head_title %}
-        </title>
-        {% block extra_head %}
-            <link rel="stylesheet" href="{% static 'allauth_ui/output.css' %}">
-        {% endblock extra_head %}
-    </head>
-    <body class="min-h-screen bg-base-300">
-        {% block body %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div role="alert"
-                         class="text-sm md:text-base alert alert-{{ message.tags }}">
-                        <span><strong>{{ message }}</strong></span>
-                    </div>
-                {% endfor %}
-            {% endif %}
-            {% block content %}
-            {% endblock content %}
-            <div class="mx-auto [&_a]:link text-sm flex flex-col md:flex-row items-center justify-center gap-3 mt-3">
-                {% if user.is_authenticated %}
-                    {% url 'account_email' as email_url %}
-                    {% if email_url %}
-                        <a href="{{ email_url }}">{% trans "Change Email" %}</a>
-                    {% endif %}
-                    {% url 'account_change_password' as change_password_url %}
-                    {% if change_password_url %}
-                        <a href="{{ change_password_url }}">{% trans "Change Password" %}</a>
-                    {% endif %}
-                    {% url 'mfa_index' as mfa_url %}
-                    {% if mfa_url %}
-                        <a href="{{ mfa_url }}">{% trans "Two-Factor Authentication" %}</a>
-                    {% endif %}
-                    {% url 'usersessions_list' as usersessions_list_url %}
-                    {% if usersessions_list_url %}
-                        <a href="{{ usersessions_list_url }}">{% trans "Sessions" %}</a>
-                    {% endif %}
-                    {% url 'account_logout' as logout_url %}
-                    {% if logout_url %}
-                        <a href="{{ logout_url }}">{% trans "Sign Out" %}</a>
-                    {% endif %}
-                {% else %}
-                    {% url 'account_login' as login_url %}
-                    {% if login_url %}
-                        <a href="{{ login_url }}">{% trans "Sign In" %}</a>
-                    {% endif %}
-                    {% url 'account_signup' as signup_url %}
-                    {% if signup_url %}
-                        <a href="{{ signup_url }}">{% trans "Sign Up" %}</a>
-                    {% endif %}
-                {% endif %}
-            </div>
-        {% endblock body %}
-        {% block extra_body %}
-        {% endblock extra_body %}
-    </body>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block head_title %}
+        {% endblock head_title %}
+    </title>
+    {% block extra_head %}
+    <link rel="stylesheet" href="{% static 'allauth_ui/output.css' %}">
+    {% endblock extra_head %}
+</head>
+
+<body class="min-h-screen bg-base-300">
+    {% block body %}
+
+    {% include 'helpers/messages.html' %}
+
+    {% block content %}
+    {% endblock content %}
+    <div class="mx-auto [&_a]:link text-sm flex flex-col md:flex-row items-center justify-center gap-3 mt-3">
+        {% if user.is_authenticated %}
+        {% url 'account_email' as email_url %}
+        {% if email_url %}
+        <a href="{{ email_url }}">{% trans "Change Email" %}</a>
+        {% endif %}
+        {% url 'account_change_password' as change_password_url %}
+        {% if change_password_url %}
+        <a href="{{ change_password_url }}">{% trans "Change Password" %}</a>
+        {% endif %}
+        {% url 'mfa_index' as mfa_url %}
+        {% if mfa_url %}
+        <a href="{{ mfa_url }}">{% trans "Two-Factor Authentication" %}</a>
+        {% endif %}
+        {% url 'usersessions_list' as usersessions_list_url %}
+        {% if usersessions_list_url %}
+        <a href="{{ usersessions_list_url }}">{% trans "Sessions" %}</a>
+        {% endif %}
+        {% url 'account_logout' as logout_url %}
+        {% if logout_url %}
+        <a href="{{ logout_url }}">{% trans "Sign Out" %}</a>
+        {% endif %}
+        {% else %}
+        {% url 'account_login' as login_url %}
+        {% if login_url %}
+        <a href="{{ login_url }}">{% trans "Sign In" %}</a>
+        {% endif %}
+        {% url 'account_signup' as signup_url %}
+        {% if signup_url %}
+        <a href="{{ signup_url }}">{% trans "Sign Up" %}</a>
+        {% endif %}
+        {% endif %}
+    </div>
+    {% endblock body %}
+    {% block extra_body %}
+    {% endblock extra_body %}
+</body>
+
 </html>
