@@ -1,11 +1,41 @@
+{% load slippers %}
 {% load widget_tweaks %}
+{% var is_password=is_password|default:"false" %}
+
+<script>
+function togglePassword() {
+    const passwordField = document.querySelector('.password-field');
+    const toggleButton = document.querySelector('button');
+
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleButton.textContent = "Hide";
+    } else {
+        passwordField.type = "password";
+        toggleButton.textContent = "Show";
+    }
+}
+</script>
+
+
 <label class="label" for="{{ field.id_for_label }}">
     <span class="label-text">{{ field.label }}</span>
 </label>
 {% if field.errors %}
     {% render_field field placeholder="" class="w-full input input-bordered text-primary input-error" %}
 {% else %}
-    {% render_field field placeholder="" class="w-full input input-bordered text-primary" %}
+    {% if is_password == 'true' %}
+        <div class="relative flex w-full">
+            {% render_field field placeholder="" class="w-full input input-bordered text-primary password-field"%}
+            <button type="button" onclick="togglePassword()" 
+                class="btn btn-neutral text-gray-500 hover:text-gray-700 text-sm">
+                Show
+            </button>
+            
+        </div>
+    {% else %}
+        {% render_field field placeholder="" class="w-full input input-bordered text-primary" %}
+    {% endif %}
 {% endif %}
 {% for error in field.errors %}
     <span class="flex items-center max-w-xs mt-1 ml-1 text-xs font-medium tracking-wide text-error">{{ error }}</span>
