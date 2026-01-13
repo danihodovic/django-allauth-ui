@@ -7,7 +7,9 @@
 {% block content %}
     {% trans "Sign In" as heading %}
     {% #container heading=heading  %}
-    <div class="py-3">{% blocktranslate %}Enter Sign-In Code{% endblocktranslate %}</div>
+    <div class="py-3">
+        {% blocktranslate %}Enter Sign-In Code{% endblocktranslate %}
+    </div>
     <div class="py-3">
         {% setvar email_link %}
         <a href="mailto:{{ email }}">{{ email }}</a>
@@ -19,7 +21,9 @@
 {{ redirect_field }}
 {% csrf_token %}
 {% /form %}
-<button type="submit" class="btn btn-red" form="logout-from-stage">{% translate "Cancel" %}</button>
+<button type="submit" class="btn btn-red" form="logout-from-stage">
+    {% translate "Cancel" %}
+</button>
 <form id="logout-from-stage"
       method="post"
       action="{% url 'account_logout' %}">

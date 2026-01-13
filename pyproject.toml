@@ -12,7 +12,8 @@ packages = [
     { include = "allauth_ui" },
 ]
 include = [
-  {path = "allauth_ui/static/allauth_ui/output.css", format = ["sdist", "wheel"]}
+  {path = "allauth_ui/static/allauth_ui/output.css", format = ["sdist", "wheel"]},
+  {path = "allauth_ui/locale/*/LC_MESSAGES/*.mo", format = ["sdist", "wheel"]}
 ]
 readme = "README.md"
 repository = "https://github.com/danihodovic/django-allauth-ui"
