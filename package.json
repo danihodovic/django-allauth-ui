@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:watch": "npx @tailwindcss/cli -i allauth_ui/static/allauth_ui/input.css -o allauth_ui/static/allauth_ui/output.css --watch",
-    "build": "npx @tailwindcss/cli -i allauth_ui/static/allauth_ui/input.css -o allauth_ui/static/allauth_ui/output.css --minify"
+    "build": "npx @tailwindcss/cli -i allauth_ui/static/allauth_ui/input.css -o allauth_ui/static/allauth_ui/tailwindcss --minify"
   },
   "repository": {
     "type": "git",
