@@ -1,0 +1,582 @@
+# Arabic translation for django-allauth-ui
+# Copyright (C) 2026 django-allauth-ui contributors
+# This file is distributed under the same license as the django-allauth-ui package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: django-allauth-ui\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-28 13:52-0500\n"
+"PO-Revision-Date: 2026-01-31 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic <LL@li.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#: allauth_ui/templates/account/account_inactive.html:5
+msgid "Account Inactive"
+msgstr "الحساب غير نشط"
+
+#: allauth_ui/templates/account/account_inactive.html:6
+msgid "This account is inactive."
+msgstr "هذا الحساب غير نشط."
+
+#: allauth_ui/templates/account/base_reauthenticate.html:5
+msgid "Confirm Access"
+msgstr "تأكيد الوصول"
+
+#: allauth_ui/templates/account/base_reauthenticate.html:6
+msgid ""
+"\n"
+"    Please reauthenticate to safeguard your account.\n"
+"    "
+msgstr ""
+"\n"
+"    يرجى إعادة المصادقة لحماية حسابك.\n"
+"    "
+
+#: allauth_ui/templates/account/base_reauthenticate.html:13
+#: allauth_ui/templates/mfa/authenticate.html:17
+msgid "Alternative options"
+msgstr "خيارات بديلة"
+
+#: allauth_ui/templates/account/confirm_login_code.html:8
+#: allauth_ui/templates/account/login.html:6
+#: allauth_ui/templates/allauth/layouts/base.html:55
+#: allauth_ui/templates/mfa/authenticate.html:11
+msgid "Sign In"
+msgstr "تسجيل الدخول"
+
+#: allauth_ui/templates/account/confirm_login_code.html:10
+msgid "Enter Sign-In Code"
+msgstr "أدخل رمز تسجيل الدخول"
+
+#: allauth_ui/templates/account/confirm_login_code.html:15
+#, python-format
+msgid ""
+"We've sent a code to %(email_link)s. The code expires shortly, so please "
+"enter it soon."
+msgstr ""
+"لقد أرسلنا رمزًا إلى %(email_link)s. ينتهي صلاحية الرمز قريبًا، يرجى إدخاله "
+"في أقرب وقت."
+
+#: allauth_ui/templates/account/confirm_login_code.html:22
+#: allauth_ui/templates/mfa/authenticate.html:22
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: allauth_ui/templates/account/email.html:5
+msgid "Email Addresses"
+msgstr "عناوين البريد الإلكتروني"
+
+#: allauth_ui/templates/account/email.html:9
+msgid "The following email addresses are associated with your account:"
+msgstr "عناوين البريد الإلكتروني التالية مرتبطة بحسابك:"
+
+#: allauth_ui/templates/account/email.html:22
+msgid "verified"
+msgstr "مُتحقق منه"
+
+#: allauth_ui/templates/account/email.html:25
+msgid "primary"
+msgstr "رئيسي"
+
+#: allauth_ui/templates/account/email.html:41
+msgid "Make Primary"
+msgstr "جعله رئيسيًا"
+
+#: allauth_ui/templates/account/email.html:44
+msgid "Re-send verification"
+msgstr "إعادة إرسال التحقق"
+
+#: allauth_ui/templates/account/email.html:47
+#: allauth_ui/templates/socialaccount/connections.html:35
+msgid "Remove"
+msgstr "إزالة"
+
+#: allauth_ui/templates/account/email.html:56
+msgid "Add Email Address"
+msgstr "إضافة عنوان بريد إلكتروني"
+
+#: allauth_ui/templates/account/email.html:57
+msgid "Add Email"
+msgstr "إضافة بريد إلكتروني"
+
+#: allauth_ui/templates/account/email_confirm.html:7
+#: allauth_ui/templates/account/verification_sent.html:5
+msgid "Confirm Email Address"
+msgstr "تأكيد عنوان البريد الإلكتروني"
+
+#: allauth_ui/templates/account/email_confirm.html:13
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an email "
+"address for user %(user_display)s."
+msgstr ""
+"يرجى تأكيد أن <a href=\"mailto:%(email)s\">%(email)s</a> هو عنوان بريد "
+"إلكتروني للمستخدم %(user_display)s."
+
+#: allauth_ui/templates/account/email_confirm.html:16
+#: allauth_ui/templates/account/reauthenticate.html:9
+#: allauth_ui/templates/mfa/reauthenticate.html:9
+msgid "Confirm"
+msgstr "تأكيد"
+
+#: allauth_ui/templates/account/email_confirm.html:23
+#, python-format
+msgid ""
+"Unable to confirm %(email)s because it is already confirmed by a different "
+"account."
+msgstr ""
+"تعذر تأكيد %(email)s لأنه مؤكد بالفعل من حساب آخر."
+
+#: allauth_ui/templates/account/email_confirm.html:29
+#, python-format
+msgid ""
+"This email confirmation link expired or is invalid. Please <a "
+"href=\"%(email_url)s\">issue a new email confirmation request</a>."
+msgstr ""
+"انتهت صلاحية رابط تأكيد البريد الإلكتروني أو أنه غير صالح. يرجى <a "
+"href=\"%(email_url)s\">إصدار طلب تأكيد بريد إلكتروني جديد</a>."
+
+#: allauth_ui/templates/account/login.html:10
+#, python-format
+msgid ""
+"If you have not created an account yet, then please\n"
+"            <a class=\"link\" href=\"%(signup_url)s\">sign up</a> first."
+msgstr ""
+"إذا لم تقم بإنشاء حساب بعد، يرجى\n"
+"            <a class=\"link\" href=\"%(signup_url)s\">التسجيل</a> أولاً."
+
+#: allauth_ui/templates/account/login.html:19
+msgid "Remember me"
+msgstr "تذكرني"
+
+#: allauth_ui/templates/account/login.html:27
+msgid "Forgot password?"
+msgstr "نسيت كلمة المرور؟"
+
+#: allauth_ui/templates/account/login.html:33
+#: allauth_ui/templates/account/request_login_code.html:6
+msgid "Mail me a sign-in code"
+msgstr "أرسل لي رمز تسجيل الدخول"
+
+#: allauth_ui/templates/account/logout.html:5
+#: allauth_ui/templates/allauth/layouts/base.html:50
+#: allauth_ui/templates/usersessions/usersession_list.html:15
+msgid "Sign Out"
+msgstr "تسجيل الخروج"
+
+#: allauth_ui/templates/account/logout.html:6
+msgid "Are you sure you want to sign out?"
+msgstr "هل أنت متأكد أنك تريد تسجيل الخروج؟"
+
+#: allauth_ui/templates/account/logout.html:9
+#: allauth_ui/templates/socialaccount/login.html:14
+#: allauth_ui/templates/socialaccount/signup.html:12
+msgid "Continue"
+msgstr "متابعة"
+
+#: allauth_ui/templates/account/password_change.html:6
+#: allauth_ui/templates/account/password_reset_from_key.html:8
+#: allauth_ui/templates/account/password_reset_from_key.html:18
+#: allauth_ui/templates/account/password_reset_from_key_done.html:5
+#: allauth_ui/templates/allauth/layouts/base.html:38
+msgid "Change Password"
+msgstr "تغيير كلمة المرور"
+
+#: allauth_ui/templates/account/password_change.html:14
+msgid "Forgot Password?"
+msgstr "نسيت كلمة المرور؟"
+
+#: allauth_ui/templates/account/password_reset.html:5
+#: allauth_ui/templates/account/password_reset_done.html:5
+msgid "Password Reset"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: allauth_ui/templates/account/password_reset.html:11
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll send you "
+"an email allowing you to reset it."
+msgstr ""
+"نسيت كلمة المرور؟ أدخل عنوان بريدك الإلكتروني أدناه، وسنرسل لك بريدًا "
+"إلكترونيًا يتيح لك إعادة تعيينها."
+
+#: allauth_ui/templates/account/password_reset.html:14
+msgid "Reset My Password"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: allauth_ui/templates/account/password_reset.html:20
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "يرجى الاتصال بنا إذا واجهت أي مشكلة في إعادة تعيين كلمة المرور."
+
+#: allauth_ui/templates/account/password_reset_done.html:11
+msgid ""
+"We have sent you an email. If you have not received it please check your "
+"spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr ""
+"لقد أرسلنا لك بريدًا إلكترونيًا. إذا لم تستلمه، يرجى التحقق من مجلد البريد "
+"المزعج. وإلا تواصل معنا إذا لم تستلمه خلال بضع دقائق."
+
+#: allauth_ui/templates/account/password_reset_from_key.html:6
+msgid "Bad Token"
+msgstr "رمز غير صالح"
+
+#: allauth_ui/templates/account/password_reset_from_key.html:14
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+"رابط إعادة تعيين كلمة المرور غير صالح، ربما لأنه قد تم استخدامه بالفعل. يرجى "
+"طلب <a href=\"%(passwd_reset_url)s\">إعادة تعيين كلمة مرور جديدة</a>."
+
+#: allauth_ui/templates/account/password_reset_from_key_done.html:6
+msgid "Your password is now changed."
+msgstr "تم تغيير كلمة المرور الخاصة بك."
+
+#: allauth_ui/templates/account/password_set.html:6
+msgid "Set Password"
+msgstr "تعيين كلمة المرور"
+
+#: allauth_ui/templates/account/reauthenticate.html:6
+msgid "Enter your password:"
+msgstr "أدخل كلمة المرور:"
+
+#: allauth_ui/templates/account/request_login_code.html:9
+msgid ""
+"You will receive an email containing a special code for a password-free sign-"
+"in."
+msgstr ""
+"ستتلقى بريدًا إلكترونيًا يحتوي على رمز خاص لتسجيل الدخول بدون كلمة مرور."
+
+#: allauth_ui/templates/account/signup.html:6
+#: allauth_ui/templates/allauth/layouts/base.html:59
+#: allauth_ui/templates/socialaccount/signup.html:6
+#: allauth_ui/templates/socialaccount/signup.html:14
+msgid "Sign Up"
+msgstr "إنشاء حساب"
+
+#: allauth_ui/templates/account/signup.html:7
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\" "
+"class=\"link\">sign in</a>."
+msgstr ""
+"لديك حساب بالفعل؟ يرجى <a href=\"%(login_url)s\" "
+"class=\"link\">تسجيل الدخول</a>."
+
+#: allauth_ui/templates/account/signup_closed.html:5
+msgid "Sign Up Closed"
+msgstr "التسجيل مغلق"
+
+#: allauth_ui/templates/account/signup_closed.html:6
+msgid "We are sorry, but the sign up is currently closed."
+msgstr "نأسف، ولكن التسجيل مغلق حاليًا."
+
+#: allauth_ui/templates/account/verification_sent.html:6
+msgid ""
+"We have sent an email to you for verification. Follow the link provided to "
+"finalize the signup process. If you do not see the verification email in "
+"your main inbox, check your spam folder. Please contact us if you do not "
+"receive the verification email within a few minutes."
+msgstr ""
+"لقد أرسلنا إليك بريدًا إلكترونيًا للتحقق. اتبع الرابط المقدم لإكمال عملية "
+"التسجيل. إذا لم تجد رسالة التحقق في صندوق الوارد الرئيسي، تحقق من مجلد البريد "
+"المزعج. يرجى الاتصال بنا إذا لم تستلم رسالة التحقق خلال بضع دقائق."
+
+#: allauth_ui/templates/allauth/layouts/base.html:34
+msgid "Change Email"
+msgstr "تغيير البريد الإلكتروني"
+
+#: allauth_ui/templates/allauth/layouts/base.html:42
+#: allauth_ui/templates/mfa/authenticate.html:6
+#: allauth_ui/templates/mfa/index.html:5
+msgid "Two-Factor Authentication"
+msgstr "المصادقة الثنائية"
+
+#: allauth_ui/templates/allauth/layouts/base.html:46
+#: allauth_ui/templates/usersessions/usersession_list.html:6
+msgid "Sessions"
+msgstr "الجلسات"
+
+#: allauth_ui/templates/mfa/authenticate.html:7
+msgid ""
+"Your account is protected by two-factor authentication. Please enter an "
+"authenticator code:"
+msgstr ""
+"حسابك محمي بالمصادقة الثنائية. يرجى إدخال رمز المصادقة:"
+
+#: allauth_ui/templates/mfa/authenticate.html:10
+#: allauth_ui/templates/mfa/index.html:22
+#: allauth_ui/templates/mfa/totp/activate_form.html:10
+msgid "Activate"
+msgstr "تفعيل"
+
+#: allauth_ui/templates/mfa/authenticate.html:20
+msgid "Use a security key"
+msgstr "استخدام مفتاح أمان"
+
+#: allauth_ui/templates/mfa/index.html:8
+msgid "Authenticator App"
+msgstr "تطبيق المصادقة"
+
+#: allauth_ui/templates/mfa/index.html:11
+msgid "Authentication using an authenticator app is active."
+msgstr "المصادقة باستخدام تطبيق المصادقة مفعّلة."
+
+#: allauth_ui/templates/mfa/index.html:15
+#: allauth_ui/templates/mfa/totp/deactivate_form.html:11
+msgid "Deactivate"
+msgstr "إلغاء التفعيل"
+
+#: allauth_ui/templates/mfa/index.html:19
+msgid "An authenticator app is not active."
+msgstr "تطبيق المصادقة غير مفعّل."
+
+#: allauth_ui/templates/mfa/index.html:27
+msgid "Security Keys"
+msgstr "مفاتيح الأمان"
+
+#: allauth_ui/templates/mfa/index.html:30
+#, python-format
+msgid "You have added %(count)s security key."
+msgid_plural "You have added %(count)s security keys."
+msgstr[0] "لم تقم بإضافة أي مفتاح أمان."
+msgstr[1] "لقد أضفت مفتاح أمان واحد."
+msgstr[2] "لقد أضفت مفتاحي أمان."
+msgstr[3] "لقد أضفت %(count)s مفاتيح أمان."
+msgstr[4] "لقد أضفت %(count)s مفتاح أمان."
+msgstr[5] "لقد أضفت %(count)s مفتاح أمان."
+
+#: allauth_ui/templates/mfa/index.html:34
+msgid "Manage"
+msgstr "إدارة"
+
+#: allauth_ui/templates/mfa/index.html:36
+msgid "No security keys have been added."
+msgstr "لم يتم إضافة أي مفاتيح أمان."
+
+#: allauth_ui/templates/mfa/index.html:39
+msgid "Add"
+msgstr "إضافة"
+
+#: allauth_ui/templates/mfa/index.html:45
+#: allauth_ui/templates/mfa/recovery_codes/generate.html:6
+#: allauth_ui/templates/mfa/recovery_codes/index.html:6
+msgid "Recovery Codes"
+msgstr "رموز الاسترداد"
+
+#: allauth_ui/templates/mfa/index.html:48
+#: allauth_ui/templates/mfa/recovery_codes/index.html:7
+#, python-format
+msgid ""
+"There is %(unused_count)s out of %(total_count)s recovery codes available."
+msgid_plural ""
+"There are %(unused_count)s out of %(total_count)s recovery codes available."
+msgstr[0] "لا توجد رموز استرداد متاحة من أصل %(total_count)s."
+msgstr[1] "يوجد رمز استرداد واحد متاح من أصل %(total_count)s."
+msgstr[2] "يوجد رمزا استرداد متاحان من أصل %(total_count)s."
+msgstr[3] "يوجد %(unused_count)s رموز استرداد متاحة من أصل %(total_count)s."
+msgstr[4] "يوجد %(unused_count)s رمز استرداد متاح من أصل %(total_count)s."
+msgstr[5] "يوجد %(unused_count)s رمز استرداد متاح من أصل %(total_count)s."
+
+#: allauth_ui/templates/mfa/index.html:50
+msgid "No recovery codes set up."
+msgstr "لم يتم إعداد رموز الاسترداد."
+
+#: allauth_ui/templates/mfa/index.html:59
+msgid "View"
+msgstr "عرض"
+
+#: allauth_ui/templates/mfa/index.html:62
+msgid "Download"
+msgstr "تنزيل"
+
+#: allauth_ui/templates/mfa/index.html:67
+#: allauth_ui/templates/mfa/recovery_codes/generate.html:16
+msgid "Generate"
+msgstr "إنشاء"
+
+#: allauth_ui/templates/mfa/reauthenticate.html:6
+msgid "Enter an authenticator code:"
+msgstr "أدخل رمز المصادقة:"
+
+#: allauth_ui/templates/mfa/recovery_codes/generate.html:7
+msgid "You are about to generate a new set of recovery codes for your account."
+msgstr "أنت على وشك إنشاء مجموعة جديدة من رموز الاسترداد لحسابك."
+
+#: allauth_ui/templates/mfa/recovery_codes/generate.html:11
+msgid "This action will invalidate your existing codes."
+msgstr "هذا الإجراء سيُبطل رموزك الحالية."
+
+#: allauth_ui/templates/mfa/recovery_codes/generate.html:13
+msgid "Are you sure?"
+msgstr "هل أنت متأكد؟"
+
+#: allauth_ui/templates/mfa/recovery_codes/index.html:11
+msgid "Unused codes"
+msgstr "الرموز غير المستخدمة"
+
+#: allauth_ui/templates/mfa/recovery_codes/index.html:21
+msgid "Download codes"
+msgstr "تنزيل الرموز"
+
+#: allauth_ui/templates/mfa/recovery_codes/index.html:24
+msgid "Generate new codes"
+msgstr "إنشاء رموز جديدة"
+
+#: allauth_ui/templates/mfa/totp/activate_form.html:7
+msgid "Activate Authenticator App"
+msgstr "تفعيل تطبيق المصادقة"
+
+#: allauth_ui/templates/mfa/totp/activate_form.html:8
+msgid ""
+"To protect your account with two-factor authentication, scan the QR code "
+"below with your authenticator app. Then, input the verification code "
+"generated by the app below."
+msgstr ""
+"لحماية حسابك بالمصادقة الثنائية، امسح رمز QR أدناه بتطبيق المصادقة الخاص بك. "
+"ثم أدخل رمز التحقق الذي أنشأه التطبيق أدناه."
+
+#: allauth_ui/templates/mfa/totp/activate_form.html:22
+msgid "Authenticator secret"
+msgstr "مفتاح المصادقة السري"
+
+#: allauth_ui/templates/mfa/totp/activate_form.html:25
+msgid ""
+"You can store this secret and use it to reinstall your authenticator app at "
+"a later time."
+msgstr ""
+"يمكنك حفظ هذا المفتاح السري واستخدامه لإعادة تثبيت تطبيق المصادقة في وقت لاحق."
+
+#: allauth_ui/templates/mfa/totp/deactivate_form.html:5
+msgid "Deactivate Authenticator App"
+msgstr "إلغاء تفعيل تطبيق المصادقة"
+
+#: allauth_ui/templates/mfa/totp/deactivate_form.html:6
+msgid ""
+"You are about to deactivate authenticator app based authentication. Are you "
+"sure?"
+msgstr ""
+"أنت على وشك إلغاء تفعيل المصادقة المعتمدة على تطبيق المصادقة. هل أنت متأكد؟"
+
+#: allauth_ui/templates/socialaccount/authentication_error.html:5
+msgid "Third-Party Login Failure"
+msgstr "فشل تسجيل الدخول عبر طرف ثالث"
+
+#: allauth_ui/templates/socialaccount/authentication_error.html:6
+msgid ""
+"An error occurred while attempting to login via your third-party account."
+msgstr "حدث خطأ أثناء محاولة تسجيل الدخول عبر حساب الطرف الثالث الخاص بك."
+
+#: allauth_ui/templates/socialaccount/connections.html:7
+msgid "Account Connections"
+msgstr "ربط الحسابات"
+
+#: allauth_ui/templates/socialaccount/connections.html:9
+msgid ""
+"\n"
+"        You can sign in to your account using any of the following third-"
+"party accounts:\n"
+"        "
+msgstr ""
+"\n"
+"        يمكنك تسجيل الدخول إلى حسابك باستخدام أي من حسابات الطرف الثالث "
+"التالية:\n"
+"        "
+
+#: allauth_ui/templates/socialaccount/connections.html:13
+msgid "You currently have no third-party accounts connected to this account."
+msgstr "ليس لديك حاليًا أي حسابات طرف ثالث مرتبطة بهذا الحساب."
+
+#: allauth_ui/templates/socialaccount/connections.html:39
+msgid "Add a Third-Party Account"
+msgstr "إضافة حساب طرف ثالث"
+
+#: allauth_ui/templates/socialaccount/login.html:7
+#, python-format
+msgid "Connect %(provider)s"
+msgstr "ربط %(provider)s"
+
+#: allauth_ui/templates/socialaccount/login.html:8
+#, python-format
+msgid "You are about to connect a new third-party account from %(provider)s."
+msgstr "أنت على وشك ربط حساب طرف ثالث جديد من %(provider)s."
+
+#: allauth_ui/templates/socialaccount/login.html:10
+#, python-format
+msgid "Sign In Via %(provider)s"
+msgstr "تسجيل الدخول عبر %(provider)s"
+
+#: allauth_ui/templates/socialaccount/login.html:11
+#, python-format
+msgid "You are about to sign in using a third-party account from %(provider)s."
+msgstr "أنت على وشك تسجيل الدخول باستخدام حساب طرف ثالث من %(provider)s."
+
+#: allauth_ui/templates/socialaccount/signup.html:7
+#, python-format
+msgid ""
+"\n"
+"        You are about to use your %(provider_name)s account to login to "
+"%(site_name)s.\n"
+"        As a final step, please complete the following form:\n"
+"    "
+msgstr ""
+"\n"
+"        أنت على وشك استخدام حساب %(provider_name)s الخاص بك لتسجيل الدخول إلى "
+"%(site_name)s.\n"
+"        كخطوة أخيرة، يرجى إكمال النموذج التالي:\n"
+"    "
+
+#: allauth_ui/templates/socialaccount/snippets/login.html:8
+msgid "Or use a third-party"
+msgstr "أو استخدم طرف ثالث"
+
+#: allauth_ui/templates/usersessions/usersession_list.html:12
+msgid "Sign Out Other Sessions"
+msgstr "تسجيل الخروج من الجلسات الأخرى"
+
+#: allauth_ui/templates/usersessions/usersession_list.html:23
+msgid "Started At"
+msgstr "بدأت في"
+
+#: allauth_ui/templates/usersessions/usersession_list.html:24
+msgid "IP Address"
+msgstr "عنوان IP"
+
+#: allauth_ui/templates/usersessions/usersession_list.html:25
+msgid "Browser"
+msgstr "المتصفح"
+
+#: allauth_ui/templates/usersessions/usersession_list.html:27
+msgid "Last seen at"
+msgstr "آخر ظهور"
+
+#: allauth_ui/templates/usersessions/usersession_list.html:50
+msgid "Current"
+msgstr "الحالي"
+
+#: tests/settings.py:88
+msgid "English"
+msgstr "الإنجليزية"
+
+#: tests/settings.py:89
+msgid "Spanish"
+msgstr "الإسبانية"
+
+#: tests/settings.py:90
+msgid "French"
+msgstr "الفرنسية"
+
+#: tests/settings.py:91
+msgid "Portuguese (Brazil)"
+msgstr "البرتغالية (البرازيل)"
+
+#: tests/settings.py:92
+msgid "Turkish)"
+msgstr "التركية"
